@@ -28,7 +28,7 @@
 
   "release_status": "validated public release for arXiv v1",
 
-  "repository": "PUBLIC_REPOSITORY_URL",
+  "repository": "https://github.com/qianguoguoguo/aggregate-reuse",
 
   "scientific_environment": {
     "PyYAML": "6.0.3",

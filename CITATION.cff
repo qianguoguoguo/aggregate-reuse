@@ -12,7 +12,7 @@ authors:
   - family-names: "Zhang"
     given-names: "Rui"
     affiliation: "University of Delaware"
-repository-code: "PUBLIC_REPOSITORY_URL"
+repository-code: "https://github.com/qianguoguoguo/aggregate-reuse"
 version: "1.0.0"
 date-released: "2026-09-09"
 license: MIT

@@ -6,7 +6,7 @@ Public reproducibility artifact for:
 
 Authors: Qian Guo, Yidan Hu, and Rui Zhang
 
-Repository: [PUBLIC REPOSITORY URL](PUBLIC_REPOSITORY_URL)
+Repository: [https://github.com/qianguoguoguo/aggregate-reuse](https://github.com/qianguoguoguo/aggregate-reuse)
 
 This artifact reproduces the controlled experiments, the primary
 `Home_and_Kitchen` Amazon evaluation, the `Electronics` cross-category
