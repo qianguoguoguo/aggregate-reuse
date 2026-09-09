@@ -1,0 +1,137 @@
+{
+  "checks_expected": 26,
+  "checks_run": 26,
+  "results": [
+    {
+      "name": "environment",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "anonymity",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "gold_integrity",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "controlled_null",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "controlled_matched",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "controlled_sweep",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "amazon_preprocess",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "amazon_reference",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "primary_attack",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "primary_reuse",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "matched_twins",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "shape",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "complementarity",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "reference_history",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "strength_fixed",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "k6_population_audit",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "full_background",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "self_influence",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "electronics",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "figure_data",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "electronics_figure_data",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "electronics_reporting",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "numerical_tables",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "cross_category_table",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "reporting_spec",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "name": "pytest",
+      "passed": true,
+      "returncode": 0
+    }
+  ],
+  "status": "PASS"
+}

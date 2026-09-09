@@ -1,0 +1,11 @@
+{
+  "aggregate_auc": 0.6238666666666666,
+  "coactivity_auc": 0.7502276851851852,
+  "combined_auc": 0.8737004111111111,
+  "combined_minus_best_single": 0.1234727259259259,
+  "evidence_only_aggregate_auc": 0.7477333333333332,
+  "evidence_only_coactivity_auc": 0.5,
+  "frequency_auc": 0.5,
+  "topology_only_aggregate_auc": 0.5,
+  "topology_only_coactivity_auc": 1.0
+}

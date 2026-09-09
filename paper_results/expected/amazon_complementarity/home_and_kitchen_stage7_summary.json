@@ -1,0 +1,115 @@
+{
+  "dimensions": {
+    "account_degree_r": 8,
+    "item_degree_m": 6,
+    "n_accounts_per_branch": 1500,
+    "n_items": 2000,
+    "team_repetitions": 8,
+    "team_size": 6
+  },
+  "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+  "invariants": {
+    "all_account_degrees_equal_r": true,
+    "all_item_degrees_equal_m": true,
+    "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+    "frequency_auc_exactly_half": true,
+    "stage4_attack_world_reused_without_modification": true,
+    "topology_only_branch_has_zero_aggregate_treatment_effect": true
+  },
+  "metrics": {
+    "aggregate_auc": {
+      "ci_lower": 0.6200887126449106,
+      "ci_upper": 0.6276446206884225,
+      "mean": 0.6238666666666666
+    },
+    "both_active_aggregate_auc": {
+      "ci_lower": 0.731503135000729,
+      "ci_upper": 0.7508968649992709,
+      "mean": 0.7412
+    },
+    "both_active_coactivity_auc": {
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "mean": 1.0
+    },
+    "both_active_combined_auc": {
+      "ci_lower": 0.9646596048476408,
+      "ci_upper": 0.974407239596804,
+      "mean": 0.9695334222222224
+    },
+    "coactivity_auc": {
+      "ci_lower": 0.749004811986473,
+      "ci_upper": 0.7514505583838975,
+      "mean": 0.7502276851851852
+    },
+    "combined_auc": {
+      "ci_lower": 0.870007930772748,
+      "ci_upper": 0.8773928914494742,
+      "mean": 0.8737004111111111
+    },
+    "combined_minus_best_single": {
+      "ci_lower": 0.11986353165750412,
+      "ci_upper": 0.1270819201943477,
+      "mean": 0.1234727259259259
+    },
+    "evidence_only_aggregate_auc": {
+      "ci_lower": 0.7401774252898214,
+      "ci_upper": 0.755289241376845,
+      "mean": 0.7477333333333332
+    },
+    "evidence_only_coactivity_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "frequency_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "topology_only_aggregate_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "topology_only_coactivity_auc": {
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "mean": 1.0
+    }
+  },
+  "n_seeds": 30,
+  "seed_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "stage": "amazon_stage7_complementarity"
+}

@@ -1,0 +1,962 @@
+[
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:09:35.364988+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27001,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27001__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:09:29.629187+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 302562997,
+    "started_at_utc": "2026-08-17T19:09:29.629187+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:09:43.369929+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27002,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27002__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:09:37.013173+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2462093990,
+    "started_at_utc": "2026-08-17T19:09:37.013173+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:09:53.385876+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27003,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27003__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:09:45.451341+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 1898353477,
+    "started_at_utc": "2026-08-17T19:09:45.451341+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:10:03.141666+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27004,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27004__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:09:55.468587+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2688936010,
+    "started_at_utc": "2026-08-17T19:09:55.468587+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:10:14.808405+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27005,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27005__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:10:05.488077+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3509332443,
+    "started_at_utc": "2026-08-17T19:10:05.488077+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:10:27.919168+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27006,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27006__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:10:17.367578+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3562495584,
+    "started_at_utc": "2026-08-17T19:10:17.367578+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:10:39.087569+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27007,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27007__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:10:29.951869+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3496993946,
+    "started_at_utc": "2026-08-17T19:10:29.951869+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:10:47.813331+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27008,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27008__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:10:41.064347+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 1716968725,
+    "started_at_utc": "2026-08-17T19:10:41.064347+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:10:57.367077+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27009,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27009__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:10:49.854919+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 167824760,
+    "started_at_utc": "2026-08-17T19:10:49.854919+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:11:09.180623+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27010,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27010__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:10:59.335702+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2593765198,
+    "started_at_utc": "2026-08-17T19:10:59.335702+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:11:19.694253+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27011,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27011__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:11:11.493729+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 1347119812,
+    "started_at_utc": "2026-08-17T19:11:11.493729+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:11:28.837171+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27012,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27012__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:11:21.656568+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3596288405,
+    "started_at_utc": "2026-08-17T19:11:21.655567+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:11:39.182672+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27013,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27013__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:11:31.217559+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2147440321,
+    "started_at_utc": "2026-08-17T19:11:31.216469+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:11:49.333954+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27014,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27014__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:11:42.204204+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 391807711,
+    "started_at_utc": "2026-08-17T19:11:42.204204+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:12:00.487746+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27015,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27015__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:11:51.313867+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2909534298,
+    "started_at_utc": "2026-08-17T19:11:51.313867+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:12:13.822581+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27016,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27016__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:12:03.348785+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 602723664,
+    "started_at_utc": "2026-08-17T19:12:03.348785+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:12:22.867097+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27017,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27017__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:12:15.900443+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 480109325,
+    "started_at_utc": "2026-08-17T19:12:15.900443+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:12:32.412057+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27018,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27018__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:12:24.955953+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2195399581,
+    "started_at_utc": "2026-08-17T19:12:24.955953+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:12:41.839021+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27019,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27019__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:12:34.491606+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 1816797672,
+    "started_at_utc": "2026-08-17T19:12:34.491606+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:12:50.330891+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27020,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27020__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:12:43.724275+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2822243415,
+    "started_at_utc": "2026-08-17T19:12:43.724275+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:13:00.735480+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27021,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27021__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:12:52.467165+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2118394301,
+    "started_at_utc": "2026-08-17T19:12:52.467165+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:13:12.770728+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27022,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27022__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:13:04.682721+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2881259409,
+    "started_at_utc": "2026-08-17T19:13:04.682721+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:13:22.773969+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27023,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27023__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:13:15.135915+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 102106115,
+    "started_at_utc": "2026-08-17T19:13:15.135915+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:13:31.720775+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27024,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27024__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:13:24.893056+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 38548623,
+    "started_at_utc": "2026-08-17T19:13:24.893056+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:13:40.404396+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27025,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27025__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:13:33.675602+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3804300950,
+    "started_at_utc": "2026-08-17T19:13:33.675602+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:13:51.067304+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27026,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27026__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:13:42.945926+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 2201589652,
+    "started_at_utc": "2026-08-17T19:13:42.945926+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:14:00.984002+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27027,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27027__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:13:53.851939+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 4150966731,
+    "started_at_utc": "2026-08-17T19:13:53.851939+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:14:09.685393+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27028,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27028__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:14:02.837133+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 4147631721,
+    "started_at_utc": "2026-08-17T19:14:02.836132+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:14:18.654319+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27029,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27029__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:14:11.558997+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3176326272,
+    "started_at_utc": "2026-08-17T19:14:11.557997+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  },
+  {
+    "config_hash": "251fb7fe535c",
+    "config_path": "config/frozen_experimental_spec_v1.yaml",
+    "experiment": "controlled_matched_exposure_divergence",
+    "finished_at_utc": "2026-08-17T19:14:26.766560+00:00",
+    "manifest": "manifest/manifest.json",
+    "master_seed": 27030,
+    "project_root": ".",
+    "run_id": "controlled_matched_exposure_divergence__seed-27030__cfg-251fb7fe535c",
+    "software": {
+      "captured_at_utc": "2026-08-17T19:14:20.526021+00:00",
+      "executable": "external/python.exe",
+      "git": {
+        "available": false,
+        "commit": null,
+        "dirty": null
+      },
+      "packages": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "yaml": "6.0.3"
+      },
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+    },
+    "stage_seed": 3323583202,
+    "started_at_utc": "2026-08-17T19:14:20.526021+00:00",
+    "status": "COMPLETED",
+    "summary_metrics": "metrics/summary_metrics.json"
+  }
+]

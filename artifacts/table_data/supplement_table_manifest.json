@@ -1,0 +1,34 @@
+{
+  "category": "home_and_kitchen",
+  "controlled_grid_included": true,
+  "generated_table_data": "artifacts/table_data/supplement_numerical_tables.json",
+  "generated_tex_files": [
+    "supp_complementarity.tex",
+    "supp_controlled_grid.tex",
+    "supp_k6_population.tex",
+    "supp_one_world_ranking_freq8.tex",
+    "supp_one_world_ranking_full.tex",
+    "supp_reference_history.tex",
+    "supp_reuse_results.tex",
+    "supp_self_influence.tex",
+    "supp_shape_results.tex",
+    "supp_strength_results.tex",
+    "supp_twin_results.tex"
+  ],
+  "n_tables": 10,
+  "phase": "2S",
+  "scope": "numerical_supplement_tables_only",
+  "source_paths": {
+    "complementarity": "../amazon_preprocess/stage7_complementarity/home_and_kitchen_stage7_summary.json",
+    "controlled_grid": "artifacts/figure_data/controlled_regime_auc.csv",
+    "population_audit": "../amazon_preprocess/stage9_k6_population_audit/home_and_kitchen_k6_population_audit_summary.json",
+    "ranking": "../amazon_preprocess/stage10_full_background/home_and_kitchen_stage10_ranking_full_background_summary.json",
+    "reference_history": "../amazon_preprocess/stage8_reference_history/home_and_kitchen_stage8_refhistory_summary.json",
+    "reuse": "../amazon_preprocess/stage4_reuse/home_and_kitchen_stage4_summary.json",
+    "self_influence": "../amazon_preprocess/stage11_self_influence/home_and_kitchen_stage11_self_influence_loo_summary.json",
+    "shape": "../amazon_preprocess/stage6_shape/home_and_kitchen_stage6_summary.json",
+    "strength": "../amazon_preprocess/stage9_strength_fixed/home_and_kitchen_stage9_strength_fixed_identity_summary.json",
+    "twins": "../amazon_preprocess/stage5_twins/home_and_kitchen_stage5_summary.json"
+  },
+  "static_spec_tables_deferred": true
+}

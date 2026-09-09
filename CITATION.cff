@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the accompanying paper."
+title: "Aggregate Reuse Reproducibility Artifact"
+type: software
+authors:
+  - family-names: "Guo"
+    given-names: "Qian"
+    affiliation: "University of Delaware"
+  - family-names: "Hu"
+    given-names: "Yidan"
+    affiliation: "Rochester Institute of Technology"
+  - family-names: "Zhang"
+    given-names: "Rui"
+    affiliation: "University of Delaware"
+repository-code: "PUBLIC_REPOSITORY_URL"
+version: "1.0.0"
+date-released: "2026-09-09"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Principled Detection of Coordinated Manipulation from Aggregate Distortion and Account Reuse"
+  authors:
+    - family-names: "Guo"
+      given-names: "Qian"
+    - family-names: "Hu"
+      given-names: "Yidan"
+    - family-names: "Zhang"
+      given-names: "Rui"
+  year: 2026

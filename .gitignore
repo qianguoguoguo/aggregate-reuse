@@ -1,0 +1,54 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+# Generated/local experiment intermediates only.
+/artifacts/results/
+/artifacts/per_seed/
+/artifacts/manifests/
+/artifacts/amazon_preprocess/
+
+# Raw Amazon datasets and large local intermediates.
+/Home_and_Kitchen.jsonl.gz
+/Electronics.jsonl.gz
+/amazon_preprocess/
+/phase3-inputs/
+
+# Compact release artifacts under these directories are intentionally tracked:
+# artifacts/verification/
+# artifacts/figure_data/
+# artifacts/figures/
+# artifacts/table_data/
+# artifacts/tables/
+# artifacts/electronics/
+# paper_results/expected/
+
+!artifacts/**/.gitkeep
+
+# Local environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+_smoke/
+
+# Raw Amazon datasets and large generated intermediates
+Home_and_Kitchen.jsonl.gz
+Electronics.jsonl.gz
+# Generated/local preprocessing only.
+# Do not match paper_results/expected/amazon_preprocess/.
+/amazon_preprocess/
+/artifacts/amazon_preprocess/
+
+# Local Phase-3 transfer bundles only.
+/phase3-inputs/
+
+# Patch / rollback / temporary packaging material
+*phase4*-backup*/
+*.bak
+PACKAGE_MANIFEST_SHA256.txt.tmp

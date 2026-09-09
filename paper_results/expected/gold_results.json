@@ -1,0 +1,1250 @@
+{
+  "known_provenance_gaps": [
+    "Auxiliary k=6 population audit values are reported in the supplement but have no dedicated compact result artifact in the trimmed ZIP.",
+    "Separate compact per-seed vectors are not retained for Stages 5/6/7/9/10/11; the final runners should emit them.",
+    "The reported 786,064 deduplicated reviewer-item records are not stored in the retained Stage-2 summary; final preprocessing must emit this count."
+  ],
+  "reported_prose_full_precision": {
+    "amazon_preprocessing": {
+      "eligible_items": 31247,
+      "removed_repeated_user_item_records_reported": 786064
+    },
+    "amazon_temporal_calibration": {
+      "plugin_centered_ci": [
+        0.12025135878522676,
+        0.12510664047144618
+      ],
+      "plugin_centered_mean": 0.12268886315849689,
+      "predictive_centered_ci": [
+        0.1015633437187101,
+        0.10640330714362015
+      ],
+      "predictive_centered_mean": 0.10399279718735407,
+      "predictive_holdout_1_mean": 0.09583661995080951,
+      "predictive_holdout_2_mean": 0.11214897442389861,
+      "selected_lambda": 20.0
+    },
+    "controlled_matched_exposure_boundary": {
+      "frequency_auc_range": [
+        0.48622666666666675,
+        0.5165618558333332
+      ],
+      "p_on_1_mean_signed_increment": 0.015832304559900767
+    },
+    "controlled_null": {
+      "centered_cumulative_slope": -3.366911106880552e-05,
+      "centered_mean_increment": -1.3454324936667668e-05,
+      "centered_mean_increment_ci": [
+        -0.00010078903844694363,
+        7.585081699209378e-05
+      ],
+      "raw_cumulative_slope": 0.04528975890380891,
+      "raw_mean_w1": 0.04530977444591939
+    },
+    "controlled_theory_principal": {
+      "Delta_hat": 0.004180429911454729,
+      "empirical_gap_slope": 0.004189711094633956,
+      "final_pair_misordering": 0.0,
+      "frequency_auc": 0.5126736666666667,
+      "observed_final_gap": 16.757696857379734,
+      "predicted_final_gap": 16.72171964581891,
+      "realized_R_exp": 1.0017681676024295,
+      "score_auc": 1.0
+    },
+    "fixed_attack_primary": {
+      "construction_error_range": [
+        5.551115123125783e-18,
+        1.0362081563168128e-16
+      ],
+      "mean_d_cf": 0.07635742143375306,
+      "mean_d_cf_ci": [
+        0.07367436801569235,
+        0.07904047485181376
+      ],
+      "positive_blocks": 0.6383166666666666
+    },
+    "ranking_additional": {
+      "predictive_freq_7_9_median_percentile": 0.9443711353133469
+    },
+    "supplement_only_claims_without_compact_source": {
+      "k6_population_audit": {
+        "exact_expected_mean_d_cf": {
+          "k6_feasible_population": 0.07637,
+          "k9_feasible_population": 0.00079
+        },
+        "k6_feasible_population": {
+          "mean_d_cf": 0.0761,
+          "roc_auc": 0.739
+        },
+        "k9_feasible_population": {
+          "mean_d_cf": -0.0004,
+          "roc_auc": 0.509
+        }
+      }
+    }
+  },
+  "schema_version": 1,
+  "source_files": {
+    "amazon_drift": {
+      "archive_path": "artifacts/amazon/paper/amazon_drift_figure_data.csv",
+      "sha256": "4f265f1345c625fa3a7a85b2e037bd6c01804b82547a340bfd233cbc5962cc3c",
+      "size_bytes": 259,
+      "snapshot": "figure_data/amazon_drift_figure_data.csv"
+    },
+    "amazon_stage10_full_background": {
+      "archive_path": "artifacts/amazon/stage10_ranking_full_background/home_and_kitchen_stage10_ranking_full_background_summary.json",
+      "sha256": "16a93dbf79b469abc4eb80035e9f2d15e2b1ca0e6559d8c54cdc1eab9c09ead7",
+      "size_bytes": 63237,
+      "snapshot": "source_snapshots/home_and_kitchen_stage10_ranking_full_background_summary.json"
+    },
+    "amazon_stage11": {
+      "archive_path": "artifacts/amazon/stage11_self_influence_loo/home_and_kitchen_stage11_self_influence_loo_summary.json",
+      "sha256": "170643eb2824f7cc20a71c20d7127c272d95dc1921237a5711a2b4fcfc747104",
+      "size_bytes": 2833,
+      "snapshot": "source_snapshots/home_and_kitchen_stage11_self_influence_loo_summary.json"
+    },
+    "amazon_stage2": {
+      "archive_path": "artifacts/amazon/stage2/home_and_kitchen_stage2_summary.json",
+      "sha256": "80cd4ff4075ea9782deda84ef2cc6c9c8554cf4c154c01374ae6c0d0f6d32de2",
+      "size_bytes": 3309,
+      "snapshot": "source_snapshots/home_and_kitchen_stage2_summary.json"
+    },
+    "amazon_stage2_manifest": {
+      "archive_path": "artifacts/amazon/stage2/home_and_kitchen_stage2_manifest.csv",
+      "note": "Large source not copied into compact gold package.",
+      "sha256": "6c693ca8056eff41ababe898fa29f4baf44440e902c8de9e144d397f5d957797",
+      "size_bytes": 9039264,
+      "snapshot": null
+    },
+    "amazon_stage3": {
+      "archive_path": "artifacts/amazon/stage3/home_and_kitchen_stage3_summary.json",
+      "sha256": "584054e60e4d481129a6e933c7064f51c155e5c9fbe6cfd545f6cc7ea9f24f43",
+      "size_bytes": 4308,
+      "snapshot": "source_snapshots/home_and_kitchen_stage3_summary.json"
+    },
+    "amazon_stage4": {
+      "archive_path": "artifacts/amazon/stage4/home_and_kitchen_stage4_summary.json",
+      "sha256": "77070c11321031e7fb3d1a115c8a4b12c12df83aeef314ff1f2fd296f4376d07",
+      "size_bytes": 6635,
+      "snapshot": "source_snapshots/home_and_kitchen_stage4_summary.json"
+    },
+    "amazon_stage4_seed_metrics": {
+      "archive_path": "artifacts/amazon/stage4/home_and_kitchen_stage4_seed_metrics.csv",
+      "sha256": "fe3c0da742799e13d3a5daf2aa5162d3fa6cd563402d57e0aba5b60a59084064",
+      "size_bytes": 60582,
+      "snapshot": "source_snapshots/home_and_kitchen_stage4_seed_metrics.csv"
+    },
+    "amazon_stage5": {
+      "archive_path": "artifacts/amazon/stage5/home_and_kitchen_stage5_summary.json",
+      "sha256": "515c2ed0d864bc45f386224cf2a07189231d1fabec1d34d1657ecdf75ffa7c30",
+      "size_bytes": 3421,
+      "snapshot": "source_snapshots/home_and_kitchen_stage5_summary.json"
+    },
+    "amazon_stage6": {
+      "archive_path": "artifacts/amazon/stage6/home_and_kitchen_stage6_summary.json",
+      "sha256": "34c40207f02df07b4684d7a04cb150a4f46b684a11c165294a3388d133148232",
+      "size_bytes": 3993,
+      "snapshot": "source_snapshots/home_and_kitchen_stage6_summary.json"
+    },
+    "amazon_stage7": {
+      "archive_path": "artifacts/amazon/stage7/home_and_kitchen_stage7_summary.json",
+      "sha256": "90e381eca33dde4898792c1b48fda32615c944bba4d7f7feed1fbb79ce04cc5b",
+      "size_bytes": 2802,
+      "snapshot": "source_snapshots/home_and_kitchen_stage7_summary.json"
+    },
+    "amazon_stage8": {
+      "archive_path": "artifacts/amazon/stage8_refhistory/home_and_kitchen_stage8_refhistory_summary.json",
+      "sha256": "21ce0d1480a3a6cce06d32d2cefa17b3485876eeef6d8d2c3795c49613a1a7dd",
+      "size_bytes": 3562,
+      "snapshot": "source_snapshots/home_and_kitchen_stage8_refhistory_summary.json"
+    },
+    "amazon_stage8_calibration": {
+      "archive_path": "artifacts/amazon/stage8_refhistory/reference_history_calibration.csv",
+      "sha256": "2e12010a4348c84410314164747ace86c6efad2f7e56bda4ef4a75a4b1faf9e7",
+      "size_bytes": 1101,
+      "snapshot": "source_snapshots/reference_history_calibration.csv"
+    },
+    "amazon_stage8_seed_metrics": {
+      "archive_path": "artifacts/amazon/stage8_refhistory/reference_history_seed_metrics.csv",
+      "sha256": "060ac392c569bf23671b3e4f86f712d81b71f8d4fc83af8d46bc0a888139c81c",
+      "size_bytes": 6326,
+      "snapshot": "source_snapshots/reference_history_seed_metrics.csv"
+    },
+    "amazon_stage9": {
+      "archive_path": "artifacts/amazon/stage9_strength_fixed_identity/home_and_kitchen_stage9_strength_fixed_identity_summary.json",
+      "sha256": "759a8ca033365b3bb4d5a6240b857b6375dd83c7db00a9098ee529e6b3f57b2b",
+      "size_bytes": 5566,
+      "snapshot": "source_snapshots/home_and_kitchen_stage9_strength_fixed_identity_summary.json"
+    },
+    "controlled_matched": {
+      "archive_path": "artifacts/summaries/controlled_matched_30seed_summary.json",
+      "sha256": "6443f60882bd8c73fe84be693780c35bf8c29dbbed4c096b28f6b6509a826330",
+      "size_bytes": 1715,
+      "snapshot": "source_snapshots/controlled_matched_30seed_summary.json"
+    },
+    "controlled_null": {
+      "archive_path": "artifacts/summaries/controlled_null_30seed_summary.json",
+      "sha256": "04e4ffbb3fd5a98266ef1082aa528855a49787cf58b60ba27f1491803228405d",
+      "size_bytes": 1337,
+      "snapshot": "source_snapshots/controlled_null_30seed_summary.json"
+    },
+    "controlled_sweep": {
+      "archive_path": "artifacts/summaries/controlled_sweep_30seed_summary.json",
+      "sha256": "72424d61f96a7e77ae636e65e4c7f40c0a3bb57d817bfde53d4633211584f615",
+      "size_bytes": 192286,
+      "snapshot": "source_snapshots/controlled_sweep_30seed_summary.json"
+    },
+    "fig1a": {
+      "archive_path": "artifacts/figure_data/controlled_null_trajectory.csv",
+      "sha256": "80c6fe147b1020986bdb1354bbf5fc15b17846342d340c761ea9fbded0582160",
+      "size_bytes": 348415,
+      "snapshot": "figure_data/controlled_null_trajectory.csv"
+    },
+    "fig1b": {
+      "archive_path": "artifacts/figure_data/controlled_theory_trajectory.csv",
+      "sha256": "5cb1cffeee2eb5b41c3f94243cbb9541ec42c32a2f50ca3403333050aa73c8b8",
+      "size_bytes": 383052,
+      "snapshot": "figure_data/controlled_theory_trajectory.csv"
+    },
+    "fig1c": {
+      "archive_path": "artifacts/figure_data/controlled_regime_auc.csv",
+      "sha256": "db530bc628efc8adc3d189e5a66e6e2f807ffdc3a25ebd8914b7652b79a2f14a",
+      "size_bytes": 37109,
+      "snapshot": "figure_data/controlled_regime_auc.csv"
+    },
+    "fig2": {
+      "archive_path": "artifacts/amazon/paper/amazon_main_figure_data.csv",
+      "sha256": "1594a242dfc72c0d484bb55ab2f4c15aa61bc3e24270eb7d949be5bff1df6560",
+      "size_bytes": 1701,
+      "snapshot": "figure_data/amazon_main_figure_data.csv"
+    },
+    "fig3": {
+      "archive_path": "artifacts/amazon/paper/fig3_amazon_robustness_figure_data.csv",
+      "sha256": "b2f03e8a5202555752144b98df045a7b3ae1eed981a6f6f7da54e2b0345cac9f",
+      "size_bytes": 1098,
+      "snapshot": "figure_data/fig3_amazon_robustness_figure_data.csv"
+    }
+  },
+  "source_repository": {
+    "filename": "aggregate_reuse_repro - Copy(1).zip",
+    "sha256": "4536cdfedcac1336ac59963344df6e55c9ebb75232be663161daf5427e51682a",
+    "size_bytes": 99914671
+  },
+  "source_supplement": {
+    "filename": "supplement.tex",
+    "sha256": "d2f4b5858fda048303384149ae7607cbd02c49d7bb0bb02b963d8e45de2314c7",
+    "size_bytes": 87967
+  },
+  "stage2_eligibility_audit": {
+    "k6_feasible_both_blocks": 21197,
+    "k9_feasible_both_blocks": 13268,
+    "source_columns": null,
+    "source_manifest_sha256": "6c693ca8056eff41ababe898fa29f4baf44440e902c8de9e144d397f5d957797"
+  },
+  "status": "FROZEN_STEP_1B",
+  "supplement_display_strings": {
+    "tab:supp-complementarity": [
+      [
+        "Evidence only",
+        "0.748",
+        "0.500",
+        "--"
+      ],
+      [
+        "Topology only",
+        "0.500",
+        "1.000",
+        "--"
+      ],
+      [
+        "Mixed",
+        "0.624",
+        "0.750",
+        "0.874"
+      ]
+    ],
+    "tab:supp-controlled-grid": {
+      "0.25": [
+        "1.000",
+        "0.725",
+        "0.363",
+        "0.254",
+        "0.228",
+        "0.226",
+        "0.225",
+        "0.236",
+        "0.254",
+        "0.261"
+      ],
+      "0.50": [
+        "1.000",
+        "1.000",
+        "0.995",
+        "0.825",
+        "0.498",
+        "0.295",
+        "0.188",
+        "0.137",
+        "0.118",
+        "0.103"
+      ],
+      "0.75": [
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "0.994",
+        "0.886",
+        "0.645",
+        "0.392",
+        "0.241",
+        "0.152"
+      ],
+      "1.00": [
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "0.994",
+        "0.926",
+        "0.742",
+        "0.507"
+      ],
+      "1.25": [
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "0.994",
+        "0.951"
+      ],
+      "1.50": [
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000"
+      ],
+      "2.00": [
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000",
+        "1.000"
+      ]
+    },
+    "tab:supp-k6-population": [
+      [
+        "Primary",
+        "21,197",
+        "0.0764",
+        "0.744"
+      ],
+      [
+        "Strength sensitivity",
+        "13,268",
+        "0.0006",
+        "0.514"
+      ]
+    ],
+    "tab:supp-one-world-ranking": {
+      "freq_eq_8": [
+        [
+          "Median background percentile",
+          "0.500",
+          "0.946",
+          "0.926"
+        ],
+        [
+          "25th--75th percentile",
+          "0.500--0.500",
+          "0.805--0.979",
+          "0.754--0.977"
+        ],
+        [
+          "Above background 95th percentile",
+          "0.000",
+          "0.456",
+          "0.426"
+        ],
+        [
+          "Above background 99th percentile",
+          "0.000",
+          "0.183",
+          "0.163"
+        ],
+        [
+          "Background accounts above planted median",
+          "0",
+          "5.1",
+          "7.0"
+        ]
+      ],
+      "full": [
+        [
+          "Median background percentile",
+          "0.99991",
+          "0.99996",
+          "0.99735"
+        ],
+        [
+          "Planted in top 1%",
+          "1.000",
+          "1.000",
+          "0.728"
+        ],
+        [
+          "Planted in top 5%",
+          "1.000",
+          "1.000",
+          "0.922"
+        ],
+        [
+          "Accounts inspected for 50%",
+          "907",
+          "808",
+          "5,144"
+        ],
+        [
+          "Inspection fraction for 50%",
+          "0.00054",
+          "0.00048",
+          "0.00307"
+        ]
+      ]
+    },
+    "tab:supp-reference-history": [
+      [
+        "60",
+        "20",
+        "0.618",
+        "0.382"
+      ],
+      [
+        "90",
+        "20",
+        "0.688",
+        "0.312"
+      ],
+      [
+        "120",
+        "20",
+        "0.744",
+        "0.256"
+      ]
+    ],
+    "tab:supp-reuse-results": [
+      [
+        "1",
+        "0.500",
+        "0.498"
+      ],
+      [
+        "2",
+        "0.562",
+        "0.998"
+      ],
+      [
+        "4",
+        "0.626",
+        "1.000"
+      ],
+      [
+        "8",
+        "0.706",
+        "1.000"
+      ],
+      [
+        "16",
+        "0.797",
+        "1.000"
+      ]
+    ],
+    "tab:supp-self-influence": [
+      [
+        "ROC--AUC",
+        "0.744",
+        "0.779"
+      ],
+      [
+        "Mean paired gap",
+        "0.611",
+        "0.639"
+      ],
+      [
+        "Misordering probability",
+        "0.256",
+        "0.221"
+      ]
+    ],
+    "tab:supp-shape-results": [
+      [
+        "Frequency",
+        "0.500",
+        "1.000"
+      ],
+      [
+        "Mean deviation",
+        "0.500",
+        "1.000"
+      ],
+      [
+        "Wasserstein--1",
+        "0.909",
+        "0.091"
+      ],
+      [
+        "Jensen--Shannon",
+        "0.967",
+        "0.033"
+      ]
+    ],
+    "tab:supp-strength-results": [
+      [
+        "3",
+        "-0.0625",
+        "0.385",
+        "0.182",
+        "0.818"
+      ],
+      [
+        "6",
+        "0.0006",
+        "0.534",
+        "0.514",
+        "0.486"
+      ],
+      [
+        "9",
+        "0.1604",
+        "0.677",
+        "0.838",
+        "0.162"
+      ]
+    ],
+    "tab:supp-twin-results": {
+      "Counterfactual ROC--AUC": "0.744",
+      "Frequency ROC--AUC": "0.500",
+      "Matched-pair misordering": "0.256",
+      "Mean paired score gap": "0.6109",
+      "Posterior-predictive ROC--AUC": "0.755",
+      "Raw-world ROC--AUC": "0.748"
+    }
+  },
+  "supplement_tables_full_precision": {
+    "tab:supp-complementarity": {
+      "evidence_only": {
+        "aggregate": 0.7477333333333332,
+        "coactivity": 0.5
+      },
+      "mixed": {
+        "aggregate": 0.6238666666666666,
+        "aggregate_ci": [
+          0.6200887126449106,
+          0.6276446206884225
+        ],
+        "coactivity": 0.7502276851851852,
+        "coactivity_ci": [
+          0.749004811986473,
+          0.7514505583838975
+        ],
+        "combined": 0.8737004111111111,
+        "combined_ci": [
+          0.870007930772748,
+          0.8773928914494742
+        ],
+        "gain": 0.1234727259259259
+      },
+      "topology_only": {
+        "aggregate": 0.5,
+        "coactivity": 1.0
+      }
+    },
+    "tab:supp-controlled-grid": [
+      {
+        "R_exp": 0.25,
+        "cells": [
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0063300935479489616,
+            "p_on": 0.1,
+            "score_auc_mean": 0.9999199999999998
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.004690402469113205,
+            "p_on": 0.2,
+            "score_auc_mean": 0.7245795000000002
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0035565607364847094,
+            "p_on": 0.3,
+            "score_auc_mean": 0.36322096083333333
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.002812970499293151,
+            "p_on": 0.4,
+            "score_auc_mean": 0.25367558333333334
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0023312044586258646,
+            "p_on": 0.5,
+            "score_auc_mean": 0.22838573333333334
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0019550454458948092,
+            "p_on": 0.6,
+            "score_auc_mean": 0.22550491166666664
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0018013033363144552,
+            "p_on": 0.7,
+            "score_auc_mean": 0.22485221666666666
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0015553572277414846,
+            "p_on": 0.8,
+            "score_auc_mean": 0.23622022916666668
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0013510974724380465,
+            "p_on": 0.9,
+            "score_auc_mean": 0.25397473666666665
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.001261319848782833,
+            "p_on": 1.0,
+            "score_auc_mean": 0.2608644833333333
+          }
+        ]
+      },
+      {
+        "R_exp": 0.5,
+        "cells": [
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.013155653913560607,
+            "p_on": 0.1,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.012586085490321855,
+            "p_on": 0.2,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.010809114613995661,
+            "p_on": 0.3,
+            "score_auc_mean": 0.9953088541666666
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.00929586298143293,
+            "p_on": 0.4,
+            "score_auc_mean": 0.8252065833333332
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.00802486769976332,
+            "p_on": 0.5,
+            "score_auc_mean": 0.49793646666666663
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0070654557980635285,
+            "p_on": 0.6,
+            "score_auc_mean": 0.2950315608333333
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.00617032536599187,
+            "p_on": 0.7,
+            "score_auc_mean": 0.1881294525
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0055685491625603305,
+            "p_on": 0.8,
+            "score_auc_mean": 0.13726195833333332
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.004924248571260136,
+            "p_on": 0.9,
+            "score_auc_mean": 0.11830749000000002
+          },
+          {
+            "frequency_auc_mean": 0.0,
+            "mean_signed_increment_mean": 0.0045827963111876435,
+            "p_on": 1.0,
+            "score_auc_mean": 0.10318856666666669
+          }
+        ]
+      },
+      {
+        "R_exp": 0.75,
+        "cells": [
+          {
+            "frequency_auc_mean": 0.001419916666666664,
+            "mean_signed_increment_mean": 0.018130635211882684,
+            "p_on": 0.1,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.0005519166666666627,
+            "mean_signed_increment_mean": 0.019894856360411512,
+            "p_on": 0.2,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.000507999999999992,
+            "mean_signed_increment_mean": 0.01890302125486775,
+            "p_on": 0.3,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.000476458333333327,
+            "mean_signed_increment_mean": 0.01721257890991042,
+            "p_on": 0.4,
+            "score_auc_mean": 0.9999916666666667
+          },
+          {
+            "frequency_auc_mean": 0.0005056666666666585,
+            "mean_signed_increment_mean": 0.015456669542621778,
+            "p_on": 0.5,
+            "score_auc_mean": 0.9942927333333333
+          },
+          {
+            "frequency_auc_mean": 0.0004810833333333267,
+            "mean_signed_increment_mean": 0.013872227784939977,
+            "p_on": 0.6,
+            "score_auc_mean": 0.8864125833333333
+          },
+          {
+            "frequency_auc_mean": 0.00046396416666666103,
+            "mean_signed_increment_mean": 0.012547010078353195,
+            "p_on": 0.7,
+            "score_auc_mean": 0.6447260133333333
+          },
+          {
+            "frequency_auc_mean": 0.00043573958333332157,
+            "mean_signed_increment_mean": 0.011365792589933857,
+            "p_on": 0.8,
+            "score_auc_mean": 0.3918817083333333
+          },
+          {
+            "frequency_auc_mean": 0.0005008537499999967,
+            "mean_signed_increment_mean": 0.010536509384581394,
+            "p_on": 0.9,
+            "score_auc_mean": 0.24076561666666668
+          },
+          {
+            "frequency_auc_mean": 0.00040499999999997943,
+            "mean_signed_increment_mean": 0.009587565067610944,
+            "p_on": 1.0,
+            "score_auc_mean": 0.15157868333333335
+          }
+        ]
+      },
+      {
+        "R_exp": 1.0,
+        "cells": [
+          {
+            "frequency_auc_mean": 0.5156203333333332,
+            "mean_signed_increment_mean": 0.021891011500553212,
+            "p_on": 0.1,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.48622666666666675,
+            "mean_signed_increment_mean": 0.026125294383048246,
+            "p_on": 0.2,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.5063581695833332,
+            "mean_signed_increment_mean": 0.02641793552716693,
+            "p_on": 0.3,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.5035939166666666,
+            "mean_signed_increment_mean": 0.025172737506938093,
+            "p_on": 0.4,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.5154239666666667,
+            "mean_signed_increment_mean": 0.023514384927411803,
+            "p_on": 0.5,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.50697349625,
+            "mean_signed_increment_mean": 0.02163685778263431,
+            "p_on": 0.6,
+            "score_auc_mean": 0.9999628399999998
+          },
+          {
+            "frequency_auc_mean": 0.4909981124999999,
+            "mean_signed_increment_mean": 0.019868593486672168,
+            "p_on": 0.7,
+            "score_auc_mean": 0.9939663449999999
+          },
+          {
+            "frequency_auc_mean": 0.510920875,
+            "mean_signed_increment_mean": 0.01838157394899741,
+            "p_on": 0.8,
+            "score_auc_mean": 0.9257850833333333
+          },
+          {
+            "frequency_auc_mean": 0.5165618558333332,
+            "mean_signed_increment_mean": 0.017094136900475728,
+            "p_on": 0.9,
+            "score_auc_mean": 0.7421844208333332
+          },
+          {
+            "frequency_auc_mean": 0.5049033333333334,
+            "mean_signed_increment_mean": 0.015832304559900767,
+            "p_on": 1.0,
+            "score_auc_mean": 0.5067470666666668
+          }
+        ]
+      },
+      {
+        "R_exp": 1.25,
+        "cells": [
+          {
+            "frequency_auc_mean": 0.9933770833333333,
+            "mean_signed_increment_mean": 0.024886888622593726,
+            "p_on": 0.1,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.9978639583333333,
+            "mean_signed_increment_mean": 0.031467252592248536,
+            "p_on": 0.2,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.9982671904166665,
+            "mean_signed_increment_mean": 0.033162007556833344,
+            "p_on": 0.3,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.9986842708333333,
+            "mean_signed_increment_mean": 0.03281000793560537,
+            "p_on": 0.4,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.9990398333333333,
+            "mean_signed_increment_mean": 0.031512487084638524,
+            "p_on": 0.5,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.99922789375,
+            "mean_signed_increment_mean": 0.02985661476664429,
+            "p_on": 0.6,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 0.9991275854166667,
+            "mean_signed_increment_mean": 0.027911944352361665,
+            "p_on": 0.7,
+            "score_auc_mean": 0.9999999175
+          },
+          {
+            "frequency_auc_mean": 0.999166875,
+            "mean_signed_increment_mean": 0.02612017262141549,
+            "p_on": 0.8,
+            "score_auc_mean": 0.9999155208333333
+          },
+          {
+            "frequency_auc_mean": 0.9991585033333334,
+            "mean_signed_increment_mean": 0.02445903598147117,
+            "p_on": 0.9,
+            "score_auc_mean": 0.9944576366666665
+          },
+          {
+            "frequency_auc_mean": 0.9991916666666666,
+            "mean_signed_increment_mean": 0.02300828352068427,
+            "p_on": 1.0,
+            "score_auc_mean": 0.9508144166666667
+          }
+        ]
+      },
+      {
+        "R_exp": 1.5,
+        "cells": [
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.027270164680743048,
+            "p_on": 0.1,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.03605337468670286,
+            "p_on": 0.2,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.03925847433829997,
+            "p_on": 0.3,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.039901061867629234,
+            "p_on": 0.4,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.03909710927678491,
+            "p_on": 0.5,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.03778651937322181,
+            "p_on": 0.6,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.03582196376149815,
+            "p_on": 0.7,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.034208815283259475,
+            "p_on": 0.8,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.03235553351586332,
+            "p_on": 0.9,
+            "score_auc_mean": 0.9999990508333334
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.030688641062848313,
+            "p_on": 1.0,
+            "score_auc_mean": 0.9999181666666667
+          }
+        ]
+      },
+      {
+        "R_exp": 2.0,
+        "cells": [
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.030841176686123815,
+            "p_on": 0.1,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.04355515894193095,
+            "p_on": 0.2,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.049722660245640135,
+            "p_on": 0.3,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.05240253806765927,
+            "p_on": 0.4,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.05319016380529386,
+            "p_on": 0.5,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.05297570790095348,
+            "p_on": 0.6,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.051719202365513035,
+            "p_on": 0.7,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.05022824220633671,
+            "p_on": 0.8,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.048683696053772936,
+            "p_on": 0.9,
+            "score_auc_mean": 1.0
+          },
+          {
+            "frequency_auc_mean": 1.0,
+            "mean_signed_increment_mean": 0.04665967422375371,
+            "p_on": 1.0,
+            "score_auc_mean": 1.0
+          }
+        ]
+      }
+    ],
+    "tab:supp-k6-population": {
+      "primary": {
+        "eligible_items": 21197,
+        "mean_d_cf": 0.07635742143375306,
+        "roc_auc": 0.7436000000000001
+      },
+      "strength_sensitivity": {
+        "eligible_items": 13268,
+        "mean_d_cf": 0.0005955420706549051,
+        "roc_auc": 0.514
+      }
+    },
+    "tab:supp-one-world-ranking": {
+      "freq_eq_8": {
+        "Frequency": {
+          "above_p95": 0.0,
+          "above_p99": 0.0,
+          "background_above_planted_median": 0.0,
+          "median_background_percentile": 0.5,
+          "q25": 0.5,
+          "q75": 0.5
+        },
+        "Predictive W1": {
+          "above_p95": 0.426,
+          "above_p99": 0.16266666666666663,
+          "background_above_planted_median": 7.033333333333333,
+          "median_background_percentile": 0.9257067529912529,
+          "q25": 0.7539067709454296,
+          "q75": 0.9774746599548364
+        },
+        "Raw W1": {
+          "above_p95": 0.45613333333333334,
+          "above_p99": 0.18253333333333333,
+          "background_above_planted_median": 5.066666666666666,
+          "median_background_percentile": 0.946319799185899,
+          "q25": 0.8049662451975564,
+          "q75": 0.9788596847146427
+        }
+      },
+      "full": {
+        "Frequency": {
+          "accounts_for_50pct": 906.7333333333333,
+          "fraction_for_50pct": 0.0005405066021618617,
+          "median_background_percentile": 0.9999066661407693,
+          "top_1pct_capture": 1.0,
+          "top_5pct_capture": 1.0
+        },
+        "Predictive W1": {
+          "accounts_for_50pct": 5143.766666666666,
+          "fraction_for_50pct": 0.0030662157159148606,
+          "median_background_percentile": 0.9973519971116672,
+          "top_1pct_capture": 0.7277777777777779,
+          "top_5pct_capture": 0.9217333333333333
+        },
+        "Raw W1": {
+          "accounts_for_50pct": 808.1333333333333,
+          "fraction_for_50pct": 0.000481730842051258,
+          "median_background_percentile": 0.9999649873592423,
+          "top_1pct_capture": 0.9998666666666668,
+          "top_5pct_capture": 1.0
+        }
+      }
+    },
+    "tab:supp-reference-history": [
+      {
+        "misordering": 0.38173333333333337,
+        "n_ref": 60,
+        "roc_auc": 0.6182666666666666,
+        "selected_lambda": 20.0
+      },
+      {
+        "misordering": 0.3121333333333333,
+        "n_ref": 90,
+        "roc_auc": 0.6878666666666666,
+        "selected_lambda": 20.0
+      },
+      {
+        "misordering": 0.2564,
+        "n_ref": 120,
+        "roc_auc": 0.7436000000000001,
+        "selected_lambda": 20.0
+      }
+    ],
+    "tab:supp-reuse-results": [
+      {
+        "evidence_auc": 0.4997748883437735,
+        "frequency_auc": 0.498294460959986,
+        "mean_d_cf": 0.07635742143375306,
+        "r": 1,
+        "reuse_law_abs_error": 5.551115123125783e-18
+      },
+      {
+        "evidence_auc": 0.5618403029634398,
+        "frequency_auc": 0.9982805231498607,
+        "mean_d_cf": 0.07635742143375306,
+        "r": 2,
+        "reuse_law_abs_error": 9.25185853854297e-18
+      },
+      {
+        "evidence_auc": 0.6263578185872887,
+        "frequency_auc": 0.9999996516747477,
+        "mean_d_cf": 0.07635742143375306,
+        "r": 4,
+        "reuse_law_abs_error": 2.4054832200211726e-17
+      },
+      {
+        "evidence_auc": 0.7055070825608974,
+        "frequency_auc": 1.0,
+        "mean_d_cf": 0.07635742143375306,
+        "r": 8,
+        "reuse_law_abs_error": 3.3306690738754695e-17
+      },
+      {
+        "evidence_auc": 0.7967051272867719,
+        "frequency_auc": 1.0,
+        "mean_d_cf": 0.07635742143375306,
+        "r": 16,
+        "reuse_law_abs_error": 1.0362081563168128e-16
+      }
+    ],
+    "tab:supp-self-influence": {
+      "loo_auc": 0.7794222222222221,
+      "loo_mean_gap": 0.6390165593266437,
+      "loo_misordering": 0.22057777777777776,
+      "original_auc": 0.7436000000000001,
+      "original_mean_gap": 0.6108593714700244,
+      "original_misordering": 0.2564,
+      "pearson": 0.9913080926009614,
+      "retained_gap_fraction": 1.0474933643657467,
+      "spearman": 0.9897203679152667
+    },
+    "tab:supp-shape-results": {
+      "frequency": {
+        "auc": 0.5,
+        "misordering": 1.0
+      },
+      "js": {
+        "auc": 0.9665333333333332,
+        "auc_ci": [
+          0.9621569732736909,
+          0.9709096933929756
+        ],
+        "mean_gap": 0.13928815195329194,
+        "misordering": 0.03346666666666667,
+        "positive_item_fraction": 0.7236833333333332,
+        "positive_pair_fraction": 0.9665333333333332
+      },
+      "mean_deviation": {
+        "auc": 0.5,
+        "misordering": 1.0
+      },
+      "w1": {
+        "auc": 0.9090666666666667,
+        "auc_ci": [
+          0.902094702182069,
+          0.9160386311512644
+        ],
+        "mean_gap": 0.2583175844730347,
+        "misordering": 0.09093333333333335,
+        "positive_item_fraction": 0.5574333333333333,
+        "positive_pair_fraction": 0.9090666666666667
+      }
+    },
+    "tab:supp-strength-results": [
+      {
+        "k": 3,
+        "mean_d_cf": -0.062491012629934076,
+        "mean_paired_gap": -0.4999281010394726,
+        "misordering": 0.8182666666666666,
+        "positive_blocks": 0.3853333333333334,
+        "roc_auc": 0.18173333333333333,
+        "roc_auc_ci": [
+          0.17281734138377983,
+          0.19064932528288683
+        ]
+      },
+      {
+        "k": 6,
+        "mean_d_cf": 0.0005955420706549051,
+        "mean_paired_gap": 0.004764336565239239,
+        "misordering": 0.48599999999999993,
+        "positive_blocks": 0.5338999999999999,
+        "roc_auc": 0.514,
+        "roc_auc_ci": [
+          0.5033604667362337,
+          0.5246395332637663
+        ]
+      },
+      {
+        "k": 9,
+        "mean_d_cf": 0.16044679871023498,
+        "mean_paired_gap": 1.2835743896818799,
+        "misordering": 0.16199999999999998,
+        "positive_blocks": 0.6766666666666666,
+        "roc_auc": 0.8380000000000003,
+        "roc_auc_ci": [
+          0.8293017952669691,
+          0.8466982047330315
+        ]
+      }
+    ],
+    "tab:supp-twin-results": {
+      "counterfactual_auc": 0.7436000000000001,
+      "counterfactual_auc_ci": [
+        0.7317846970101424,
+        0.7554153029898579
+      ],
+      "frequency_auc": 0.5,
+      "mean_paired_gap": 0.6108593714700244,
+      "misordering": 0.2564,
+      "predictive_world_auc": 0.7550266666666666,
+      "raw_world_auc": 0.7476922666666667
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "category": "home_and_kitchen",
+  "chronological_order": "(timestamp, source_line)",
+  "deduplication_policy": "For each (user_id, asin), keep the earliest usable review by timestamp; break exact timestamp ties by source line number.",
+  "final": {
+    "exported_reviews": 9374100,
+    "final_eligible_items": 31247,
+    "preliminary_eligible_items": 31247,
+    "preliminary_items_excluded_at_stage1": 0,
+    "rating_totals_first300": {
+      "1": 806098,
+      "2": 424821,
+      "3": 603706,
+      "4": 1145533,
+      "5": 6393942
+    },
+    "reviews_per_item": 300
+  },
+  "ingest": {
+    "candidate_valid_records": 30593001,
+    "noncandidate_records": 36816943,
+    "sqlite_changes": 30306776,
+    "total_lines": 67409944
+  },
+  "input_reviews": "external/Home_and_Kitchen.jsonl.gz",
+  "outputs": {
+    "corpus": "artifacts/amazon/stage1/home_and_kitchen_first300.items.jsonl.gz",
+    "excluded": "artifacts/amazon/stage1/home_and_kitchen_stage1_excluded.csv",
+    "manifest": "artifacts/amazon/stage1/home_and_kitchen_first300_manifest.csv"
+  },
+  "preliminary_counts_csv": "artifacts/amazon/home_and_kitchen_item_counts.csv",
+  "rating_policy": {
+    "accepted": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "other_nonstandard_ratings": "skipped and counted",
+    "rating_zero": "explicitly skipped"
+  },
+  "stage": "amazon_stage1_canonical_first300"
+}

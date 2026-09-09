@@ -1,0 +1,26 @@
+experiment: amazon_same_k6_population_audit
+status: final
+
+category: electronics
+
+k: 6
+
+population_rules:
+  k6_feasible_population: 6
+  k9_feasible_population: 9
+
+reference:
+  selected_lambda_from_stage3_freeze: true
+
+shared_data:
+  root: ../amazon_preprocess/electronics
+  roles_file: stage2/electronics_roles.items.jsonl.gz
+  reference_histograms: stage2/electronics_reference_histograms.csv
+  reference_freeze: stage3/electronics_reference_freeze.json
+  output_subdir: stage9_k6_population_audit
+
+provenance:
+  source: recompute_from_electronics
+  note: >
+    Population counts and expected d_cf must be derived from the Electronics
+    preprocessing artifacts and selected Electronics reference freeze.

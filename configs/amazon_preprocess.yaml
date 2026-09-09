@@ -1,0 +1,46 @@
+# Canonical Amazon preprocessing configuration.
+experiment: amazon_preprocess
+status: frozen
+
+category: home_and_kitchen
+
+# The raw Amazon file is assumed to be in the parent directory of this repo.
+dataset:
+  filename: Home_and_Kitchen.jsonl.gz
+  location: parent_of_repository
+
+eligibility:
+  minimum_usable_unique_user_reviews: 300
+
+rating_policy:
+  accepted_exact_stars: [1, 2, 3, 4, 5]
+  rating_zero: skip
+  other_nonstandard_ratings: skip_and_count
+
+deduplication:
+  key: [asin, user_id]
+  keep: earliest_usable_review
+  order: [timestamp, source_line]
+
+chronology:
+  first_n_reviews_per_item: 300
+  order: [timestamp, source_line]
+
+roles:
+  reference: [1, 120]
+  calibration_1: [121, 150]
+  calibration_2: [151, 180]
+  experimental_A: [181, 210]
+  experimental_B: [211, 240]
+  holdout_1: [241, 270]
+  holdout_2: [271, 300]
+
+feasibility_audit:
+  k_values: [6, 9]
+  both_experimental_blocks_required: true
+  donor_rule: non_five_star_reviews
+
+implementation:
+  scan_progress_every: 1000000
+  ingest_progress_every: 1000000
+  sqlite_batch_size: 50000

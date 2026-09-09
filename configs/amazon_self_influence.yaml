@@ -1,0 +1,46 @@
+stage: amazon_stage11_leave_one_out_self_influence
+category: home_and_kitchen
+
+seed_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+
+primary_modified_ratings_k: 6
+reuse_r: 8
+
+shared_data:
+  root: ../amazon_preprocess
+  roles_file: stage2/home_and_kitchen_roles.items.jsonl.gz
+  reference_histograms: stage2/home_and_kitchen_reference_histograms.csv
+  reference_freeze: stage3/home_and_kitchen_reference_freeze.json
+  attack_dir: stage4_attack
+  reuse_dir: stage4_reuse
+  output_subdir: stage11_self_influence

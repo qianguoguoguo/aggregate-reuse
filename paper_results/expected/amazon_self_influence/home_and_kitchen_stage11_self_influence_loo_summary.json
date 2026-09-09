@@ -1,0 +1,116 @@
+{
+  "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+  "metrics": {
+    "fraction_accounts_loo_score_positive": {
+      "ci_lower": 0.7693340888517803,
+      "ci_upper": 0.7895103555926639,
+      "mean": 0.7794222222222221,
+      "n": 30
+    },
+    "loo_matched_twin_auc": {
+      "ci_lower": 0.7693340888517803,
+      "ci_upper": 0.7895103555926639,
+      "mean": 0.7794222222222221,
+      "n": 30
+    },
+    "loo_mean_paired_gap": {
+      "ci_lower": 0.62006724024132,
+      "ci_upper": 0.6579658784119674,
+      "mean": 0.6390165593266437,
+      "n": 30
+    },
+    "loo_misordering_probability": {
+      "ci_lower": 0.21048964440733592,
+      "ci_upper": 0.2306659111482196,
+      "mean": 0.22057777777777776,
+      "n": 30
+    },
+    "mean_direct_self_component": {
+      "ci_lower": -0.03104494324007372,
+      "ci_upper": -0.0252694324731647,
+      "mean": -0.02815718785661921,
+      "n": 30
+    },
+    "median_direct_self_component": {
+      "ci_lower": -0.03118497323749637,
+      "ci_upper": -0.024677285352730564,
+      "mean": -0.027931129295113467,
+      "n": 30
+    },
+    "original_matched_twin_auc": {
+      "ci_lower": 0.7317846970101424,
+      "ci_upper": 0.7554153029898579,
+      "mean": 0.7436000000000001,
+      "n": 30
+    },
+    "original_mean_paired_gap": {
+      "ci_lower": 0.5893949441255388,
+      "ci_upper": 0.6323237988145101,
+      "mean": 0.6108593714700244,
+      "n": 30
+    },
+    "original_misordering_probability": {
+      "ci_lower": 0.24458469701014218,
+      "ci_upper": 0.26821530298985785,
+      "mean": 0.2564,
+      "n": 30
+    },
+    "pearson_original_vs_loo_score": {
+      "ci_lower": 0.9910163460805956,
+      "ci_upper": 0.9915998391213272,
+      "mean": 0.9913080926009614,
+      "n": 30
+    },
+    "retained_mean_gap_fraction": {
+      "ci_lower": 1.0412537386100547,
+      "ci_upper": 1.0537329901214387,
+      "mean": 1.0474933643657467,
+      "n": 30
+    },
+    "spearman_original_vs_loo_score": {
+      "ci_lower": 0.9891933719250016,
+      "ci_upper": 0.9902473639055319,
+      "mean": 0.9897203679152667,
+      "n": 30
+    }
+  },
+  "n_seeds": 30,
+  "population": {
+    "exposures_per_account": 8,
+    "n_exposures_per_seed": 12000,
+    "n_synthetic_accounts_per_seed": 1500
+  },
+  "seed_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "stage": "amazon_stage11_leave_one_out_self_influence"
+}

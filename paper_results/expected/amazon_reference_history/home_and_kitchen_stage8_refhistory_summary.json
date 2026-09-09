@@ -1,0 +1,107 @@
+{
+  "interpretation_guard": "Only the historical prefix used to estimate the item reference and its calibration-selected shrinkage parameter vary. Attack items, slots, replacement ratings, and r=8 identities are inherited unchanged.",
+  "invariants": {
+    "lambda_selected_from_calibration_only_for_each_reference_length": true,
+    "n_ref_120_reproduces_stage4_item_dcf": true,
+    "n_ref_120_reproduces_stage5_counterfactual_auc_when_stage5_seed_summaries_exist": true,
+    "stage4_attack_world_fixed": true,
+    "stage4_r8_identity_assignment_fixed": true
+  },
+  "metrics_by_reference_length": {
+    "120": {
+      "calibration_predictive_signed_mean": 0.049774518406760476,
+      "counterfactual_score_auc": {
+        "ci_lower": 0.7317846970101424,
+        "ci_upper": 0.7554153029898579,
+        "mean": 0.7436000000000001
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "mean_paired_score_gap": {
+        "ci_lower": 0.5893949441255388,
+        "ci_upper": 0.6323237988145101,
+        "mean": 0.6108593714700244
+      },
+      "paired_misordering_probability": {
+        "ci_lower": 0.24458469701014218,
+        "ci_upper": 0.26821530298985785,
+        "mean": 0.2564
+      },
+      "positive_pair_fraction": {
+        "ci_lower": 0.7317846970101424,
+        "ci_upper": 0.7554153029898579,
+        "mean": 0.7436000000000001
+      },
+      "selected_lambda": 20.0
+    },
+    "60": {
+      "calibration_predictive_signed_mean": 0.07125913441653103,
+      "counterfactual_score_auc": {
+        "ci_lower": 0.6066593727064108,
+        "ci_upper": 0.6298739606269225,
+        "mean": 0.6182666666666666
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.0328356238216736,
+        "ci_upper": 0.03825101999762419,
+        "mean": 0.035543321909648894
+      },
+      "mean_paired_score_gap": {
+        "ci_lower": 0.2626849905733888,
+        "ci_upper": 0.3060081599809935,
+        "mean": 0.28434657527719115
+      },
+      "paired_misordering_probability": {
+        "ci_lower": 0.37012603937307753,
+        "ci_upper": 0.3933406272935892,
+        "mean": 0.38173333333333337
+      },
+      "positive_pair_fraction": {
+        "ci_lower": 0.6066593727064108,
+        "ci_upper": 0.6298739606269225,
+        "mean": 0.6182666666666666
+      },
+      "selected_lambda": 20.0
+    },
+    "90": {
+      "calibration_predictive_signed_mean": 0.060733495010284994,
+      "counterfactual_score_auc": {
+        "ci_lower": 0.6765629073473468,
+        "ci_upper": 0.6991704259859864,
+        "mean": 0.6878666666666666
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.054936395995853635,
+        "ci_upper": 0.06063500528573264,
+        "mean": 0.057785700640793136
+      },
+      "mean_paired_score_gap": {
+        "ci_lower": 0.4394911679668291,
+        "ci_upper": 0.4850800422858611,
+        "mean": 0.4622856051263451
+      },
+      "paired_misordering_probability": {
+        "ci_lower": 0.3008295740140135,
+        "ci_upper": 0.32343709265265314,
+        "mean": 0.3121333333333333
+      },
+      "positive_pair_fraction": {
+        "ci_lower": 0.6765629073473468,
+        "ci_upper": 0.6991704259859864,
+        "mean": 0.6878666666666666
+      },
+      "selected_lambda": 20.0
+    }
+  },
+  "n_seeds": 30,
+  "reference_lengths": [
+    60,
+    90,
+    120
+  ],
+  "reuse_r": 8,
+  "stage": "amazon_stage8_reference_history_robustness"
+}

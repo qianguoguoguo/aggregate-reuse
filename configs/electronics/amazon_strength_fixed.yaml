@@ -1,0 +1,74 @@
+stage: amazon_stage9_intervention_strength_fixed_identity
+category: electronics
+
+seed_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+
+# k = number of modified ratings per treated 30-review block.
+strength_grid_k:
+  - 3
+  - 6
+  - 9
+
+# Fixed identity/exposure construction for every k.
+fixed_item_degree: 9
+reuse_r: 8
+n_items_per_seed: 2000
+
+# Common population: both candidate experimental blocks must support k=9.
+feasibility_rule: >
+  Both experimental_A and experimental_B must contain at least 9
+  non-five-star ratings.
+
+nested_slot_rule: >
+  Choose 9 non-five-star donor positions once per item/seed in random order;
+  k=3,6,9 use the first 3,6,9 donors respectively.
+
+fixed_identity_rule: >
+  Build one exact-regular account-item incidence with item degree 9 and
+  account degree r=8. Reuse this same identity population and incidence for
+  all k. Map donor ranks 0..8 to the nine incident accounts using a balanced
+  rank construction. At k, only donor ranks <k are modified, but all nine
+  fixed synthetic identities remain exposed to the item's aggregate evidence.
+
+attack_seed_offset: 900000
+incidence_seed_multiplier: 100003
+incidence_seed_offset: 9091
+
+reference_freeze: ../amazon_preprocess/electronics/stage3/electronics_reference_freeze.json
+
+shared_data:
+  root: ../amazon_preprocess/electronics
+  roles_file: stage2/electronics_roles.items.jsonl.gz
+  reference_histograms: stage2/electronics_reference_histograms.csv
+  reference_freeze: stage3/electronics_reference_freeze.json
+  output_subdir: stage9_strength_fixed

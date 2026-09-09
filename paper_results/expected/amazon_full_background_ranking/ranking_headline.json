@@ -1,0 +1,17 @@
+{
+  "freq_eq_8_predictive": {
+    "above_p95": 0.426,
+    "above_p99": 0.16266666666666663,
+    "background_above_planted_median": 7.033333333333333,
+    "median_background_percentile": 0.9257067529912529,
+    "q25": 0.7539067709454296,
+    "q75": 0.9774746599548364
+  },
+  "full_predictive": {
+    "burden_50_accounts": 5143.766666666666,
+    "burden_50_fraction": 0.0030662157159148606,
+    "median_background_percentile": 0.9973519971116672,
+    "top_1pct_capture": 0.7277777777777779,
+    "top_5pct_capture": 0.9217333333333333
+  }
+}

@@ -1,0 +1,45 @@
+stage: amazon_stage7_complementarity
+category: home_and_kitchen
+seed_ids:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+- 20
+- 21
+- 22
+- 23
+- 24
+- 25
+- 26
+- 27
+- 28
+- 29
+reuse_r: 8
+item_degree_m: 6
+n_items: 2000
+n_accounts: 1500
+team_size: 6
+team_repetitions: 8
+swap_success_multiplier: 20
+
+shared_data:
+  root: ../amazon_preprocess
+  attack_dir: stage4_attack
+  output_subdir: stage7_complementarity

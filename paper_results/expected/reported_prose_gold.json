@@ -1,0 +1,79 @@
+{
+  "amazon_preprocessing": {
+    "eligible_items": 31247,
+    "removed_repeated_user_item_records_reported": 786064
+  },
+  "amazon_temporal_calibration": {
+    "plugin_centered_ci": [
+      0.12025135878522676,
+      0.12510664047144618
+    ],
+    "plugin_centered_mean": 0.12268886315849689,
+    "predictive_centered_ci": [
+      0.1015633437187101,
+      0.10640330714362015
+    ],
+    "predictive_centered_mean": 0.10399279718735407,
+    "predictive_holdout_1_mean": 0.09583661995080951,
+    "predictive_holdout_2_mean": 0.11214897442389861,
+    "selected_lambda": 20.0
+  },
+  "controlled_matched_exposure_boundary": {
+    "frequency_auc_range": [
+      0.48622666666666675,
+      0.5165618558333332
+    ],
+    "p_on_1_mean_signed_increment": 0.015832304559900767
+  },
+  "controlled_null": {
+    "centered_cumulative_slope": -3.366911106880552e-05,
+    "centered_mean_increment": -1.3454324936667668e-05,
+    "centered_mean_increment_ci": [
+      -0.00010078903844694363,
+      7.585081699209378e-05
+    ],
+    "raw_cumulative_slope": 0.04528975890380891,
+    "raw_mean_w1": 0.04530977444591939
+  },
+  "controlled_theory_principal": {
+    "Delta_hat": 0.004180429911454729,
+    "empirical_gap_slope": 0.004189711094633956,
+    "final_pair_misordering": 0.0,
+    "frequency_auc": 0.5126736666666667,
+    "observed_final_gap": 16.757696857379734,
+    "predicted_final_gap": 16.72171964581891,
+    "realized_R_exp": 1.0017681676024295,
+    "score_auc": 1.0
+  },
+  "fixed_attack_primary": {
+    "construction_error_range": [
+      5.551115123125783e-18,
+      1.0362081563168128e-16
+    ],
+    "mean_d_cf": 0.07635742143375306,
+    "mean_d_cf_ci": [
+      0.07367436801569235,
+      0.07904047485181376
+    ],
+    "positive_blocks": 0.6383166666666666
+  },
+  "ranking_additional": {
+    "predictive_freq_7_9_median_percentile": 0.9443711353133469
+  },
+  "supplement_only_claims_without_compact_source": {
+    "k6_population_audit": {
+      "exact_expected_mean_d_cf": {
+        "k6_feasible_population": 0.07637,
+        "k9_feasible_population": 0.00079
+      },
+      "k6_feasible_population": {
+        "mean_d_cf": 0.0761,
+        "roc_auc": 0.739
+      },
+      "k9_feasible_population": {
+        "mean_d_cf": -0.0004,
+        "roc_auc": 0.509
+      }
+    }
+  }
+}

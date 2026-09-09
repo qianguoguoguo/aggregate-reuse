@@ -1,0 +1,56 @@
+{
+  "artifact": "aggregate-reuse",
+
+  "artifact_version": "1.0.0",
+
+  "authors": [
+    "Qian Guo",
+    "Yidan Hu",
+    "Rui Zhang"
+  ],
+
+  "clean_room_fixes": [
+    "Added scikit-learn==1.9.0 to frozen requirements/environment gates.",
+    "Numerical-table verifier accepts expected fragments as subset when valid static fragments also coexist."
+  ],
+
+  "expected_amazon_shared_location": "../amazon_preprocess/",
+
+  "large_amazon_intermediates_included": false,
+
+  "paper": "Principled Detection of Coordinated Manipulation from Aggregate Distortion and Account Reuse",
+
+  "paper_version": "arXiv v1",
+
+  "paper_url": null,
+
+  "raw_data_included": false,
+
+  "release_status": "validated public release for arXiv v1",
+
+  "repository": "PUBLIC_REPOSITORY_URL",
+
+  "scientific_environment": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.1",
+    "python": "3.12.10",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0"
+  },
+
+  "source_snapshot": {
+    "tag": "artifact-v1.0",
+    "commit": "4913a950859d38fe647a744e8dfe272eb34434f0"
+  },
+
+  "scientific_content_changed": false,
+
+  "public_packaging_changes": [
+    "Added public authorship and citation metadata.",
+    "Removed the standalone conference-submission supplement.",
+    "Added the appendix source used by the arXiv manuscript.",
+    "Updated reader-facing documentation and repository links.",
+    "Added an approved software license.",
+    "Regenerated the package-wide SHA-256 manifest."
+  ]
+}

@@ -1,0 +1,2732 @@
+[
+  {
+    "seed": 0,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.74,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9917946666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7453333333333333,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0110882680057969,
+          "repeated_account_pairs": 325,
+          "unique_account_pairs": 29671
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0098290022889458,
+          "repeated_account_pairs": 290,
+          "unique_account_pairs": 29708
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6226666666666667,
+        "coactivity_auc": 0.753463,
+        "combined_auc": 0.8738855555555556,
+        "combined_minus_best_single": 0.12042255555555559,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15432214195798016,
+            "std": 0.5409466496119205
+          },
+          "coactivity": {
+            "mean": 9.066666666666666,
+            "std": 14.982730799898336
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 0,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "e6c1e331e091a817f66b33f292874fcd8a769bc71e7390eb90d30b0bf6aee327",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241666,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241723,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 1,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.716,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9666106666666666
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7313333333333333,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0095571409341768,
+          "repeated_account_pairs": 283,
+          "unique_account_pairs": 29716
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.010339137170377,
+          "repeated_account_pairs": 306,
+          "unique_account_pairs": 29693
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6156666666666667,
+        "coactivity_auc": 0.7453973888888888,
+        "combined_auc": 0.8662592222222222,
+        "combined_minus_best_single": 0.12086183333333334,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.14755453993349246,
+            "std": 0.5548983974936251
+          },
+          "coactivity": {
+            "mean": 9.041666666666666,
+            "std": 14.99691959111011
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 1,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "d2a6af13ef9520fb43cb4748fb4123dcd5b503fb6643a89b4e3aeb95a816bc2c",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241612,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241673,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 2,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.688,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9532826666666666
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7153333333333334,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0092514718250631,
+          "repeated_account_pairs": 270,
+          "unique_account_pairs": 29725
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0093533409595585,
+          "repeated_account_pairs": 278,
+          "unique_account_pairs": 29722
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6076666666666667,
+        "coactivity_auc": 0.7503505,
+        "combined_auc": 0.8577998888888889,
+        "combined_minus_best_single": 0.10744938888888889,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1263442741623309,
+            "std": 0.5191060054562753
+          },
+          "coactivity": {
+            "mean": 9.026,
+            "std": 15.00505439288153
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 2,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "995a0e15147a97cf6b3e60c3fc7dcb1533e16598b92a731e212ffcc80050bafd",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241671,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241732,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 3,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.732,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9797333333333333
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.74,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0097610232245036,
+          "repeated_account_pairs": 290,
+          "unique_account_pairs": 29710
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0102030508132134,
+          "repeated_account_pairs": 301,
+          "unique_account_pairs": 29697
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.62,
+        "coactivity_auc": 0.7490565555555555,
+        "combined_auc": 0.8695685555555556,
+        "combined_minus_best_single": 0.12051200000000006,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15016798409244006,
+            "std": 0.5253906647001056
+          },
+          "coactivity": {
+            "mean": 9.044333333333332,
+            "std": 14.995133695821307
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 3,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "5f4fbb438e098d7766a856b00cd993ed76b8fe654b56bbd5fe62662277f6e3ed",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241649,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241660,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 4,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.724,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.963944
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7166666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.010611419909045,
+          "repeated_account_pairs": 314,
+          "unique_account_pairs": 29685
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0094891984655765,
+          "repeated_account_pairs": 282,
+          "unique_account_pairs": 29718
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6083333333333333,
+        "coactivity_auc": 0.7533825555555556,
+        "combined_auc": 0.858727,
+        "combined_minus_best_single": 0.10534444444444446,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.13093638019952272,
+            "std": 0.5214821451540448
+          },
+          "coactivity": {
+            "mean": 9.054,
+            "std": 14.990010584830598
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 4,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "08dd949cbdb1c4e3b3d3266926dbe48f624fcc8a4354b44ecb035c37e4106d33",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241723,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241629,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 5,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.76,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9706426666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7646666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0109519797809603,
+          "repeated_account_pairs": 321,
+          "unique_account_pairs": 29675
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0101010101010102,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29700
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6323333333333333,
+        "coactivity_auc": 0.7527153888888889,
+        "combined_auc": 0.8816404444444444,
+        "combined_minus_best_single": 0.12892505555555556,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.16710673160450254,
+            "std": 0.554517258722602
+          },
+          "coactivity": {
+            "mean": 9.066666666666666,
+            "std": 14.982641808291204
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 5,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "23d700135575dfbd5c83cfde34a984fed7d849ea6140ccbc0d2c6bfe867de354",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241733,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241667,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 6,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.768,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.976
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7553333333333333,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0103051121438675,
+          "repeated_account_pairs": 303,
+          "unique_account_pairs": 29694
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0102710894089915,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29695
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6276666666666667,
+        "coactivity_auc": 0.7498550555555555,
+        "combined_auc": 0.8783483333333333,
+        "combined_minus_best_single": 0.12849327777777775,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15181222457426932,
+            "std": 0.518381122334119
+          },
+          "coactivity": {
+            "mean": 9.055666666666667,
+            "std": 14.98885923685396
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 6,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "86f006f6dbdd0a64a22efa5ddc7f1cd635c52aa2096589a99f6d94e348be2512",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241708,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241672,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 7,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.764,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9529866666666666
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.762,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0096250925489667,
+          "repeated_account_pairs": 286,
+          "unique_account_pairs": 29714
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0103731644887513,
+          "repeated_account_pairs": 306,
+          "unique_account_pairs": 29692
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.631,
+        "coactivity_auc": 0.7471426111111111,
+        "combined_auc": 0.8803588888888889,
+        "combined_minus_best_single": 0.13321627777777778,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15894693255974862,
+            "std": 0.5333060051576264
+          },
+          "coactivity": {
+            "mean": 9.043333333333333,
+            "std": 14.995203307131993
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 7,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "b7b6848423d687d84a8d07817fe8b2e0daa74eec1616a79e9b05c2ef7184685b",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241660,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241647,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 8,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.78,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.984
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.78,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0112245929821013,
+          "repeated_account_pairs": 331,
+          "unique_account_pairs": 29667
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0100670011110737,
+          "repeated_account_pairs": 296,
+          "unique_account_pairs": 29701
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.64,
+        "coactivity_auc": 0.7555766666666667,
+        "combined_auc": 0.8907831111111111,
+        "combined_minus_best_single": 0.1352064444444444,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1852706179533838,
+            "std": 0.5729744166771614
+          },
+          "coactivity": {
+            "mean": 9.071666666666667,
+            "std": 14.979804089358298
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 8,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "1645ad95fffcbaaf8f94ba227fd596b930056ef3ac236f5ed458f8eacf694b6b",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241637,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241647,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 9,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.776,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9837386666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.76,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0101690349518486,
+          "repeated_account_pairs": 302,
+          "unique_account_pairs": 29698
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0102370689655173,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29696
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.63,
+        "coactivity_auc": 0.750523,
+        "combined_auc": 0.8794204444444444,
+        "combined_minus_best_single": 0.1288974444444444,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1660243966465803,
+            "std": 0.551776537364412
+          },
+          "coactivity": {
+            "mean": 9.052666666666667,
+            "std": 14.990393353374316
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 9,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "8c91d53e1fa59d7c5c05b126d5f74527d0a264ab0e1f41d1d3ec529f16d64191",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241674,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241713,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 10,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.756,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.971696
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7506666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.010339137170377,
+          "repeated_account_pairs": 306,
+          "unique_account_pairs": 29693
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0108157282927321,
+          "repeated_account_pairs": 319,
+          "unique_account_pairs": 29679
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6253333333333333,
+        "coactivity_auc": 0.7488464444444445,
+        "combined_auc": 0.8748272222222222,
+        "combined_minus_best_single": 0.12598077777777772,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15298465746472695,
+            "std": 0.5509502044310134
+          },
+          "coactivity": {
+            "mean": 9.061666666666667,
+            "std": 14.985521809029171
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 10,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "0c38945661ccd4eb0be69f9fc79f2cafb76d8e94a0daaa9265416f4bb9850934",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241642,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241662,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 11,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.808,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.979976
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.802,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0102370689655173,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29696
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.00965907178676,
+          "repeated_account_pairs": 286,
+          "unique_account_pairs": 29713
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.651,
+        "coactivity_auc": 0.752229,
+        "combined_auc": 0.9000352222222222,
+        "combined_minus_best_single": 0.14780622222222217,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.18978553757738137,
+            "std": 0.5627921124227888
+          },
+          "coactivity": {
+            "mean": 9.048333333333334,
+            "std": 14.992787062080518
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 11,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "c21565ab259766109fbad2ce0c51e5c9061a832b8f039bd88de567c7dccbdfd8",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241714,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241611,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 12,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.736,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9706346666666666
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7266666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.010611419909045,
+          "repeated_account_pairs": 312,
+          "unique_account_pairs": 29685
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.00965907178676,
+          "repeated_account_pairs": 286,
+          "unique_account_pairs": 29713
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6133333333333333,
+        "coactivity_auc": 0.7534606666666667,
+        "combined_auc": 0.8629054444444444,
+        "combined_minus_best_single": 0.10944477777777772,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.14175343594456283,
+            "std": 0.5298229051634624
+          },
+          "coactivity": {
+            "mean": 9.055666666666667,
+            "std": 14.988725803824094
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 12,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "2000cdf3e6201d6269f26826102349cb4709bdcc762a2a2a521ed0f03d1301f9",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241612,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241725,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 13,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.724,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9506453333333333
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7273333333333334,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101010101010102,
+          "repeated_account_pairs": 298,
+          "unique_account_pairs": 29700
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0103051121438675,
+          "repeated_account_pairs": 305,
+          "unique_account_pairs": 29694
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6136666666666667,
+        "coactivity_auc": 0.7493707222222222,
+        "combined_auc": 0.8647907777777778,
+        "combined_minus_best_single": 0.11542005555555557,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.13757552159057315,
+            "std": 0.5284183820599665
+          },
+          "coactivity": {
+            "mean": 9.052,
+            "std": 14.990818167576224
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 13,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "9d39ffd155ab7fd116dba14b81bb290a47241c4ade8fcd1db0d440ce3c2e228c",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241710,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241689,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 14,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.728,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9557413333333333
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7406666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0100329944111508,
+          "repeated_account_pairs": 296,
+          "unique_account_pairs": 29702
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0102030508132134,
+          "repeated_account_pairs": 302,
+          "unique_account_pairs": 29697
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6203333333333333,
+        "coactivity_auc": 0.7500180555555556,
+        "combined_auc": 0.868587,
+        "combined_minus_best_single": 0.11856894444444444,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1386914351703685,
+            "std": 0.5204333254306548
+          },
+          "coactivity": {
+            "mean": 9.049666666666667,
+            "std": 14.992260221712918
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 14,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "c67a3f67383634c1d19186c12a6834aeb361ea0ebee9c21ef575a96a6cb0eae5",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241707,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241643,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 15,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.736,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9743146666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.756,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.008979921299566,
+          "repeated_account_pairs": 265,
+          "unique_account_pairs": 29733
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0095231685567183,
+          "repeated_account_pairs": 283,
+          "unique_account_pairs": 29717
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.628,
+        "coactivity_auc": 0.7469854444444445,
+        "combined_auc": 0.8764787777777778,
+        "combined_minus_best_single": 0.12949333333333335,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15916613837047336,
+            "std": 0.5621778555233518
+          },
+          "coactivity": {
+            "mean": 9.022333333333334,
+            "std": 15.007115019957107
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 15,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "28993c11fcb5bead56ad7e49a420a4142473930e0b813f93c0669f8d75341534",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241678,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241680,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 16,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.736,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9776426666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.764,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0093533409595585,
+          "repeated_account_pairs": 277,
+          "unique_account_pairs": 29722
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0110882680057969,
+          "repeated_account_pairs": 328,
+          "unique_account_pairs": 29671
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.632,
+        "coactivity_auc": 0.7432092777777778,
+        "combined_auc": 0.8816486666666666,
+        "combined_minus_best_single": 0.13843938888888885,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15562809502473463,
+            "std": 0.542024479225437
+          },
+          "coactivity": {
+            "mean": 9.045,
+            "std": 14.994942758588085
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 16,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "b543c2889d8a364a0d75b517e05287881fb16db5f42ef92300eda421cd408090",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241637,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241638,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 17,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.752,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.975376
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7566666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0105773765411306,
+          "repeated_account_pairs": 312,
+          "unique_account_pairs": 29686
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.00993098804915,
+          "repeated_account_pairs": 295,
+          "unique_account_pairs": 29705
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6283333333333333,
+        "coactivity_auc": 0.7520745555555556,
+        "combined_auc": 0.8783495555555556,
+        "combined_minus_best_single": 0.12627500000000003,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15839027768887756,
+            "std": 0.5372038910944164
+          },
+          "coactivity": {
+            "mean": 9.057666666666666,
+            "std": 14.987695216039352
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 17,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "d8ad716247b9b260d6e7a9b557c859f2598db45a4989149d4be2088bb5f3ba46",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241570,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241766,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 18,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.704,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9384826666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.72,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.010611419909045,
+          "repeated_account_pairs": 313,
+          "unique_account_pairs": 29685
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0112245929821013,
+          "repeated_account_pairs": 331,
+          "unique_account_pairs": 29667
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.61,
+        "coactivity_auc": 0.7468841666666667,
+        "combined_auc": 0.8604763333333333,
+        "combined_minus_best_single": 0.1135921666666666,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.13228055438715206,
+            "std": 0.5186867400978258
+          },
+          "coactivity": {
+            "mean": 9.071,
+            "std": 14.980686199236672
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 18,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "c6c34d9c1845c8193060d5a7fffcfb3fe6c1b04aaca4eb7b1bdb73b41f7e431e",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241696,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241609,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 19,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.708,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.974552
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7093333333333334,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0102710894089915,
+          "repeated_account_pairs": 304,
+          "unique_account_pairs": 29695
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0110541925047183,
+          "repeated_account_pairs": 326,
+          "unique_account_pairs": 29672
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6046666666666667,
+        "coactivity_auc": 0.7475216666666666,
+        "combined_auc": 0.8555523333333334,
+        "combined_minus_best_single": 0.10803066666666672,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1360958569935047,
+            "std": 0.5471744102865158
+          },
+          "coactivity": {
+            "mean": 9.062666666666667,
+            "std": 14.985339709937248
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 19,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "64706dcc2ab35cd0aaa6c2379b626853e7f0009638dad769dfd6a16181faa757",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241664,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241776,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 20,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.712,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.950408
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7386666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101010101010102,
+          "repeated_account_pairs": 298,
+          "unique_account_pairs": 29700
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101010101010102,
+          "repeated_account_pairs": 298,
+          "unique_account_pairs": 29700
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6193333333333333,
+        "coactivity_auc": 0.7490954444444444,
+        "combined_auc": 0.8686728888888889,
+        "combined_minus_best_single": 0.11957744444444451,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.14693066396308255,
+            "std": 0.5306987151941666
+          },
+          "coactivity": {
+            "mean": 9.05,
+            "std": 14.991714378282428
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 20,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "f5806d5fc0779cadbd48eaa7e615cd0cf4a223c7a60b9e9604e1e4989acd581b",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241678,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241659,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 21,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.712,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9664
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.726,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101350213811913,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29699
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101010101010102,
+          "repeated_account_pairs": 296,
+          "unique_account_pairs": 29700
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.613,
+        "coactivity_auc": 0.7500802222222223,
+        "combined_auc": 0.8628006666666667,
+        "combined_minus_best_single": 0.1127204444444444,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.14663091900525174,
+            "std": 0.5476026193265044
+          },
+          "coactivity": {
+            "mean": 9.050666666666666,
+            "std": 14.991578732371348
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 21,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "424d6aab5d27a2beccb22ed550ba1284f084ce57b8a57e96bae41de0adc83da8",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241698,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241653,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 22,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.724,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9730213333333333
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7453333333333333,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0094891984655765,
+          "repeated_account_pairs": 279,
+          "unique_account_pairs": 29718
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101350213811913,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29699
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6226666666666667,
+        "coactivity_auc": 0.7466294444444445,
+        "combined_auc": 0.8721375555555556,
+        "combined_minus_best_single": 0.12550811111111115,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.14236710687539436,
+            "std": 0.5297726246943716
+          },
+          "coactivity": {
+            "mean": 9.038333333333334,
+            "std": 14.998395377135813
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 22,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "972d804efac22e959ce67067b77e2d80ea58f4dcec72a4a8178a99dba64344b0",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241527,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241622,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 23,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.768,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9679946666666667
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.762,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0102030508132134,
+          "repeated_account_pairs": 303,
+          "unique_account_pairs": 29697
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0100670011110737,
+          "repeated_account_pairs": 299,
+          "unique_account_pairs": 29701
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.631,
+        "coactivity_auc": 0.7509147222222222,
+        "combined_auc": 0.8799681111111111,
+        "combined_minus_best_single": 0.12905338888888884,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15775919218612366,
+            "std": 0.549996111576334
+          },
+          "coactivity": {
+            "mean": 9.051666666666666,
+            "std": 14.990830438045192
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 23,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "1e9974b35070a6b4452ddd03ac0cfd81d64a10258a0b3770545e39bd77586b00",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241691,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241758,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 24,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.756,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9785146666666666
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7546666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0100670011110737,
+          "repeated_account_pairs": 299,
+          "unique_account_pairs": 29701
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0092514718250631,
+          "repeated_account_pairs": 274,
+          "unique_account_pairs": 29725
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6273333333333333,
+        "coactivity_auc": 0.7525042777777777,
+        "combined_auc": 0.877631,
+        "combined_minus_best_single": 0.12512672222222232,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1529329360253351,
+            "std": 0.5422891966866104
+          },
+          "coactivity": {
+            "mean": 9.041,
+            "std": 14.997065901924506
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 24,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "100858967310b2ce6b5c95d4fc52144d9a344e5026d0719dfc8c6bbfa1ba14d5",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241708,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241679,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 25,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.744,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.974416
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7586666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0094552306605202,
+          "repeated_account_pairs": 280,
+          "unique_account_pairs": 29719
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0101350213811913,
+          "repeated_account_pairs": 300,
+          "unique_account_pairs": 29699
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6293333333333333,
+        "coactivity_auc": 0.7468342222222222,
+        "combined_auc": 0.8792314444444445,
+        "combined_minus_best_single": 0.13239722222222228,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1610960170901876,
+            "std": 0.5450450365229581
+          },
+          "coactivity": {
+            "mean": 9.037666666666667,
+            "std": 14.99864153478204
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 25,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "ce7a602e8c19a5ae0d8b5d17ca51c8dba79170e2773c1bac4df4034ce2a26b3e",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241580,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241580,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 26,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.728,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9637386666666666
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7546666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.010407194099222,
+          "repeated_account_pairs": 308,
+          "unique_account_pairs": 29691
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0106454655706778,
+          "repeated_account_pairs": 316,
+          "unique_account_pairs": 29684
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6273333333333333,
+        "coactivity_auc": 0.749842,
+        "combined_auc": 0.8769931111111111,
+        "combined_minus_best_single": 0.1271511111111111,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.15689589951323296,
+            "std": 0.5509911003648261
+          },
+          "coactivity": {
+            "mean": 9.061333333333334,
+            "std": 14.985311860470423
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 26,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "7921df77cbe4986b1fdcdf6efca76d80625d545a715b14f30da72ee3ff289ac0",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241640,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241615,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 27,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.756,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9877573333333334
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7593333333333333,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0105433354667026,
+          "repeated_account_pairs": 312,
+          "unique_account_pairs": 29687
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0102710894089915,
+          "repeated_account_pairs": 305,
+          "unique_account_pairs": 29695
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6296666666666667,
+        "coactivity_auc": 0.7511248333333334,
+        "combined_auc": 0.8791491111111112,
+        "combined_minus_best_single": 0.1280242777777778,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.16679790578908388,
+            "std": 0.5537620864828623
+          },
+          "coactivity": {
+            "mean": 9.060333333333332,
+            "std": 14.986339108964833
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 27,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "84e657735aaaaabb0fadeeecc966cfe2ba1c2f52d143a6ef1955eed08442f01d",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241643,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241640,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 28,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.744,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.9479573333333333
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.7486666666666667,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0112586799703365,
+          "repeated_account_pairs": 334,
+          "unique_account_pairs": 29666
+        },
+        "random2": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.010611419909045,
+          "repeated_account_pairs": 315,
+          "unique_account_pairs": 29685
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.6243333333333333,
+        "coactivity_auc": 0.7522353333333334,
+        "combined_auc": 0.8734504444444444,
+        "combined_minus_best_single": 0.12121511111111105,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.1472771067839541,
+            "std": 0.5292278611265857
+          },
+          "coactivity": {
+            "mean": 9.077666666666667,
+            "std": 14.976447105000867
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 28,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "97182e7df9d8c6d8b76fef044fa4b044a7bcd2954d0b63fad18e7320a1259a7d",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241674,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241549,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  },
+  {
+    "seed": 29,
+    "summary": {
+      "branch_metrics": {
+        "both_active": {
+          "aggregate_auc": 0.756,
+          "coactivity_auc": 1.0,
+          "combined_auc": 0.984
+        },
+        "evidence_only": {
+          "aggregate_auc": 0.76,
+          "coactivity_auc": 0.5
+        },
+        "topology_only": {
+          "aggregate_auc": 0.5,
+          "coactivity_auc": 1.0
+        }
+      },
+      "dimensions": {
+        "account_degree_r": 8,
+        "item_degree_m": 6,
+        "n_accounts_per_branch": 1500,
+        "n_items": 2000,
+        "team_repetitions": 8,
+        "team_size": 6
+      },
+      "incidence_diagnostics": {
+        "random1": {
+          "max_pair_cooccurrence": 2,
+          "mean_pair_cooccurrence": 1.0110882680057969,
+          "repeated_account_pairs": 329,
+          "unique_account_pairs": 29671
+        },
+        "random2": {
+          "max_pair_cooccurrence": 3,
+          "mean_pair_cooccurrence": 1.0088442008272522,
+          "repeated_account_pairs": 262,
+          "unique_account_pairs": 29737
+        },
+        "team": {
+          "max_pair_cooccurrence": 8,
+          "mean_pair_cooccurrence": 8.0,
+          "repeated_account_pairs": 3750,
+          "unique_account_pairs": 3750
+        }
+      },
+      "interpretation_guard": "The primary mixed benchmark is a complementarity stress test, not an isolation experiment. Half of positive mechanisms carry aggregate evidence without repeated-team structure; half carry repeated-team structure without rating intervention. The combined score is untrained.",
+      "invariants": {
+        "all_account_degrees_equal_r": true,
+        "all_item_degrees_equal_m": true,
+        "evidence_only_branch_uses_identical_incidence_for_pos_neg": true,
+        "frequency_auc_exactly_half": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "topology_only_branch_has_zero_aggregate_treatment_effect": true
+      },
+      "primary_mixed_benchmark": {
+        "aggregate_auc": 0.63,
+        "coactivity_auc": 0.7595073333333333,
+        "combined_auc": 0.8805352222222222,
+        "combined_minus_best_single": 0.12102788888888893,
+        "frequency_auc": 0.5,
+        "normalization": {
+          "aggregate": {
+            "mean": 0.16191980489693159,
+            "std": 0.5473960586780734
+          },
+          "coactivity": {
+            "mean": 9.057,
+            "std": 14.988053609458433
+          },
+          "combined_rule": "z(aggregate)+z(coactivity)",
+          "weights_trained": false
+        }
+      },
+      "seed": 29,
+      "stage": "amazon_stage7_complementarity",
+      "stage4_attack_world_sha256": "aab38f3aca4c83b12c3f74ea3590a5bae0f4a25d950bd08a5b81f2e475607bff",
+      "swap_diagnostics": {
+        "random1": {
+          "attempts": 241740,
+          "edges": 12000,
+          "successful_swaps": 240000
+        },
+        "random2": {
+          "attempts": 241666,
+          "edges": 12000,
+          "successful_swaps": 240000
+        }
+      }
+    }
+  }
+]

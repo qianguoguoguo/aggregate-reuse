@@ -1,0 +1,48 @@
+{
+  "experiment": "controlled_null_centering",
+  "metrics": {
+    "final_raw_cumulative": {
+      "ci_lower": 180.8865916759989,
+      "ci_upper": 181.59980328316144,
+      "mean": 181.2390977836776,
+      "n_seeds": 30
+    },
+    "final_signed_cumulative": {
+      "ci_lower": -0.40714162469059667,
+      "ci_upper": 0.29906678331447134,
+      "mean": -0.0538172997466703,
+      "n_seeds": 30
+    },
+    "mean_matched_baseline": {
+      "ci_lower": 0.04531895961243717,
+      "ci_upper": 0.045327474840008236,
+      "mean": 0.045323228770856074,
+      "n_seeds": 30
+    },
+    "mean_raw_w1": {
+      "ci_lower": 0.04521951814572397,
+      "ci_upper": 0.045398943825667275,
+      "mean": 0.04530977444591939,
+      "n_seeds": 30
+    },
+    "mean_signed_increment": {
+      "ci_lower": -0.00010078903844694363,
+      "ci_upper": 7.585081699209378e-05,
+      "mean": -1.3454324936667668e-05,
+      "n_seeds": 30
+    },
+    "raw_cumulative_slope": {
+      "ci_lower": 0.04520497939639332,
+      "ci_upper": 0.04537323122261113,
+      "mean": 0.04528975890380891,
+      "n_seeds": 30
+    },
+    "signed_cumulative_slope": {
+      "ci_lower": -0.00011780666045544164,
+      "ci_upper": 4.994288000579402e-05,
+      "mean": -3.366911106880552e-05,
+      "n_seeds": 30
+    }
+  },
+  "n_seeds": 30
+}

@@ -1,0 +1,139 @@
+{
+  "category": "home_and_kitchen",
+  "data_usage_guards": {
+    "attack_generated_in_stage2": false,
+    "calibration_used_for_reference_estimation": false,
+    "experimental_blocks_used_for_reference_estimation": false,
+    "holdout_used_for_reference_estimation": false,
+    "holdout_used_for_tuning": false,
+    "lambda_selected_in_stage2": false
+  },
+  "global_reference_prefix": {
+    "counts": {
+      "1": 278017,
+      "2": 157985,
+      "3": 237010,
+      "4": 492434,
+      "5": 2584194
+    },
+    "mean": 4.319274116981897,
+    "n": 3749640,
+    "probs": {
+      "1": 0.07414498458518684,
+      "2": 0.04213337813763455,
+      "3": 0.06320873470519836,
+      "4": 0.13132834085405531,
+      "5": 0.689184561717925
+    }
+  },
+  "input_stage1_corpus": "artifacts/amazon/stage1/home_and_kitchen_first300.items.jsonl.gz",
+  "leave_one_item_out_reference": {
+    "construction": "For item i, subtract its positions 1--120 rating counts from the global positions 1--120 pool and normalize the remainder.",
+    "n_per_item": 3749520,
+    "uses_only_reference_prefixes": true
+  },
+  "n_items": 31247,
+  "outputs": {
+    "manifest": "artifacts/amazon/stage2/home_and_kitchen_stage2_manifest.csv",
+    "references": "artifacts/amazon/stage2/home_and_kitchen_reference_histograms.csv",
+    "roles": "artifacts/amazon/stage2/home_and_kitchen_roles.items.jsonl.gz"
+  },
+  "role_ranges": {
+    "calibration_1": {
+      "end": 150,
+      "n_per_item": 30,
+      "start": 121
+    },
+    "calibration_2": {
+      "end": 180,
+      "n_per_item": 30,
+      "start": 151
+    },
+    "experimental_A": {
+      "end": 210,
+      "n_per_item": 30,
+      "start": 181
+    },
+    "experimental_B": {
+      "end": 240,
+      "n_per_item": 30,
+      "start": 211
+    },
+    "holdout_1": {
+      "end": 270,
+      "n_per_item": 30,
+      "start": 241
+    },
+    "holdout_2": {
+      "end": 300,
+      "n_per_item": 30,
+      "start": 271
+    },
+    "reference": {
+      "end": 120,
+      "n_per_item": 120,
+      "start": 1
+    }
+  },
+  "role_rating_totals": {
+    "calibration_1": {
+      "1": 79375,
+      "2": 41849,
+      "3": 60196,
+      "4": 114626,
+      "5": 641364
+    },
+    "calibration_2": {
+      "1": 82324,
+      "2": 43342,
+      "3": 60628,
+      "4": 111899,
+      "5": 639217
+    },
+    "experimental_A": {
+      "1": 85283,
+      "2": 43831,
+      "3": 60703,
+      "4": 109783,
+      "5": 637810
+    },
+    "experimental_B": {
+      "1": 89522,
+      "2": 44783,
+      "3": 61091,
+      "4": 107799,
+      "5": 634215
+    },
+    "holdout_1": {
+      "1": 93930,
+      "2": 45876,
+      "3": 61166,
+      "4": 105699,
+      "5": 630739
+    },
+    "holdout_2": {
+      "1": 97647,
+      "2": 47155,
+      "3": 62912,
+      "4": 103293,
+      "5": 626403
+    },
+    "reference": {
+      "1": 278017,
+      "2": 157985,
+      "3": 237010,
+      "4": 492434,
+      "5": 2584194
+    }
+  },
+  "role_review_totals": {
+    "calibration_1": 937410,
+    "calibration_2": 937410,
+    "experimental_A": 937410,
+    "experimental_B": 937410,
+    "holdout_1": 937410,
+    "holdout_2": 937410,
+    "reference": 3749640
+  },
+  "stage": "amazon_stage2_frozen_roles_and_references"
+}

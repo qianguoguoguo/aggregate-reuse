@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "generator_does_not_read_gold": true,
+    "latex_fragment_matches_table_data": true,
+    "manifest_has_both_categories": true,
+    "table_data_matches_canonical_sources": true
+  },
+  "failures": [],
+  "schema_version": 1,
+  "status": "PASS"
+}

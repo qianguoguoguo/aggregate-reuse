@@ -1,0 +1,21 @@
+\begin{tabular}{lll}
+\toprule
+Experiment & Canonical config & Canonical output \\
+\midrule
+Controlled null & configs/controlled.yaml & artifacts/results/controlled_null_summary.json \\
+Controlled matched exposure & configs/controlled.yaml & artifacts/results/controlled_matched_summary.json \\
+Controlled regime sweep & configs/controlled.yaml & artifacts/results/controlled_sweep_summary.json \\
+Amazon preprocessing & configs/amazon_preprocess.yaml & ../amazon_preprocess/stage2/ \\
+Reference/calibration & configs/amazon_reference.yaml & ../amazon_preprocess/stage3/ \\
+Primary attack & configs/amazon_primary.yaml & ../amazon_preprocess/stage4_attack/ \\
+Fixed-attack reuse & configs/amazon_primary.yaml & ../amazon_preprocess/stage4_reuse/ \\
+Exact matched twins & configs/amazon_twins.yaml & ../amazon_preprocess/stage5_twins/ \\
+Mean-preserving shape & configs/amazon_shape.yaml & ../amazon_preprocess/stage6_shape/ \\
+Complementarity & configs/amazon_complementarity.yaml & ../amazon_preprocess/stage7_complementarity/ \\
+Reference history & configs/amazon_reference_history.yaml & ../amazon_preprocess/stage8_reference_history/ \\
+Fixed-identity strength & configs/amazon_strength_fixed.yaml & ../amazon_preprocess/stage9_strength_fixed/ \\
+Same-k=6 population audit & configs/amazon_k6_population_audit.yaml & ../amazon_preprocess/stage9_k6_population_audit/ \\
+Full-background ranking & configs/amazon_full_background.yaml & ../amazon_preprocess/stage10_full_background/ \\
+LOO self-influence & configs/amazon_self_influence.yaml & ../amazon_preprocess/stage11_self_influence/ \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aggregate-reuse"
+version = "1.0.0"
+description = "Reproducibility artifact for aggregate-distortion and account-reuse experiments."
+readme = "README.md"
+requires-python = "==3.12.10"
+authors = [
+  {name = "Qian Guo"},
+  {name = "Yidan Hu"},
+  {name = "Rui Zhang"},
+]
+
+[project.urls]
+Repository = "PUBLIC_REPOSITORY_URL"

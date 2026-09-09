@@ -1,0 +1,1172 @@
+[
+  {
+    "seed": 0,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.74,
+        "expected_total_m_times_sum_dcf": 925.9328517478812,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.0771610709789901,
+        "mean_paired_score_gap": 0.6172885678319208,
+        "paired_gap_nonpositive_fraction": 0.26,
+        "paired_gap_positive_fraction": 0.74,
+        "paired_predictive_misordering_probability": 0.26,
+        "paired_raw_misordering_probability": 0.26,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6172885678319208,
+        "predictive_centered_world_score_auc": 0.758288,
+        "raw_world_score_auc": 0.75144,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 925.9328517478812
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 0,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "e6c1e331e091a817f66b33f292874fcd8a769bc71e7390eb90d30b0bf6aee327"
+    }
+  },
+  {
+    "seed": 1,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.712,
+        "expected_total_m_times_sum_dcf": 885.327239600955,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07377726996674625,
+        "mean_paired_score_gap": 0.5902181597339698,
+        "paired_gap_nonpositive_fraction": 0.288,
+        "paired_gap_positive_fraction": 0.712,
+        "paired_predictive_misordering_probability": 0.288,
+        "paired_raw_misordering_probability": 0.288,
+        "predicted_mean_gap_r_times_mean_dcf": 0.59021815973397,
+        "predictive_centered_world_score_auc": 0.729264,
+        "raw_world_score_auc": 0.727344,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 2.2737367544323206e-13,
+        "total_paired_gap": 885.3272396009547
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 1,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "d2a6af13ef9520fb43cb4748fb4123dcd5b503fb6643a89b4e3aeb95a816bc2c"
+    }
+  },
+  {
+    "seed": 2,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.716,
+        "expected_total_m_times_sum_dcf": 758.0656449739855,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.06317213708116545,
+        "mean_paired_score_gap": 0.5053770966493236,
+        "paired_gap_nonpositive_fraction": 0.284,
+        "paired_gap_positive_fraction": 0.716,
+        "paired_predictive_misordering_probability": 0.284,
+        "paired_raw_misordering_probability": 0.284,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5053770966493236,
+        "predictive_centered_world_score_auc": 0.716112,
+        "raw_world_score_auc": 0.70632,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 758.0656449739854
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 2,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "995a0e15147a97cf6b3e60c3fc7dcb1533e16598b92a731e212ffcc80050bafd"
+    }
+  },
+  {
+    "seed": 3,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.732,
+        "expected_total_m_times_sum_dcf": 901.0079045546404,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07508399204622003,
+        "mean_paired_score_gap": 0.6006719363697602,
+        "paired_gap_nonpositive_fraction": 0.268,
+        "paired_gap_positive_fraction": 0.732,
+        "paired_predictive_misordering_probability": 0.268,
+        "paired_raw_misordering_probability": 0.268,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6006719363697602,
+        "predictive_centered_world_score_auc": 0.74776,
+        "raw_world_score_auc": 0.741248,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 901.0079045546403
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 3,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "5f4fbb438e098d7766a856b00cd993ed76b8fe654b56bbd5fe62662277f6e3ed"
+    }
+  },
+  {
+    "seed": 4,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.672,
+        "expected_total_m_times_sum_dcf": 785.6182811971363,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.06546819009976136,
+        "mean_paired_score_gap": 0.5237455207980908,
+        "paired_gap_nonpositive_fraction": 0.328,
+        "paired_gap_positive_fraction": 0.672,
+        "paired_predictive_misordering_probability": 0.328,
+        "paired_raw_misordering_probability": 0.328,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5237455207980909,
+        "predictive_centered_world_score_auc": 0.708656,
+        "raw_world_score_auc": 0.704976,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 785.6182811971362
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 4,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "08dd949cbdb1c4e3b3d3266926dbe48f624fcc8a4354b44ecb035c37e4106d33"
+    }
+  },
+  {
+    "seed": 5,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.792,
+        "expected_total_m_times_sum_dcf": 1002.6403896270153,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.08355336580225128,
+        "mean_paired_score_gap": 0.6684269264180102,
+        "paired_gap_nonpositive_fraction": 0.208,
+        "paired_gap_positive_fraction": 0.792,
+        "paired_predictive_misordering_probability": 0.208,
+        "paired_raw_misordering_probability": 0.208,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6684269264180103,
+        "predictive_centered_world_score_auc": 0.778704,
+        "raw_world_score_auc": 0.768272,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 1002.6403896270152
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 5,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "23d700135575dfbd5c83cfde34a984fed7d849ea6140ccbc0d2c6bfe867de354"
+    }
+  },
+  {
+    "seed": 6,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.724,
+        "expected_total_m_times_sum_dcf": 910.8733474456161,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07590611228713467,
+        "mean_paired_score_gap": 0.6072488982970775,
+        "paired_gap_nonpositive_fraction": 0.276,
+        "paired_gap_positive_fraction": 0.724,
+        "paired_predictive_misordering_probability": 0.276,
+        "paired_raw_misordering_probability": 0.276,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6072488982970774,
+        "predictive_centered_world_score_auc": 0.753072,
+        "raw_world_score_auc": 0.745344,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 910.8733474456162
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 6,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "86f006f6dbdd0a64a22efa5ddc7f1cd635c52aa2096589a99f6d94e348be2512"
+    }
+  },
+  {
+    "seed": 7,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.708,
+        "expected_total_m_times_sum_dcf": 953.6815953584918,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07947346627987431,
+        "mean_paired_score_gap": 0.6357877302389946,
+        "paired_gap_nonpositive_fraction": 0.292,
+        "paired_gap_positive_fraction": 0.708,
+        "paired_predictive_misordering_probability": 0.292,
+        "paired_raw_misordering_probability": 0.292,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6357877302389945,
+        "predictive_centered_world_score_auc": 0.762976,
+        "raw_world_score_auc": 0.754848,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 953.6815953584919
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 7,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "b7b6848423d687d84a8d07817fe8b2e0daa74eec1616a79e9b05c2ef7184685b"
+    }
+  },
+  {
+    "seed": 8,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.78,
+        "expected_total_m_times_sum_dcf": 1111.6237077203027,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.0926353089766919,
+        "mean_paired_score_gap": 0.741082471813535,
+        "paired_gap_nonpositive_fraction": 0.22,
+        "paired_gap_positive_fraction": 0.78,
+        "paired_predictive_misordering_probability": 0.22,
+        "paired_raw_misordering_probability": 0.22,
+        "predicted_mean_gap_r_times_mean_dcf": 0.7410824718135351,
+        "predictive_centered_world_score_auc": 0.802176,
+        "raw_world_score_auc": 0.79512,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 2.2737367544323206e-13,
+        "total_paired_gap": 1111.6237077203025
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 8,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "1645ad95fffcbaaf8f94ba227fd596b930056ef3ac236f5ed458f8eacf694b6b"
+    }
+  },
+  {
+    "seed": 9,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.744,
+        "expected_total_m_times_sum_dcf": 996.146379879482,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.08301219832329017,
+        "mean_paired_score_gap": 0.6640975865863212,
+        "paired_gap_nonpositive_fraction": 0.256,
+        "paired_gap_positive_fraction": 0.744,
+        "paired_predictive_misordering_probability": 0.256,
+        "paired_raw_misordering_probability": 0.256,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6640975865863213,
+        "predictive_centered_world_score_auc": 0.771392,
+        "raw_world_score_auc": 0.762752,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 996.1463798794819
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 9,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "8c91d53e1fa59d7c5c05b126d5f74527d0a264ab0e1f41d1d3ec529f16d64191"
+    }
+  },
+  {
+    "seed": 10,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.728,
+        "expected_total_m_times_sum_dcf": 917.9079447883615,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07649232873236346,
+        "mean_paired_score_gap": 0.6119386298589078,
+        "paired_gap_nonpositive_fraction": 0.272,
+        "paired_gap_positive_fraction": 0.728,
+        "paired_predictive_misordering_probability": 0.272,
+        "paired_raw_misordering_probability": 0.272,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6119386298589077,
+        "predictive_centered_world_score_auc": 0.756352,
+        "raw_world_score_auc": 0.751264,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 2.2737367544323206e-13,
+        "total_paired_gap": 917.9079447883618
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 10,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "0c38945661ccd4eb0be69f9fc79f2cafb76d8e94a0daaa9265416f4bb9850934"
+    }
+  },
+  {
+    "seed": 11,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.804,
+        "expected_total_m_times_sum_dcf": 1138.7132254642884,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.09489276878869068,
+        "mean_paired_score_gap": 0.7591421503095255,
+        "paired_gap_nonpositive_fraction": 0.196,
+        "paired_gap_positive_fraction": 0.804,
+        "paired_predictive_misordering_probability": 0.196,
+        "paired_raw_misordering_probability": 0.196,
+        "predicted_mean_gap_r_times_mean_dcf": 0.7591421503095255,
+        "predictive_centered_world_score_auc": 0.797728,
+        "raw_world_score_auc": 0.787632,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 2.2737367544323206e-13,
+        "total_paired_gap": 1138.7132254642881
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 11,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "c21565ab259766109fbad2ce0c51e5c9061a832b8f039bd88de567c7dccbdfd8"
+    }
+  },
+  {
+    "seed": 12,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.748,
+        "expected_total_m_times_sum_dcf": 850.5206156673771,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07087671797228143,
+        "mean_paired_score_gap": 0.5670137437782513,
+        "paired_gap_nonpositive_fraction": 0.252,
+        "paired_gap_positive_fraction": 0.748,
+        "paired_predictive_misordering_probability": 0.252,
+        "paired_raw_misordering_probability": 0.252,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5670137437782514,
+        "predictive_centered_world_score_auc": 0.741328,
+        "raw_world_score_auc": 0.73064,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 850.520615667377
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 12,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "2000cdf3e6201d6269f26826102349cb4709bdcc762a2a2a521ed0f03d1301f9"
+    }
+  },
+  {
+    "seed": 13,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.704,
+        "expected_total_m_times_sum_dcf": 825.4531295434389,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.06878776079528658,
+        "mean_paired_score_gap": 0.5503020863622926,
+        "paired_gap_nonpositive_fraction": 0.296,
+        "paired_gap_positive_fraction": 0.704,
+        "paired_predictive_misordering_probability": 0.296,
+        "paired_raw_misordering_probability": 0.296,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5503020863622926,
+        "predictive_centered_world_score_auc": 0.73232,
+        "raw_world_score_auc": 0.724304,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 825.453129543439
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 13,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "9d39ffd155ab7fd116dba14b81bb290a47241c4ade8fcd1db0d440ce3c2e228c"
+    }
+  },
+  {
+    "seed": 14,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.76,
+        "expected_total_m_times_sum_dcf": 832.148611022211,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.06934571758518425,
+        "mean_paired_score_gap": 0.554765740681474,
+        "paired_gap_nonpositive_fraction": 0.24,
+        "paired_gap_positive_fraction": 0.76,
+        "paired_predictive_misordering_probability": 0.24,
+        "paired_raw_misordering_probability": 0.24,
+        "predicted_mean_gap_r_times_mean_dcf": 0.554765740681474,
+        "predictive_centered_world_score_auc": 0.750192,
+        "raw_world_score_auc": 0.742704,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 832.1486110222111
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 14,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "c67a3f67383634c1d19186c12a6834aeb361ea0ebee9c21ef575a96a6cb0eae5"
+    }
+  },
+  {
+    "seed": 15,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.776,
+        "expected_total_m_times_sum_dcf": 954.99683022284,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07958306918523667,
+        "mean_paired_score_gap": 0.6366645534818934,
+        "paired_gap_nonpositive_fraction": 0.224,
+        "paired_gap_positive_fraction": 0.776,
+        "paired_predictive_misordering_probability": 0.224,
+        "paired_raw_misordering_probability": 0.224,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6366645534818933,
+        "predictive_centered_world_score_auc": 0.7644,
+        "raw_world_score_auc": 0.75848,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 954.9968302228401
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 15,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "28993c11fcb5bead56ad7e49a420a4142473930e0b813f93c0669f8d75341534"
+    }
+  },
+  {
+    "seed": 16,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.78,
+        "expected_total_m_times_sum_dcf": 933.7685701484079,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07781404751236733,
+        "mean_paired_score_gap": 0.6225123800989386,
+        "paired_gap_nonpositive_fraction": 0.22,
+        "paired_gap_positive_fraction": 0.78,
+        "paired_predictive_misordering_probability": 0.22,
+        "paired_raw_misordering_probability": 0.22,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6225123800989386,
+        "predictive_centered_world_score_auc": 0.753408,
+        "raw_world_score_auc": 0.746016,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 933.7685701484079
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 16,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "b543c2889d8a364a0d75b517e05287881fb16db5f42ef92300eda421cd408090"
+    }
+  },
+  {
+    "seed": 17,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.748,
+        "expected_total_m_times_sum_dcf": 950.3416661332653,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07919513884443877,
+        "mean_paired_score_gap": 0.6335611107555101,
+        "paired_gap_nonpositive_fraction": 0.252,
+        "paired_gap_positive_fraction": 0.748,
+        "paired_predictive_misordering_probability": 0.252,
+        "paired_raw_misordering_probability": 0.252,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6335611107555101,
+        "predictive_centered_world_score_auc": 0.75984,
+        "raw_world_score_auc": 0.755008,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 950.3416661332652
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 17,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "d8ad716247b9b260d6e7a9b557c859f2598db45a4989149d4be2088bb5f3ba46"
+    }
+  },
+  {
+    "seed": 18,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.668,
+        "expected_total_m_times_sum_dcf": 793.6833263229123,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.06614027719357603,
+        "mean_paired_score_gap": 0.5291222175486083,
+        "paired_gap_nonpositive_fraction": 0.332,
+        "paired_gap_positive_fraction": 0.668,
+        "paired_predictive_misordering_probability": 0.332,
+        "paired_raw_misordering_probability": 0.332,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5291222175486082,
+        "predictive_centered_world_score_auc": 0.728192,
+        "raw_world_score_auc": 0.719024,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 793.6833263229124
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 18,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "c6c34d9c1845c8193060d5a7fffcfb3fe6c1b04aaca4eb7b1bdb73b41f7e431e"
+    }
+  },
+  {
+    "seed": 19,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.748,
+        "expected_total_m_times_sum_dcf": 816.5751419610283,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.06804792849675237,
+        "mean_paired_score_gap": 0.544383427974019,
+        "paired_gap_nonpositive_fraction": 0.252,
+        "paired_gap_positive_fraction": 0.748,
+        "paired_predictive_misordering_probability": 0.252,
+        "paired_raw_misordering_probability": 0.252,
+        "predicted_mean_gap_r_times_mean_dcf": 0.544383427974019,
+        "predictive_centered_world_score_auc": 0.731104,
+        "raw_world_score_auc": 0.723936,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 816.5751419610284
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 19,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "64706dcc2ab35cd0aaa6c2379b626853e7f0009638dad769dfd6a16181faa757"
+    }
+  },
+  {
+    "seed": 20,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.724,
+        "expected_total_m_times_sum_dcf": 881.5839837784952,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07346533198154127,
+        "mean_paired_score_gap": 0.5877226558523302,
+        "paired_gap_nonpositive_fraction": 0.276,
+        "paired_gap_positive_fraction": 0.724,
+        "paired_predictive_misordering_probability": 0.276,
+        "paired_raw_misordering_probability": 0.276,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5877226558523302,
+        "predictive_centered_world_score_auc": 0.74544,
+        "raw_world_score_auc": 0.740016,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 881.5839837784953
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 20,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "f5806d5fc0779cadbd48eaa7e615cd0cf4a223c7a60b9e9604e1e4989acd581b"
+    }
+  },
+  {
+    "seed": 21,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.756,
+        "expected_total_m_times_sum_dcf": 879.7855140315105,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07331545950262587,
+        "mean_paired_score_gap": 0.586523676021007,
+        "paired_gap_nonpositive_fraction": 0.244,
+        "paired_gap_positive_fraction": 0.756,
+        "paired_predictive_misordering_probability": 0.244,
+        "paired_raw_misordering_probability": 0.244,
+        "predicted_mean_gap_r_times_mean_dcf": 0.586523676021007,
+        "predictive_centered_world_score_auc": 0.746128,
+        "raw_world_score_auc": 0.73896,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 879.7855140315105
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 21,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "424d6aab5d27a2beccb22ed550ba1284f084ce57b8a57e96bae41de0adc83da8"
+    }
+  },
+  {
+    "seed": 22,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.74,
+        "expected_total_m_times_sum_dcf": 854.2026412523662,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07118355343769718,
+        "mean_paired_score_gap": 0.5694684275015774,
+        "paired_gap_nonpositive_fraction": 0.26,
+        "paired_gap_positive_fraction": 0.74,
+        "paired_predictive_misordering_probability": 0.26,
+        "paired_raw_misordering_probability": 0.26,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5694684275015774,
+        "predictive_centered_world_score_auc": 0.755744,
+        "raw_world_score_auc": 0.752416,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 854.2026412523662
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 22,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "972d804efac22e959ce67067b77e2d80ea58f4dcec72a4a8178a99dba64344b0"
+    }
+  },
+  {
+    "seed": 23,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.74,
+        "expected_total_m_times_sum_dcf": 946.5551531167421,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07887959609306183,
+        "mean_paired_score_gap": 0.6310367687444945,
+        "paired_gap_nonpositive_fraction": 0.26,
+        "paired_gap_positive_fraction": 0.74,
+        "paired_predictive_misordering_probability": 0.26,
+        "paired_raw_misordering_probability": 0.26,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6310367687444947,
+        "predictive_centered_world_score_auc": 0.75128,
+        "raw_world_score_auc": 0.74448,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 2.2737367544323206e-13,
+        "total_paired_gap": 946.5551531167418
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 23,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "1e9974b35070a6b4452ddd03ac0cfd81d64a10258a0b3770545e39bd77586b00"
+    }
+  },
+  {
+    "seed": 24,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.76,
+        "expected_total_m_times_sum_dcf": 917.5976161520106,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07646646801266754,
+        "mean_paired_score_gap": 0.6117317441013403,
+        "paired_gap_nonpositive_fraction": 0.24,
+        "paired_gap_positive_fraction": 0.76,
+        "paired_predictive_misordering_probability": 0.24,
+        "paired_raw_misordering_probability": 0.24,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6117317441013403,
+        "predictive_centered_world_score_auc": 0.749312,
+        "raw_world_score_auc": 0.741872,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 917.5976161520105
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 24,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "100858967310b2ce6b5c95d4fc52144d9a344e5026d0719dfc8c6bbfa1ba14d5"
+    }
+  },
+  {
+    "seed": 25,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.76,
+        "expected_total_m_times_sum_dcf": 966.5761025411255,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.0805480085450938,
+        "mean_paired_score_gap": 0.6443840683607504,
+        "paired_gap_nonpositive_fraction": 0.24,
+        "paired_gap_positive_fraction": 0.76,
+        "paired_predictive_misordering_probability": 0.24,
+        "paired_raw_misordering_probability": 0.24,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6443840683607504,
+        "predictive_centered_world_score_auc": 0.76696,
+        "raw_world_score_auc": 0.758048,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 966.5761025411255
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 25,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "ce7a602e8c19a5ae0d8b5d17ca51c8dba79170e2773c1bac4df4034ce2a26b3e"
+    }
+  },
+  {
+    "seed": 26,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.752,
+        "expected_total_m_times_sum_dcf": 941.3753970793978,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07844794975661648,
+        "mean_paired_score_gap": 0.6275835980529317,
+        "paired_gap_nonpositive_fraction": 0.248,
+        "paired_gap_positive_fraction": 0.752,
+        "paired_predictive_misordering_probability": 0.248,
+        "paired_raw_misordering_probability": 0.248,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6275835980529318,
+        "predictive_centered_world_score_auc": 0.770688,
+        "raw_world_score_auc": 0.762896,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 1.1368683772161603e-13,
+        "total_paired_gap": 941.3753970793977
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 26,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "7921df77cbe4986b1fdcdf6efca76d80625d545a715b14f30da72ee3ff289ac0"
+    }
+  },
+  {
+    "seed": 27,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.78,
+        "expected_total_m_times_sum_dcf": 1000.7874347345034,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.08339895289454195,
+        "mean_paired_score_gap": 0.6671916231563356,
+        "paired_gap_nonpositive_fraction": 0.22,
+        "paired_gap_positive_fraction": 0.78,
+        "paired_predictive_misordering_probability": 0.22,
+        "paired_raw_misordering_probability": 0.22,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6671916231563356,
+        "predictive_centered_world_score_auc": 0.785408,
+        "raw_world_score_auc": 0.777888,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 1000.7874347345034
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 27,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "84e657735aaaaabb0fadeeecc966cfe2ba1c2f52d143a6ef1955eed08442f01d"
+    }
+  },
+  {
+    "seed": 28,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.756,
+        "expected_total_m_times_sum_dcf": 883.6626407037245,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.07363855339197704,
+        "mean_paired_score_gap": 0.5891084271358163,
+        "paired_gap_nonpositive_fraction": 0.244,
+        "paired_gap_positive_fraction": 0.756,
+        "paired_predictive_misordering_probability": 0.244,
+        "paired_raw_misordering_probability": 0.244,
+        "predicted_mean_gap_r_times_mean_dcf": 0.5891084271358163,
+        "predictive_centered_world_score_auc": 0.767616,
+        "raw_world_score_auc": 0.758832,
+        "reuse_law_abs_error": 0.0,
+        "total_gap_conservation_abs_error": 0.0,
+        "total_paired_gap": 883.6626407037245
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 28,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "97182e7df9d8c6d8b76fef044fa4b044a7bcd2954d0b63fad18e7320a1259a7d"
+    }
+  },
+  {
+    "seed": 29,
+    "summary": {
+      "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+      "matching": {
+        "block_pairwise_exact": true,
+        "frequency_exact": true,
+        "item_set_pairwise_exact": true,
+        "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+        "slot_position_pairwise_exact": true,
+        "source_line_pairwise_exact": true,
+        "timestamp_pairwise_exact_via_same_source_slot": true
+      },
+      "metrics": {
+        "counterfactual_score_auc": 0.756,
+        "expected_total_m_times_sum_dcf": 971.5188293815895,
+        "frequency_auc": 0.5,
+        "mean_d_cf": 0.08095990244846579,
+        "mean_paired_score_gap": 0.6476792195877265,
+        "paired_gap_nonpositive_fraction": 0.244,
+        "paired_gap_positive_fraction": 0.756,
+        "paired_predictive_misordering_probability": 0.244,
+        "paired_raw_misordering_probability": 0.244,
+        "predicted_mean_gap_r_times_mean_dcf": 0.6476792195877263,
+        "predictive_centered_world_score_auc": 0.76896,
+        "raw_world_score_auc": 0.758688,
+        "reuse_law_abs_error": 1.1102230246251565e-16,
+        "total_gap_conservation_abs_error": 2.2737367544323206e-13,
+        "total_paired_gap": 971.5188293815897
+      },
+      "n_edges_per_group": 12000,
+      "n_pairs": 1500,
+      "reuse_r": 8,
+      "seed": 29,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage5_exact_matched_twins_r8",
+      "stage4_attack_world_sha256": "aab38f3aca4c83b12c3f74ea3590a5bae0f4a25d950bd08a5b81f2e475607bff"
+    }
+  }
+]

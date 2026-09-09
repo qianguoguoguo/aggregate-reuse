@@ -1,0 +1,124 @@
+{
+  "interpretation_guard": "This is an exact counterfactual matched-twin experiment. It does not claim that the synthetic control identities are historical Amazon accounts. Their underlying clean actions, item contexts, positions, timestamps, and ratings are real; only identity labels are regrouped to create exact matched activity.",
+  "matching": {
+    "block_pairwise_exact": true,
+    "frequency_exact": true,
+    "item_set_pairwise_exact": true,
+    "only_difference": "coalition member occupies attacked version of the slot; control twin occupies exact clean counterpart",
+    "slot_position_pairwise_exact": true,
+    "source_line_pairwise_exact": true,
+    "timestamp_pairwise_exact_via_same_source_slot": true
+  },
+  "metrics": {
+    "counterfactual_score_auc": {
+      "ci_lower": 0.7317846970101424,
+      "ci_upper": 0.7554153029898579,
+      "mean": 0.7436000000000001
+    },
+    "expected_total_m_times_sum_dcf": {
+      "ci_lower": 884.0924161883083,
+      "ci_upper": 948.4856982217652,
+      "mean": 916.2890572050368
+    },
+    "frequency_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "mean_d_cf": {
+      "ci_lower": 0.07367436801569235,
+      "ci_upper": 0.07904047485181376,
+      "mean": 0.07635742143375306
+    },
+    "mean_paired_score_gap": {
+      "ci_lower": 0.5893949441255388,
+      "ci_upper": 0.6323237988145101,
+      "mean": 0.6108593714700244
+    },
+    "paired_gap_nonpositive_fraction": {
+      "ci_lower": 0.24458469701014218,
+      "ci_upper": 0.26821530298985785,
+      "mean": 0.2564
+    },
+    "paired_gap_positive_fraction": {
+      "ci_lower": 0.7317846970101424,
+      "ci_upper": 0.7554153029898579,
+      "mean": 0.7436000000000001
+    },
+    "paired_predictive_misordering_probability": {
+      "ci_lower": 0.24458469701014218,
+      "ci_upper": 0.26821530298985785,
+      "mean": 0.2564
+    },
+    "paired_raw_misordering_probability": {
+      "ci_lower": 0.24458469701014218,
+      "ci_upper": 0.26821530298985785,
+      "mean": 0.2564
+    },
+    "predicted_mean_gap_r_times_mean_dcf": {
+      "ci_lower": 0.5893949441255388,
+      "ci_upper": 0.6323237988145101,
+      "mean": 0.6108593714700244
+    },
+    "predictive_centered_world_score_auc": {
+      "ci_lower": 0.7470150812809427,
+      "ci_upper": 0.7630382520523905,
+      "mean": 0.7550266666666666
+    },
+    "raw_world_score_auc": {
+      "ci_lower": 0.7398815138105869,
+      "ci_upper": 0.7555030195227465,
+      "mean": 0.7476922666666667
+    },
+    "reuse_law_abs_error": {
+      "ci_lower": 3.0774751638196553e-17,
+      "ci_upper": 7.284606399348473e-17,
+      "mean": 5.181040781584064e-17
+    },
+    "total_gap_conservation_abs_error": {
+      "ci_lower": 8.15111056441064e-14,
+      "ci_upper": 1.3828344728435127e-13,
+      "mean": 1.0989727646422883e-13
+    },
+    "total_paired_gap": {
+      "ci_lower": 884.0924161883083,
+      "ci_upper": 948.4856982217652,
+      "mean": 916.2890572050368
+    }
+  },
+  "n_seeds": 30,
+  "reuse_r": 8,
+  "seed_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "stage": "amazon_stage5_exact_matched_twins_r8"
+}

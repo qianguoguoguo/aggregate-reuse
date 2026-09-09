@@ -1,0 +1,23 @@
+# Deterministic text representation across operating systems.
+* text=auto eol=lf
+
+# Platform-native launcher line endings.
+*.sh   text eol=lf
+*.bash text eol=lf
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+# Immutable verification gold was frozen from Windows CRLF bytes.
+# Force the same checkout representation on every operating system.
+paper_results/expected/*.json    text eol=crlf
+paper_results/expected/**/*.json text eol=crlf
+paper_results/expected/*.csv     text eol=crlf
+paper_results/expected/**/*.csv  text eol=crlf
+paper_results/expected/*.md      text eol=crlf
+paper_results/expected/**/*.md   text eol=crlf
+paper_results/expected/*.txt     text eol=crlf
+paper_results/expected/**/*.txt  text eol=crlf
+
+# Binary verification gold must never undergo line-ending conversion.
+paper_results/expected/*.npz     -text
+paper_results/expected/**/*.npz  -text

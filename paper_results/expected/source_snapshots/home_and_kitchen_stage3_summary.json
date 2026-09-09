@@ -1,0 +1,113 @@
+{
+  "absolute_null_diagnostic": {
+    "ci_lower": 0.1015633437187101,
+    "ci_upper": 0.10640330714362015,
+    "holdout_1_mean": 0.09583661995080951,
+    "holdout_2_mean": 0.11214897442389861,
+    "interpretation": "Absolute posterior-predictive centering retains statistically detectable temporal drift on real Amazon traffic.",
+    "predictive_centered_holdout_mean": 0.10399279718735407,
+    "zero_inside_95pct_ci": false
+  },
+  "category": "home_and_kitchen",
+  "chronological_selected_lambda_diagnostic": [
+    {
+      "plugin_signed_mean": 0.06086456403861959,
+      "predictive_signed_mean": 0.04216849806747677,
+      "role": "calibration_1"
+    },
+    {
+      "plugin_signed_mean": 0.07607660471718698,
+      "predictive_signed_mean": 0.05738053874604418,
+      "role": "calibration_2"
+    },
+    {
+      "plugin_signed_mean": 0.11453268592195234,
+      "predictive_signed_mean": 0.09583661995080951,
+      "role": "holdout_1"
+    },
+    {
+      "plugin_signed_mean": 0.1308450403950414,
+      "predictive_signed_mean": 0.11214897442389861,
+      "role": "holdout_2"
+    }
+  ],
+  "data_usage_guards": {
+    "attack_generated_in_stage3": false,
+    "experimental_A_B_used_in_stage3": false,
+    "holdout_used_for_lambda_selection": false,
+    "lambda_retuned_after_holdout": false,
+    "lambda_selection_uses_only_calibration_1_2": true
+  },
+  "holdout_validation": {
+    "plugin_centered_w1": {
+      "ci_lower": 0.12025135878522676,
+      "ci_upper": 0.12510664047144618,
+      "holdout_1_mean": 0.11453268592195234,
+      "holdout_2_mean": 0.1308450403950414,
+      "level": 0.95,
+      "mean": 0.12268886315849689,
+      "n_items": 31247,
+      "positive_fraction_all_blocks": 0.6249239927032996,
+      "replicates": 10000
+    },
+    "predictive_centered_w1": {
+      "ci_lower": 0.1015633437187101,
+      "ci_upper": 0.10640330714362015,
+      "holdout_1_mean": 0.09583661995080951,
+      "holdout_2_mean": 0.11214897442389861,
+      "level": 0.95,
+      "mean": 0.10399279718735407,
+      "n_items": 31247,
+      "positive_fraction_all_blocks": 0.5714308573623068,
+      "replicates": 10000
+    },
+    "raw_w1": {
+      "ci_lower": 0.31627809848614225,
+      "ci_upper": 0.3213967690466229,
+      "holdout_1_mean": 0.3106944870451128,
+      "holdout_2_mean": 0.32700684151820186,
+      "level": 0.95,
+      "mean": 0.31885066428165737,
+      "n_items": 31247,
+      "positive_fraction_all_blocks": 1.0,
+      "replicates": 10000
+    }
+  },
+  "lambda_grid": [
+    0.0,
+    5.0,
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    160.0
+  ],
+  "n_items": 31247,
+  "outputs": {
+    "calibration": "artifacts/amazon/stage3/home_and_kitchen_lambda_calibration.csv",
+    "chronology": "artifacts/amazon/stage3/home_and_kitchen_selected_lambda_chronology.csv",
+    "freeze": "artifacts/amazon/stage3/home_and_kitchen_reference_freeze.json",
+    "holdout": "artifacts/amazon/stage3/home_and_kitchen_holdout_validation.csv",
+    "item_holdout": "artifacts/amazon/stage3/home_and_kitchen_holdout_item_metrics.csv"
+  },
+  "posterior_predictive_model": "Dirichlet(alpha_i(lambda)) with alpha_i = item reference counts + lambda * leave-one-item-out domain probabilities.",
+  "predictive_baseline": "Exact Dirichlet-multinomial predictive W1 expectation from Beta-Binomial cumulative marginals.",
+  "selected_calibration_row": {
+    "lambda": 20.0,
+    "plugin_abs_mean": 0.06847058437790328,
+    "plugin_positive_fraction": 0.559733734438506,
+    "plugin_signed_mean": 0.06847058437790328,
+    "predictive_abs_mean": 0.049774518406760476,
+    "predictive_positive_fraction": 0.5012801228917976,
+    "predictive_signed_mean": 0.049774518406760476,
+    "raw_mean": 0.26463238550106377
+  },
+  "selected_lambda": 20.0,
+  "selection_rule": "Minimize absolute mean predictive signed increment over calibration_1 and calibration_2; break ties toward smaller lambda.",
+  "semantic_decision": {
+    "absolute_centering_used_as_primary_amazon_stage4_evidence": false,
+    "reason": "Untouched holdout exhibits residual temporal drift under absolute posterior-predictive centering.",
+    "stage4_evidence_mode": "paired_counterfactual"
+  },
+  "stage": "amazon_stage3_reference_calibration_and_drift_diagnostic"
+}

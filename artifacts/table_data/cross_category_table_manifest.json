@@ -1,0 +1,77 @@
+{
+  "electronics": {
+    "population_audit": {
+      "path": "../amazon_preprocess/electronics/stage9_k6_population_audit/electronics_k6_population_audit_summary.json",
+      "sha256": "e61caf7632dee474a760d816f0940a8ad1143d22553ba5bafd565d24bfd31698"
+    },
+    "stage2": {
+      "path": "../amazon_preprocess/electronics/stage2/electronics_stage2_summary.json",
+      "sha256": "c6541b34ef9bc82f7bbe72731f88180766f03f6f95dc2519e672b2e1cdbb4ba3"
+    },
+    "stage3": {
+      "path": "../amazon_preprocess/electronics/stage3/electronics_stage3_summary.json",
+      "sha256": "9583cba0490274dd07c889ea589f3a48a3ba3d0d44574cd9b216654c8baafefb"
+    },
+    "stage5": {
+      "path": "../amazon_preprocess/electronics/stage5_twins/electronics_stage5_summary.json",
+      "sha256": "95fbbc12af566a16d93c487dd4329a14b85349538940285c7aea41797223e3ac"
+    },
+    "stage6": {
+      "path": "../amazon_preprocess/electronics/stage6_shape/electronics_stage6_summary.json",
+      "sha256": "69e3278256abb5b9857ca6a1bce6db5d06e20cb8478da265f7a271d5e295ef7d"
+    },
+    "stage7": {
+      "path": "../amazon_preprocess/electronics/stage7_complementarity/electronics_stage7_summary.json",
+      "sha256": "e211535290a95a25dd154243a9462a7f672654026008bd1550838e36e492793a"
+    },
+    "stage8": {
+      "path": "../amazon_preprocess/electronics/stage8_reference_history/electronics_stage8_refhistory_summary.json",
+      "sha256": "99f295633e32ee0e0d208ff782415606e13a6b4f180185512997389ee3f346d3"
+    },
+    "stage9": {
+      "path": "../amazon_preprocess/electronics/stage9_strength_fixed/electronics_stage9_strength_fixed_identity_summary.json",
+      "sha256": "d416a03999904bfaacd4dc192a4258024df67e8da80a5223b9c3fe9d846bcada"
+    }
+  },
+  "generated_data": "artifacts/table_data/cross_category_table.json",
+  "generated_tex": "artifacts/tables/supp_electronics.tex",
+  "generator_reads_result_gold": false,
+  "home": {
+    "population_audit": {
+      "path": "../amazon_preprocess/stage9_k6_population_audit/home_and_kitchen_k6_population_audit_summary.json",
+      "sha256": "925f6911c0bf3277aa489336b71941d570e4a0b8ed8d13d4d10162d7924009c2"
+    },
+    "stage2": {
+      "path": "../amazon_preprocess/stage2/home_and_kitchen_stage2_summary.json",
+      "sha256": "a0dbe1a243c2c091b5c3042be69533dbfd5da19e485739c8757de510b13d360b"
+    },
+    "stage3": {
+      "path": "../amazon_preprocess/stage3/home_and_kitchen_stage3_summary.json",
+      "sha256": "36cf6f8b4f0c63a62502062a8d34dcf9cc7e3b0f09213dac800d627b1e0fd232"
+    },
+    "stage5": {
+      "path": "../amazon_preprocess/stage5_twins/home_and_kitchen_stage5_summary.json",
+      "sha256": "ab984f0ce40adc861b3bf9267849139678e5126233004415408c080556869e8d"
+    },
+    "stage6": {
+      "path": "../amazon_preprocess/stage6_shape/home_and_kitchen_stage6_summary.json",
+      "sha256": "1f1ab8c5932ec9b7ec0a0c605933da016dc5c98fcd969673ea98bf1b6a543b0f"
+    },
+    "stage7": {
+      "path": "../amazon_preprocess/stage7_complementarity/home_and_kitchen_stage7_summary.json",
+      "sha256": "52b5fafa38313ca28b66f3603aac16b2fc4caefa1bb464cc25bcb178faa9bbf2"
+    },
+    "stage8": {
+      "path": "../amazon_preprocess/stage8_reference_history/home_and_kitchen_stage8_refhistory_summary.json",
+      "sha256": "f72abbf5f43c4cdb532998d57286e7a2e6dbc4ac3b1dc97267fc8c17ad9587f3"
+    },
+    "stage9": {
+      "path": "../amazon_preprocess/stage9_strength_fixed/home_and_kitchen_stage9_strength_fixed_identity_summary.json",
+      "sha256": "8d2cf12075bf4c7cc45ae343cd408ac1092d7af8a728c40bb9a23bad89b0ede8"
+    }
+  },
+  "n_rows": 10,
+  "schema_version": 1,
+  "table_kind": "numerical_cross_category",
+  "table_label": "tab:supp-electronics"
+}

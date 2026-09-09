@@ -1,0 +1,62 @@
+# Electronics primary attack-world construction using the canonical protocol.
+experiment: amazon_primary_attack
+status: frozen
+
+category: electronics
+
+shared_data:
+  root: ../amazon_preprocess/electronics
+  roles_file: stage2/electronics_roles.items.jsonl.gz
+  reference_histograms: stage2/electronics_reference_histograms.csv
+  reference_freeze: stage3/electronics_reference_freeze.json
+  output_subdir: stage4_attack
+  reuse_output_subdir: stage4_reuse
+
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+        10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+
+attack:
+  n_items_per_seed: 2000
+  manipulated_slots_per_item: 6
+  replacement_rating: 5
+
+eligibility:
+  both_experimental_blocks_required: true
+  minimum_nonfive_reviews_per_block: 6
+  feasible_item_universe_from_preprocessing_audit: true
+
+treatment_block:
+  candidates: [experimental_A, experimental_B]
+  selection: random_50_50
+
+donor_selection:
+  candidates: non_five_star_reviews
+  sample_without_replacement: true
+  exactly_m_per_item: true
+
+reference:
+  selected_lambda_from_freeze: true
+  evidence_mode: paired_counterfactual
+  evidence_definition: "W1(attacked, Hhat_i) - W1(clean, Hhat_i)"
+
+output:
+  one_attack_world_per_seed: true
+  identity_assignment_in_this_phase: false
+
+reuse:
+  status: frozen
+  grid: [1, 2, 4, 8, 16]
+  item_degree_m: 6
+  incidence: exact_regular_circulant_after_item_shuffle
+  account_degree: exactly_r
+  duplicate_account_item_edges: forbidden
+  visible_account_labels: randomized_permutation
+  identity_rng_formula: "seed * 100003 + r * 997 + 41"
+
+attribution:
+  block_increment: frozen_d_cf_from_phase2I
+  account_score: sum_of_d_cf_over_participated_treated_blocks
+  normal_participants: original_non_donor_reviewers_in_treated_block
+  synthetic_participants: exact_regular_incidence
+  no_attack_recomputation: true

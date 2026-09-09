@@ -1,0 +1,39 @@
+# Canonical exact matched-twin experiment.
+experiment: amazon_exact_matched_twins
+status: frozen
+
+category: home_and_kitchen
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+        10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+
+reuse_r: 8
+
+shared_data:
+  root: ../amazon_preprocess
+  attack_dir: stage4_attack
+  reuse_dir: stage4_reuse
+  reference_histograms: stage2/home_and_kitchen_reference_histograms.csv
+  reference_freeze: stage3/home_and_kitchen_reference_freeze.json
+  output_subdir: stage5_twins
+
+matching:
+  type: exact_counterfactual_twin
+  frequency: exact
+  item_set: exact
+  block: exact
+  slot_position: exact
+  source_line: exact
+  timestamp: exact_via_same_source_slot
+  only_difference: attacked_vs_clean_evidence_world
+
+scores:
+  counterfactual: sum_d_cf_for_attacked_twin_vs_zero_for_clean_twin
+  raw_world: sum_attack_w1_vs_sum_clean_w1
+  predictive_centered: subtract_same_item_predictive_baseline_from_each_world
+
+guards:
+  attack_world_must_match_phase2I_hash: true
+  r8_identity_assignment_must_match_phase2J_hash: true
+  frequency_auc_must_equal: 0.5
+  total_gap_conservation: true

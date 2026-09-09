@@ -1,0 +1,159 @@
+{
+  "interpretation_guard": "Stage 6 is a controlled counterfactual shape-distortion experiment on real Amazon blocks. It tests distribution-sensitive evidence under exact mean preservation; it is not historical fraud labeling.",
+  "invariants": {
+    "all_six_selected_ratings_change": true,
+    "exact_block_mean_preservation": true,
+    "frequency_exactly_matched_at_r8": true,
+    "item_block_slot_exposure_pairwise_matched": true,
+    "mean_based_paired_effect_exactly_zero": true,
+    "three_disjoint_sum_preserving_pairs": true
+  },
+  "metrics": {
+    "frequency_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "js_counterfactual_score_auc": {
+      "ci_lower": 0.9621569732736909,
+      "ci_upper": 0.9709096933929756,
+      "mean": 0.9665333333333332
+    },
+    "js_mean_paired_gap": {
+      "ci_lower": 0.13739119837194053,
+      "ci_upper": 0.14118510553464336,
+      "mean": 0.13928815195329194
+    },
+    "js_paired_misordering_probability": {
+      "ci_lower": 0.02909030660702431,
+      "ci_upper": 0.037843026726309036,
+      "mean": 0.03346666666666667
+    },
+    "js_positive_pair_fraction": {
+      "ci_lower": 0.9621569732736909,
+      "ci_upper": 0.9709096933929756,
+      "mean": 0.9665333333333332
+    },
+    "js_raw_world_score_auc": {
+      "ci_lower": 0.9088454610349329,
+      "ci_upper": 0.9185102722984005,
+      "mean": 0.9136778666666667
+    },
+    "max_abs_d_abs_mean": {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "mean": 0.0
+    },
+    "mean_counterfactual_score_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "mean_d_abs_mean": {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "mean": 0.0
+    },
+    "mean_d_js": {
+      "ci_lower": 0.017173899796492566,
+      "ci_upper": 0.01764813819183042,
+      "mean": 0.017411018994161493
+    },
+    "mean_d_w1": {
+      "ci_lower": 0.031721343356421745,
+      "ci_upper": 0.03285805276183693,
+      "mean": 0.03228969805912934
+    },
+    "mean_mean_paired_gap": {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "mean": 0.0
+    },
+    "mean_paired_misordering_probability": {
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "mean": 1.0
+    },
+    "mean_positive_pair_fraction": {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "mean": 0.0
+    },
+    "mean_raw_world_score_auc": {
+      "ci_lower": 0.5,
+      "ci_upper": 0.5,
+      "mean": 0.5
+    },
+    "positive_d_js_fraction": {
+      "ci_lower": 0.7193690606230877,
+      "ci_upper": 0.7279976060435788,
+      "mean": 0.7236833333333332
+    },
+    "positive_d_w1_fraction": {
+      "ci_lower": 0.5545862900873367,
+      "ci_upper": 0.5602803765793299,
+      "mean": 0.5574333333333333
+    },
+    "w1_counterfactual_score_auc": {
+      "ci_lower": 0.902094702182069,
+      "ci_upper": 0.9160386311512644,
+      "mean": 0.9090666666666667
+    },
+    "w1_mean_paired_gap": {
+      "ci_lower": 0.25377074685137396,
+      "ci_upper": 0.26286442209469546,
+      "mean": 0.2583175844730347
+    },
+    "w1_paired_misordering_probability": {
+      "ci_lower": 0.0839613688487357,
+      "ci_upper": 0.097905297817931,
+      "mean": 0.09093333333333335
+    },
+    "w1_positive_pair_fraction": {
+      "ci_lower": 0.902094702182069,
+      "ci_upper": 0.9160386311512644,
+      "mean": 0.9090666666666667
+    },
+    "w1_raw_world_score_auc": {
+      "ci_lower": 0.6045939019976438,
+      "ci_upper": 0.6103868980023561,
+      "mean": 0.6074904
+    }
+  },
+  "n_items_per_seed": 2000,
+  "n_seeds": 30,
+  "reuse_r": 8,
+  "seed_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "stage": "amazon_stage6_mean_preserving_shape_r8"
+}

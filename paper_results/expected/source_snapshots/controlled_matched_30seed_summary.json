@@ -1,0 +1,66 @@
+{
+  "experiment": "controlled_matched_exposure_divergence",
+  "metrics": {
+    "Delta_hat": {
+      "ci_lower": 0.004160501360587715,
+      "ci_upper": 0.004201010152194522,
+      "mean": 0.004180429911454729,
+      "n_seeds": 30
+    },
+    "empirical_final_gap": {
+      "ci_lower": 16.545294374599294,
+      "ci_upper": 16.961260133273363,
+      "mean": 16.757696857379734,
+      "n_seeds": 30
+    },
+    "empirical_gap_slope": {
+      "ci_lower": 0.004126773940222348,
+      "ci_upper": 0.004252091485028409,
+      "mean": 0.004189711094633956,
+      "n_seeds": 30
+    },
+    "final_pair_misordering": {
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "mean": 0.0,
+      "n_seeds": 30
+    },
+    "frequency_auc": {
+      "ci_lower": 0.4501431333333334,
+      "ci_upper": 0.5746726916666667,
+      "mean": 0.5126736666666667,
+      "n_seeds": 30
+    },
+    "predicted_final_gap": {
+      "ci_lower": 16.64112461642301,
+      "ci_upper": 16.80275608260302,
+      "mean": 16.72171964581891,
+      "n_seeds": 30
+    },
+    "realized_R_exp": {
+      "ci_lower": 0.9893312375538854,
+      "ci_upper": 1.0143023700614775,
+      "mean": 1.0017681676024295,
+      "n_seeds": 30
+    },
+    "realized_p_on": {
+      "ci_lower": 0.19771666666666665,
+      "ci_upper": 0.20294187500000005,
+      "mean": 0.20033333333333336,
+      "n_seeds": 30
+    },
+    "score_auc": {
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "mean": 1.0,
+      "n_seeds": 30
+    },
+    "slope_relative_error": {
+      "ci_lower": 0.03726659590163551,
+      "ci_upper": 0.054366972603702685,
+      "mean": 0.045708454952637416,
+      "n_seeds": 30
+    }
+  },
+  "n_seeds": 30
+}

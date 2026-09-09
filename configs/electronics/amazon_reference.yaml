@@ -1,0 +1,40 @@
+# Electronics reference estimation using the canonical Amazon protocol.
+experiment: amazon_reference_calibration
+status: frozen
+
+category: electronics
+
+shared_data:
+  root: ../amazon_preprocess/electronics
+  roles_file: stage2/electronics_roles.items.jsonl.gz
+  reference_histograms: stage2/electronics_reference_histograms.csv
+  output_subdir: stage3
+
+lambda_grid: [0, 5, 10, 20, 40, 80, 160]
+
+selection:
+  roles: [calibration_1, calibration_2]
+  objective: absolute_mean_predictive_signed_increment
+  tie_break: smaller_lambda
+
+reference:
+  prefix_positions: [1, 120]
+  formula: "(c_i + lambda * H_-i) / (120 + lambda)"
+  leave_one_item_out_domain_reference: true
+
+baselines:
+  plugin: exact_binomial_cumulative_marginals
+  predictive: exact_beta_binomial_cumulative_marginals
+
+holdout:
+  roles: [holdout_1, holdout_2]
+  purpose: temporal_drift_diagnostic_only
+  retune_lambda: false
+
+bootstrap:
+  replicates: 10000
+  level: 0.95
+  seed: 314159
+
+handoff:
+  stage4_evidence_mode: paired_counterfactual

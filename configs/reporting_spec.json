@@ -1,0 +1,123 @@
+{
+  "figures": {
+    "data": "artifacts/figure_data/",
+    "renderers": "figures/",
+    "rule": "renderers consume figure-data files only and never invoke experiments"
+  },
+  "numerical_reporting_rule": "Numerical tables read canonical experiment outputs only. Frozen gold is read by verifiers only, never by generators.",
+  "schema_version": 1,
+  "supplement_tables": [
+    {
+      "generator": "experiments/reporting/generate_static_tables.py",
+      "kind": "static_spec",
+      "label": "tab:supp-map",
+      "output": "artifacts/tables/supp_map.tex",
+      "source": "configs + repository artifact registry"
+    },
+    {
+      "generator": "experiments/reporting/generate_static_tables.py",
+      "kind": "static_spec",
+      "label": "tab:supp-notation",
+      "output": "artifacts/tables/supp_notation.tex",
+      "source": "configs/reporting_spec.yaml"
+    },
+    {
+      "generator": "experiments/reporting/generate_static_tables.py",
+      "kind": "static_spec",
+      "label": "tab:supp-rotation-parameters",
+      "output": "artifacts/tables/supp_rotation_parameters.tex",
+      "source": "configs/controlled.yaml"
+    },
+    {
+      "generator": "experiments/reporting/generate_static_tables.py",
+      "kind": "static_spec",
+      "label": "tab:supp-amazon-splits",
+      "output": "artifacts/tables/supp_amazon_splits.tex",
+      "source": "configs/amazon_preprocess.yaml"
+    },
+    {
+      "generator": "experiments/reporting/generate_static_tables.py",
+      "kind": "static_spec",
+      "label": "tab:supp-shape-transforms",
+      "output": "artifacts/tables/supp_shape_transforms.tex",
+      "source": "configs/amazon_shape.yaml"
+    },
+    {
+      "generator": "experiments/reporting/generate_static_tables.py",
+      "kind": "static_spec",
+      "label": "tab:supp-controls",
+      "output": "artifacts/tables/supp_controls.tex",
+      "source": "configs/reporting_spec.yaml + experiment configs"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-reference-history",
+      "output": "artifacts/tables/supp_reference_history.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-controlled-grid",
+      "output": "artifacts/tables/supp_controlled_grid.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-reuse-results",
+      "output": "artifacts/tables/supp_reuse_results.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-twin-results",
+      "output": "artifacts/tables/supp_twin_results.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-shape-results",
+      "output": "artifacts/tables/supp_shape_results.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-strength-results",
+      "output": "artifacts/tables/supp_strength_results.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical_composite",
+      "label": "tab:supp-one-world-ranking",
+      "outputs": [
+        "artifacts/tables/supp_one_world_ranking_full.tex",
+        "artifacts/tables/supp_one_world_ranking_freq8.tex"
+      ]
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-self-influence",
+      "output": "artifacts/tables/supp_self_influence.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "numerical",
+      "label": "tab:supp-complementarity",
+      "output": "artifacts/tables/supp_complementarity.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_supplement_tables.py",
+      "kind": "composite",
+      "label": "tab:supp-k6-population",
+      "output": "artifacts/tables/supp_k6_population.tex"
+    },
+    {
+      "generator": "experiments/reporting/generate_cross_category_table.py",
+      "kind": "numerical_cross_category",
+      "label": "tab:supp-electronics",
+      "output": "artifacts/tables/supp_electronics.tex",
+      "source": "canonical Home-and-Kitchen and Electronics Stage 2/3/5/6/7/8/9 summaries plus population audits"
+    }
+  ]
+}

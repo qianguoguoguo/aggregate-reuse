@@ -1,0 +1,30 @@
+experiment: amazon_same_k6_population_audit
+status: final
+
+category: home_and_kitchen
+
+k: 6
+
+population_rules:
+  k6_feasible_population: 6
+  k9_feasible_population: 9
+
+reference:
+  selected_lambda_from_stage3_freeze: true
+
+shared_data:
+  root: ../amazon_preprocess
+  roles_file: stage2/home_and_kitchen_roles.items.jsonl.gz
+  reference_histograms: stage2/home_and_kitchen_reference_histograms.csv
+  reference_freeze: stage3/home_and_kitchen_reference_freeze.json
+  output_subdir: stage9_k6_population_audit
+
+provenance:
+  legacy_empirical_values_status: exploratory_unrecoverable
+  note: >
+    The old trimmed repository retained only rounded empirical values for an
+    auxiliary finite-sample audit, but no exact script, RNG state, or per-seed
+    artifact. A diagnostic over the historically retained Stage-4 and Stage-9
+    RNG/incidence conventions found no exact reproduction. The final artifact
+    therefore makes the population audit deterministic by reporting exact
+    full-population expected d_cf under the common k=6 intervention.

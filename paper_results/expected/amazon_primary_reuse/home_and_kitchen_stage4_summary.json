@@ -1,0 +1,234 @@
+{
+  "aggregate_visibility_mean_d_cf": {
+    "ci_lower": 0.07367436801569235,
+    "ci_upper": 0.07904047485181376,
+    "mean": 0.07635742143375306
+  },
+  "interpretation_guard": "Stage 4 tests a fixed paired aggregate five-star intervention. Across r, aggregate attack construction is unchanged; only the partition of manipulated slots into synthetic identities changes. This first reuse sweep does not match coalition and normal marginal activity; account-marginal matching is a later experiment.",
+  "n_seeds": 30,
+  "reuse_summary": {
+    "1": {
+      "coalition_mean_score": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "frequency_auc": {
+        "ci_lower": 0.4982409521659331,
+        "ci_upper": 0.49834796975403883,
+        "mean": 0.498294460959986
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "mean_reuse_law_abs_error": {
+        "ci_lower": 2.6323670672005055e-18,
+        "ci_upper": 8.469863179051061e-18,
+        "mean": 5.551115123125783e-18
+      },
+      "n_seeds": 30,
+      "positive_d_cf_fraction": {
+        "ci_lower": 0.6344300859815439,
+        "ci_upper": 0.6422032473517894,
+        "mean": 0.6383166666666666
+      },
+      "score_auc": {
+        "ci_lower": 0.49975883804064325,
+        "ci_upper": 0.4997909386469037,
+        "mean": 0.4997748883437735
+      },
+      "score_no_larger_probability": {
+        "ci_lower": 0.5008693628193417,
+        "ci_upper": 0.5009183389238858,
+        "mean": 0.5008938508716138
+      }
+    },
+    "16": {
+      "coalition_mean_score": {
+        "ci_lower": 1.1787898882510777,
+        "ci_upper": 1.2646475976290201,
+        "mean": 1.221718742940049
+      },
+      "frequency_auc": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "mean": 1.0
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "mean_reuse_law_abs_error": {
+        "ci_lower": 5.624887020546036e-17,
+        "ci_upper": 1.509927610579022e-16,
+        "mean": 1.0362081563168128e-16
+      },
+      "n_seeds": 30,
+      "positive_d_cf_fraction": {
+        "ci_lower": 0.6344300859815439,
+        "ci_upper": 0.6422032473517894,
+        "mean": 0.6383166666666666
+      },
+      "score_auc": {
+        "ci_lower": 0.7843772266484252,
+        "ci_upper": 0.8090330279251186,
+        "mean": 0.7967051272867719
+      },
+      "score_no_larger_probability": {
+        "ci_lower": 0.1909669720748815,
+        "ci_upper": 0.21562277335157481,
+        "mean": 0.20329487271322816
+      }
+    },
+    "2": {
+      "coalition_mean_score": {
+        "ci_lower": 0.1473487360313847,
+        "ci_upper": 0.15808094970362752,
+        "mean": 0.1527148428675061
+      },
+      "frequency_auc": {
+        "ci_lower": 0.9982257593391393,
+        "ci_upper": 0.9983352869605822,
+        "mean": 0.9982805231498607
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "mean_reuse_law_abs_error": {
+        "ci_lower": 4.282651850051384e-18,
+        "ci_upper": 1.4221065227034556e-17,
+        "mean": 9.25185853854297e-18
+      },
+      "n_seeds": 30,
+      "positive_d_cf_fraction": {
+        "ci_lower": 0.6344300859815439,
+        "ci_upper": 0.6422032473517894,
+        "mean": 0.6383166666666666
+      },
+      "score_auc": {
+        "ci_lower": 0.5595664138262342,
+        "ci_upper": 0.5641141921006454,
+        "mean": 0.5618403029634398
+      },
+      "score_no_larger_probability": {
+        "ci_lower": 0.43589375380982426,
+        "ci_upper": 0.4404419449955385,
+        "mean": 0.4381678494026814
+      }
+    },
+    "4": {
+      "coalition_mean_score": {
+        "ci_lower": 0.2946974720627694,
+        "ci_upper": 0.31616189940725503,
+        "mean": 0.3054296857350122
+      },
+      "frequency_auc": {
+        "ci_lower": 0.9999989392696168,
+        "ci_upper": 1.0000003640798785,
+        "mean": 0.9999996516747477
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "mean_reuse_law_abs_error": {
+        "ci_lower": 1.2274562893664598e-17,
+        "ci_upper": 3.5835101506758855e-17,
+        "mean": 2.4054832200211726e-17
+      },
+      "n_seeds": 30,
+      "positive_d_cf_fraction": {
+        "ci_lower": 0.6344300859815439,
+        "ci_upper": 0.6422032473517894,
+        "mean": 0.6383166666666666
+      },
+      "score_auc": {
+        "ci_lower": 0.6218569045065164,
+        "ci_upper": 0.6308587326680609,
+        "mean": 0.6263578185872887
+      },
+      "score_no_larger_probability": {
+        "ci_lower": 0.36914226995334143,
+        "ci_upper": 0.3781437929013587,
+        "mean": 0.37364303142735006
+      }
+    },
+    "8": {
+      "coalition_mean_score": {
+        "ci_lower": 0.5893949441255388,
+        "ci_upper": 0.6323237988145101,
+        "mean": 0.6108593714700244
+      },
+      "frequency_auc": {
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "mean": 1.0
+      },
+      "mean_d_cf": {
+        "ci_lower": 0.07367436801569235,
+        "ci_upper": 0.07904047485181376,
+        "mean": 0.07635742143375306
+      },
+      "mean_reuse_law_abs_error": {
+        "ci_lower": 1.3984206723809907e-17,
+        "ci_upper": 5.2629174753699486e-17,
+        "mean": 3.3306690738754695e-17
+      },
+      "n_seeds": 30,
+      "positive_d_cf_fraction": {
+        "ci_lower": 0.6344300859815439,
+        "ci_upper": 0.6422032473517894,
+        "mean": 0.6383166666666666
+      },
+      "score_auc": {
+        "ci_lower": 0.6968997507405731,
+        "ci_upper": 0.7141144143812218,
+        "mean": 0.7055070825608974
+      },
+      "score_no_larger_probability": {
+        "ci_lower": 0.28588558561877814,
+        "ci_upper": 0.30310024925942686,
+        "mean": 0.2944929174391025
+      }
+    }
+  },
+  "seed_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "stage": "amazon_stage4_fixed_five_star_reuse"
+}

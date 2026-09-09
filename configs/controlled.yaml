@@ -1,0 +1,90 @@
+# Canonical configuration for Phase 2D only.
+# Values copied from the validated controlled null-calibration experiment.
+experiment: controlled_null_calibration
+status: frozen
+
+seeds:
+  start: 27001
+  stop: 27030
+
+confidence_intervals:
+  level: 0.95
+  bootstrap_replicates: 10000
+
+controlled_model:
+  T: 4000
+  N_normal: 20000
+  N_coalition: 2000
+  p_normal: 0.04
+
+  action_space:
+    type: continuous_scalar
+    support: [-4.0, 4.0]
+    clipping: clip
+    histogram_bins: 40
+    binning: equal_width
+    wasserstein_support: bin_centers
+
+  normal_distribution:
+    family: normal
+    mean: 0.0
+    std: 1.0
+    clipping: [-4.0, 4.0]
+
+implementation:
+  random_stage_name: controlled_null_centering
+  participation_model: independent Bernoulli per normal account and interval
+  baseline_method: exact_binomial_marginal_expectation
+
+required_environment:
+  python: "3.12.10"
+  numpy: "2.5.1"
+  scipy: "1.18.0"
+  sklearn: "1.9.0"
+  pyyaml: "6.0.3"
+
+matched_exposure:
+  status: frozen
+  experiment_name: controlled_matched_exposure_divergence
+  random_stage_name: controlled_matched_exposure_divergence
+  campaign:
+    principal_p_on: 0.2
+    principal_exposure_ratio: 1.0
+    scheduler: cyclic_balanced_rotation
+    k_on_rule: "round(R_exp * p_normal * N_coalition / p_on)"
+  coalition_distribution:
+    family: normal
+    mean: 0.5
+    std: 1.0
+    clipping: [-4.0, 4.0]
+  matched_pairing:
+    coalition_account_j_with_normal_account_j: true
+    number_of_pairs: 2000
+    misordering_definition: "coalition_score <= paired_normal_score"
+
+regime_sweep:
+  status: frozen
+  experiment_name: controlled_exposure_intermittency_regime
+  random_stage_name: controlled_exposure_intermittency_regime
+  p_on_grid: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  exposure_ratio_grid: [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
+  principal_p_on: 0.2
+  principal_exposure_ratio: 1.0
+  scheduler: cyclic_balanced_rotation
+  coalition_in_inactive_intervals: 0
+  k_on_rule: "round(R_exp * p_normal * N_coalition / p_on)"
+  coalition_distribution:
+    family: normal
+    mean: 0.5
+    std: 1.0
+    clipping: [-4.0, 4.0]
+  common_random_numbers:
+    normal_background_shared_across_cells: true
+    campaign_uniforms_shared_across_cells: true
+    active_sets_nested_across_p_on: true
+    coalition_draws_separate_by_cell: true
+  legacy_compatibility:
+    baseline_monte_carlo_draws_per_configuration: 20000
+    note: >
+      Historical field retained for input-schema compatibility. Canonical W1
+      centering uses the exact finite-sample Binomial-marginal baseline.

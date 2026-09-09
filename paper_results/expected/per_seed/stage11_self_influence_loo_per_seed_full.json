@@ -1,0 +1,1262 @@
+[
+  {
+    "seed": 0,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7846666666666666,
+        "loo_matched_twin_auc": 0.7846666666666666,
+        "loo_mean_paired_gap": 0.6428770694484691,
+        "loo_misordering_probability": 0.21533333333333332,
+        "mean_direct_self_component": -0.02558850161654841,
+        "median_direct_self_component": -0.02464862103334453,
+        "original_matched_twin_auc": 0.74,
+        "original_mean_paired_gap": 0.6172885678319207,
+        "original_misordering_probability": 0.26,
+        "pearson_original_vs_loo_score": 0.9909432994546873,
+        "retained_mean_gap_fraction": 1.0414530625545553,
+        "spearman_original_vs_loo_score": 0.9898967327788829
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 0,
+      "source_stage4": {
+        "attack_world_sha256": "e6c1e331e091a817f66b33f292874fcd8a769bc71e7390eb90d30b0bf6aee327",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 1,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.754,
+        "loo_matched_twin_auc": 0.754,
+        "loo_mean_paired_gap": 0.621491362833578,
+        "loo_misordering_probability": 0.246,
+        "mean_direct_self_component": -0.031273203099608064,
+        "median_direct_self_component": -0.03696536210822182,
+        "original_matched_twin_auc": 0.712,
+        "original_mean_paired_gap": 0.5902181597339698,
+        "original_misordering_probability": 0.288,
+        "pearson_original_vs_loo_score": 0.9924598231759678,
+        "retained_mean_gap_fraction": 1.052985836819565,
+        "spearman_original_vs_loo_score": 0.9912949815641265
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 1,
+      "source_stage4": {
+        "attack_world_sha256": "d2a6af13ef9520fb43cb4748fb4123dcd5b503fb6643a89b4e3aeb95a816bc2c",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 2,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.74,
+        "loo_matched_twin_auc": 0.74,
+        "loo_mean_paired_gap": 0.5510583027367515,
+        "loo_misordering_probability": 0.26,
+        "mean_direct_self_component": -0.045681206087427824,
+        "median_direct_self_component": -0.0485817455570272,
+        "original_matched_twin_auc": 0.716,
+        "original_mean_paired_gap": 0.5053770966493236,
+        "original_misordering_probability": 0.284,
+        "pearson_original_vs_loo_score": 0.9913680421857775,
+        "retained_mean_gap_fraction": 1.0903903370182317,
+        "spearman_original_vs_loo_score": 0.9893098941275004
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 2,
+      "source_stage4": {
+        "attack_world_sha256": "995a0e15147a97cf6b3e60c3fc7dcb1533e16598b92a731e212ffcc80050bafd",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 3,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.774,
+        "loo_matched_twin_auc": 0.774,
+        "loo_mean_paired_gap": 0.6337589345610295,
+        "loo_misordering_probability": 0.226,
+        "mean_direct_self_component": -0.03308699819126926,
+        "median_direct_self_component": -0.0343205546073444,
+        "original_matched_twin_auc": 0.732,
+        "original_mean_paired_gap": 0.6006719363697602,
+        "original_misordering_probability": 0.268,
+        "pearson_original_vs_loo_score": 0.9910882272623514,
+        "retained_mean_gap_fraction": 1.0550833095203929,
+        "spearman_original_vs_loo_score": 0.9905512004107495
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 3,
+      "source_stage4": {
+        "attack_world_sha256": "5f4fbb438e098d7766a856b00cd993ed76b8fe654b56bbd5fe62662277f6e3ed",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 4,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7186666666666667,
+        "loo_matched_twin_auc": 0.7186666666666667,
+        "loo_mean_paired_gap": 0.560261304530067,
+        "loo_misordering_probability": 0.2813333333333333,
+        "mean_direct_self_component": -0.036515783731976094,
+        "median_direct_self_component": -0.03495581884399068,
+        "original_matched_twin_auc": 0.672,
+        "original_mean_paired_gap": 0.5237455207980909,
+        "original_misordering_probability": 0.328,
+        "pearson_original_vs_loo_score": 0.9932087767779352,
+        "retained_mean_gap_fraction": 1.069720469735632,
+        "spearman_original_vs_loo_score": 0.9926053452938344
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 4,
+      "source_stage4": {
+        "attack_world_sha256": "08dd949cbdb1c4e3b3d3266926dbe48f624fcc8a4354b44ecb035c37e4106d33",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 5,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.824,
+        "loo_matched_twin_auc": 0.824,
+        "loo_mean_paired_gap": 0.6885556621763187,
+        "loo_misordering_probability": 0.176,
+        "mean_direct_self_component": -0.02012873575830836,
+        "median_direct_self_component": -0.018821572379655205,
+        "original_matched_twin_auc": 0.792,
+        "original_mean_paired_gap": 0.6684269264180103,
+        "original_misordering_probability": 0.208,
+        "pearson_original_vs_loo_score": 0.9900789304714622,
+        "retained_mean_gap_fraction": 1.030113592021457,
+        "spearman_original_vs_loo_score": 0.9858483446401016
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 5,
+      "source_stage4": {
+        "attack_world_sha256": "23d700135575dfbd5c83cfde34a984fed7d849ea6140ccbc0d2c6bfe867de354",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 6,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7486666666666667,
+        "loo_matched_twin_auc": 0.7486666666666667,
+        "loo_mean_paired_gap": 0.6411821513521547,
+        "loo_misordering_probability": 0.25133333333333335,
+        "mean_direct_self_component": -0.03393325305507734,
+        "median_direct_self_component": -0.03294391074504191,
+        "original_matched_twin_auc": 0.724,
+        "original_mean_paired_gap": 0.6072488982970774,
+        "original_misordering_probability": 0.276,
+        "pearson_original_vs_loo_score": 0.992437859848067,
+        "retained_mean_gap_fraction": 1.0558803040239961,
+        "spearman_original_vs_loo_score": 0.9920698235247137
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 6,
+      "source_stage4": {
+        "attack_world_sha256": "86f006f6dbdd0a64a22efa5ddc7f1cd635c52aa2096589a99f6d94e348be2512",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 7,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7366666666666667,
+        "loo_matched_twin_auc": 0.7366666666666667,
+        "loo_mean_paired_gap": 0.6563170384204363,
+        "loo_misordering_probability": 0.2633333333333333,
+        "mean_direct_self_component": -0.020529308181441705,
+        "median_direct_self_component": -0.02277680180173086,
+        "original_matched_twin_auc": 0.708,
+        "original_mean_paired_gap": 0.6357877302389946,
+        "original_misordering_probability": 0.292,
+        "pearson_original_vs_loo_score": 0.9915906766192037,
+        "retained_mean_gap_fraction": 1.032289563332285,
+        "spearman_original_vs_loo_score": 0.9915177443054625
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 7,
+      "source_stage4": {
+        "attack_world_sha256": "b7b6848423d687d84a8d07817fe8b2e0daa74eec1616a79e9b05c2ef7184685b",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 8,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.8013333333333333,
+        "loo_matched_twin_auc": 0.8013333333333333,
+        "loo_mean_paired_gap": 0.7588373624266163,
+        "loo_misordering_probability": 0.19866666666666666,
+        "mean_direct_self_component": -0.01775489061308111,
+        "median_direct_self_component": -0.014942528735632093,
+        "original_matched_twin_auc": 0.78,
+        "original_mean_paired_gap": 0.7410824718135351,
+        "original_misordering_probability": 0.22,
+        "pearson_original_vs_loo_score": 0.9922006687965862,
+        "retained_mean_gap_fraction": 1.0239580495941731,
+        "spearman_original_vs_loo_score": 0.9912177729507474
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 8,
+      "source_stage4": {
+        "attack_world_sha256": "1645ad95fffcbaaf8f94ba227fd596b930056ef3ac236f5ed458f8eacf694b6b",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 9,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.776,
+        "loo_matched_twin_auc": 0.776,
+        "loo_mean_paired_gap": 0.6801040626318944,
+        "loo_misordering_probability": 0.224,
+        "mean_direct_self_component": -0.016006476045573096,
+        "median_direct_self_component": -0.013948997294313759,
+        "original_matched_twin_auc": 0.744,
+        "original_mean_paired_gap": 0.6640975865863213,
+        "original_misordering_probability": 0.256,
+        "pearson_original_vs_loo_score": 0.9919894419882486,
+        "retained_mean_gap_fraction": 1.024102596318489,
+        "spearman_original_vs_loo_score": 0.9915571624608737
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 9,
+      "source_stage4": {
+        "attack_world_sha256": "8c91d53e1fa59d7c5c05b126d5f74527d0a264ab0e1f41d1d3ec529f16d64191",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 10,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.776,
+        "loo_matched_twin_auc": 0.776,
+        "loo_mean_paired_gap": 0.6436672697205407,
+        "loo_misordering_probability": 0.224,
+        "mean_direct_self_component": -0.03172863986163297,
+        "median_direct_self_component": -0.028369955163784544,
+        "original_matched_twin_auc": 0.728,
+        "original_mean_paired_gap": 0.6119386298589078,
+        "original_misordering_probability": 0.272,
+        "pearson_original_vs_loo_score": 0.9914943413658802,
+        "retained_mean_gap_fraction": 1.0518493821332189,
+        "spearman_original_vs_loo_score": 0.9897511342184622
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 10,
+      "source_stage4": {
+        "attack_world_sha256": "0c38945661ccd4eb0be69f9fc79f2cafb76d8e94a0daaa9265416f4bb9850934",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 11,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.8273333333333334,
+        "loo_matched_twin_auc": 0.8273333333333334,
+        "loo_mean_paired_gap": 0.7679878239950566,
+        "loo_misordering_probability": 0.17266666666666666,
+        "mean_direct_self_component": -0.008845673685531085,
+        "median_direct_self_component": -0.007008704010665001,
+        "original_matched_twin_auc": 0.804,
+        "original_mean_paired_gap": 0.7591421503095256,
+        "original_misordering_probability": 0.196,
+        "pearson_original_vs_loo_score": 0.99177399613672,
+        "retained_mean_gap_fraction": 1.0116521967353866,
+        "spearman_original_vs_loo_score": 0.9891787997134791
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 11,
+      "source_stage4": {
+        "attack_world_sha256": "c21565ab259766109fbad2ce0c51e5c9061a832b8f039bd88de567c7dccbdfd8",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 12,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.784,
+        "loo_matched_twin_auc": 0.784,
+        "loo_mean_paired_gap": 0.598892134501919,
+        "loo_misordering_probability": 0.216,
+        "mean_direct_self_component": -0.03187839072366776,
+        "median_direct_self_component": -0.030668005636084142,
+        "original_matched_twin_auc": 0.748,
+        "original_mean_paired_gap": 0.5670137437782514,
+        "original_misordering_probability": 0.252,
+        "pearson_original_vs_loo_score": 0.9901074323847342,
+        "retained_mean_gap_fraction": 1.0562215485488031,
+        "spearman_original_vs_loo_score": 0.9877135786584901
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 12,
+      "source_stage4": {
+        "attack_world_sha256": "2000cdf3e6201d6269f26826102349cb4709bdcc762a2a2a521ed0f03d1301f9",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 13,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7626666666666667,
+        "loo_matched_twin_auc": 0.7626666666666667,
+        "loo_mean_paired_gap": 0.583145385270289,
+        "loo_misordering_probability": 0.23733333333333334,
+        "mean_direct_self_component": -0.03284329890799635,
+        "median_direct_self_component": -0.03276430943095017,
+        "original_matched_twin_auc": 0.704,
+        "original_mean_paired_gap": 0.5503020863622926,
+        "original_misordering_probability": 0.296,
+        "pearson_original_vs_loo_score": 0.9908005595773546,
+        "retained_mean_gap_fraction": 1.0596823085391212,
+        "spearman_original_vs_loo_score": 0.9895934243814923
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 13,
+      "source_stage4": {
+        "attack_world_sha256": "9d39ffd155ab7fd116dba14b81bb290a47241c4ade8fcd1db0d440ce3c2e228c",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 14,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7766666666666666,
+        "loo_matched_twin_auc": 0.7766666666666666,
+        "loo_mean_paired_gap": 0.59450383184855,
+        "loo_misordering_probability": 0.22333333333333333,
+        "mean_direct_self_component": -0.03973809116707601,
+        "median_direct_self_component": -0.03566954829659896,
+        "original_matched_twin_auc": 0.76,
+        "original_mean_paired_gap": 0.554765740681474,
+        "original_misordering_probability": 0.24,
+        "pearson_original_vs_loo_score": 0.9908519118436595,
+        "retained_mean_gap_fraction": 1.0716303986584712,
+        "spearman_original_vs_loo_score": 0.9881134469311522
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 14,
+      "source_stage4": {
+        "attack_world_sha256": "c67a3f67383634c1d19186c12a6834aeb361ea0ebee9c21ef575a96a6cb0eae5",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 15,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.792,
+        "loo_matched_twin_auc": 0.792,
+        "loo_mean_paired_gap": 0.658012768898787,
+        "loo_misordering_probability": 0.208,
+        "mean_direct_self_component": -0.021348215416893492,
+        "median_direct_self_component": -0.016730119123556264,
+        "original_matched_twin_auc": 0.776,
+        "original_mean_paired_gap": 0.6366645534818934,
+        "original_misordering_probability": 0.224,
+        "pearson_original_vs_loo_score": 0.9919547041257805,
+        "retained_mean_gap_fraction": 1.0335313396986545,
+        "spearman_original_vs_loo_score": 0.9893062656721692
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 15,
+      "source_stage4": {
+        "attack_world_sha256": "28993c11fcb5bead56ad7e49a420a4142473930e0b813f93c0669f8d75341534",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 16,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.796,
+        "loo_matched_twin_auc": 0.796,
+        "loo_mean_paired_gap": 0.6497219169921293,
+        "loo_misordering_probability": 0.204,
+        "mean_direct_self_component": -0.027209536893190812,
+        "median_direct_self_component": -0.023090398592366446,
+        "original_matched_twin_auc": 0.78,
+        "original_mean_paired_gap": 0.6225123800989385,
+        "original_misordering_probability": 0.22,
+        "pearson_original_vs_loo_score": 0.990654954434954,
+        "retained_mean_gap_fraction": 1.0437092301503568,
+        "spearman_original_vs_loo_score": 0.9884349376431094
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 16,
+      "source_stage4": {
+        "attack_world_sha256": "b543c2889d8a364a0d75b517e05287881fb16db5f42ef92300eda421cd408090",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 17,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.786,
+        "loo_matched_twin_auc": 0.786,
+        "loo_mean_paired_gap": 0.6612037678438605,
+        "loo_misordering_probability": 0.214,
+        "mean_direct_self_component": -0.02764265708835026,
+        "median_direct_self_component": -0.028315926573248107,
+        "original_matched_twin_auc": 0.748,
+        "original_mean_paired_gap": 0.6335611107555101,
+        "original_misordering_probability": 0.252,
+        "pearson_original_vs_loo_score": 0.9902641685813202,
+        "retained_mean_gap_fraction": 1.0436306089800667,
+        "spearman_original_vs_loo_score": 0.9893941392758613
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 17,
+      "source_stage4": {
+        "attack_world_sha256": "d8ad716247b9b260d6e7a9b557c859f2598db45a4989149d4be2088bb5f3ba46",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 18,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7206666666666667,
+        "loo_matched_twin_auc": 0.7206666666666667,
+        "loo_mean_paired_gap": 0.5689270867958456,
+        "loo_misordering_probability": 0.2793333333333333,
+        "mean_direct_self_component": -0.039804869247237334,
+        "median_direct_self_component": -0.04132889075483087,
+        "original_matched_twin_auc": 0.668,
+        "original_mean_paired_gap": 0.5291222175486082,
+        "original_misordering_probability": 0.332,
+        "pearson_original_vs_loo_score": 0.99213443663388,
+        "retained_mean_gap_fraction": 1.0752281191888917,
+        "spearman_original_vs_loo_score": 0.9913518797958147
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 18,
+      "source_stage4": {
+        "attack_world_sha256": "c6c34d9c1845c8193060d5a7fffcfb3fe6c1b04aaca4eb7b1bdb73b41f7e431e",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 19,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.786,
+        "loo_matched_twin_auc": 0.786,
+        "loo_mean_paired_gap": 0.5773790087723457,
+        "loo_misordering_probability": 0.214,
+        "mean_direct_self_component": -0.032995580798326804,
+        "median_direct_self_component": -0.03337318473973194,
+        "original_matched_twin_auc": 0.748,
+        "original_mean_paired_gap": 0.5443834279740188,
+        "original_misordering_probability": 0.252,
+        "pearson_original_vs_loo_score": 0.9907016490578708,
+        "retained_mean_gap_fraction": 1.0606109207275531,
+        "spearman_original_vs_loo_score": 0.9884602605183924
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 19,
+      "source_stage4": {
+        "attack_world_sha256": "64706dcc2ab35cd0aaa6c2379b626853e7f0009638dad769dfd6a16181faa757",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 20,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.772,
+        "loo_matched_twin_auc": 0.772,
+        "loo_mean_paired_gap": 0.62100808431361,
+        "loo_misordering_probability": 0.228,
+        "mean_direct_self_component": -0.03328542846127978,
+        "median_direct_self_component": -0.038237949301517415,
+        "original_matched_twin_auc": 0.724,
+        "original_mean_paired_gap": 0.5877226558523302,
+        "original_misordering_probability": 0.276,
+        "pearson_original_vs_loo_score": 0.991990459281795,
+        "retained_mean_gap_fraction": 1.0566345845780072,
+        "spearman_original_vs_loo_score": 0.9905389611398918
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 20,
+      "source_stage4": {
+        "attack_world_sha256": "f5806d5fc0779cadbd48eaa7e615cd0cf4a223c7a60b9e9604e1e4989acd581b",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 21,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7866666666666666,
+        "loo_matched_twin_auc": 0.7866666666666666,
+        "loo_mean_paired_gap": 0.6137588494480003,
+        "loo_misordering_probability": 0.21333333333333335,
+        "mean_direct_self_component": -0.027235173426993317,
+        "median_direct_self_component": -0.023469944054316835,
+        "original_matched_twin_auc": 0.756,
+        "original_mean_paired_gap": 0.586523676021007,
+        "original_misordering_probability": 0.244,
+        "pearson_original_vs_loo_score": 0.9912765524386792,
+        "retained_mean_gap_fraction": 1.046434908837368,
+        "spearman_original_vs_loo_score": 0.989499553422048
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 21,
+      "source_stage4": {
+        "attack_world_sha256": "424d6aab5d27a2beccb22ed550ba1284f084ce57b8a57e96bae41de0adc83da8",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 22,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.776,
+        "loo_matched_twin_auc": 0.776,
+        "loo_mean_paired_gap": 0.6016296197107538,
+        "loo_misordering_probability": 0.224,
+        "mean_direct_self_component": -0.03216119220917633,
+        "median_direct_self_component": -0.03172619954139008,
+        "original_matched_twin_auc": 0.74,
+        "original_mean_paired_gap": 0.5694684275015774,
+        "original_misordering_probability": 0.26,
+        "pearson_original_vs_loo_score": 0.9900180248159719,
+        "retained_mean_gap_fraction": 1.0564758126280622,
+        "spearman_original_vs_loo_score": 0.9887638959586792
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 22,
+      "source_stage4": {
+        "attack_world_sha256": "972d804efac22e959ce67067b77e2d80ea58f4dcec72a4a8178a99dba64344b0",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 23,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7793333333333333,
+        "loo_matched_twin_auc": 0.7793333333333333,
+        "loo_mean_paired_gap": 0.6582199585516296,
+        "loo_misordering_probability": 0.22066666666666668,
+        "mean_direct_self_component": -0.02718318980713489,
+        "median_direct_self_component": -0.025871399552278795,
+        "original_matched_twin_auc": 0.74,
+        "original_mean_paired_gap": 0.6310367687444947,
+        "original_misordering_probability": 0.26,
+        "pearson_original_vs_loo_score": 0.9911074695421388,
+        "retained_mean_gap_fraction": 1.0430770299822916,
+        "spearman_original_vs_loo_score": 0.9896313883517679
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 23,
+      "source_stage4": {
+        "attack_world_sha256": "1e9974b35070a6b4452ddd03ac0cfd81d64a10258a0b3770545e39bd77586b00",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 24,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7906666666666666,
+        "loo_matched_twin_auc": 0.7906666666666666,
+        "loo_mean_paired_gap": 0.6369058460536042,
+        "loo_misordering_probability": 0.20933333333333334,
+        "mean_direct_self_component": -0.025174101952263855,
+        "median_direct_self_component": -0.026705480698902162,
+        "original_matched_twin_auc": 0.76,
+        "original_mean_paired_gap": 0.6117317441013403,
+        "original_misordering_probability": 0.24,
+        "pearson_original_vs_loo_score": 0.9918842321572171,
+        "retained_mean_gap_fraction": 1.0411521916183142,
+        "spearman_original_vs_loo_score": 0.9896053161646257
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 24,
+      "source_stage4": {
+        "attack_world_sha256": "100858967310b2ce6b5c95d4fc52144d9a344e5026d0719dfc8c6bbfa1ba14d5",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 25,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7973333333333333,
+        "loo_matched_twin_auc": 0.7973333333333333,
+        "loo_mean_paired_gap": 0.6664220846851868,
+        "loo_misordering_probability": 0.20266666666666666,
+        "mean_direct_self_component": -0.022038016324436492,
+        "median_direct_self_component": -0.024295959800752276,
+        "original_matched_twin_auc": 0.76,
+        "original_mean_paired_gap": 0.6443840683607504,
+        "original_misordering_probability": 0.24,
+        "pearson_original_vs_loo_score": 0.9908695757920586,
+        "retained_mean_gap_fraction": 1.0342001259908535,
+        "spearman_original_vs_loo_score": 0.9887923884981576
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 25,
+      "source_stage4": {
+        "attack_world_sha256": "ce7a602e8c19a5ae0d8b5d17ca51c8dba79170e2773c1bac4df4034ce2a26b3e",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 26,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.812,
+        "loo_matched_twin_auc": 0.812,
+        "loo_mean_paired_gap": 0.6495392147473477,
+        "loo_misordering_probability": 0.188,
+        "mean_direct_self_component": -0.021955616694415786,
+        "median_direct_self_component": -0.023143866191555562,
+        "original_matched_twin_auc": 0.752,
+        "original_mean_paired_gap": 0.6275835980529318,
+        "original_misordering_probability": 0.248,
+        "pearson_original_vs_loo_score": 0.9913500473807354,
+        "retained_mean_gap_fraction": 1.034984369831418,
+        "spearman_original_vs_loo_score": 0.989339567279968
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 26,
+      "source_stage4": {
+        "attack_world_sha256": "7921df77cbe4986b1fdcdf6efca76d80625d545a715b14f30da72ee3ff289ac0",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 27,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.816,
+        "loo_matched_twin_auc": 0.816,
+        "loo_mean_paired_gap": 0.6965065234140884,
+        "loo_misordering_probability": 0.184,
+        "mean_direct_self_component": -0.029314900257752914,
+        "median_direct_self_component": -0.027999084703860255,
+        "original_matched_twin_auc": 0.78,
+        "original_mean_paired_gap": 0.6671916231563356,
+        "original_misordering_probability": 0.22,
+        "pearson_original_vs_loo_score": 0.9908686311267675,
+        "retained_mean_gap_fraction": 1.0439377522743323,
+        "spearman_original_vs_loo_score": 0.9899681929946648
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 27,
+      "source_stage4": {
+        "attack_world_sha256": "84e657735aaaaabb0fadeeecc966cfe2ba1c2f52d143a6ef1955eed08442f01d",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 28,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.7953333333333333,
+        "loo_matched_twin_auc": 0.7953333333333333,
+        "loo_mean_paired_gap": 0.6161401181965414,
+        "loo_misordering_probability": 0.20466666666666666,
+        "mean_direct_self_component": -0.027031691060724984,
+        "median_direct_self_component": -0.0246057334419265,
+        "original_matched_twin_auc": 0.756,
+        "original_mean_paired_gap": 0.5891084271358163,
+        "original_misordering_probability": 0.244,
+        "pearson_original_vs_loo_score": 0.9910626890620199,
+        "retained_mean_gap_fraction": 1.045885765362669,
+        "spearman_original_vs_loo_score": 0.9895019845625498
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 28,
+      "source_stage4": {
+        "attack_world_sha256": "97182e7df9d8c6d8b76fef044fa4b044a7bcd2954d0b63fad18e7320a1259a7d",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  },
+  {
+    "seed": 29,
+    "summary": {
+      "interpretation_guard": "Stage 11 is an offline diagnostic, not the deployable online score. Each scored synthetic account's own review is removed from both attacked and clean worlds before recomputing paired evidence.",
+      "invariants": {
+        "all_accounts_have_exactly_r_exposures": true,
+        "loo_histograms_have_size_29": true,
+        "same_reference_used_for_original_and_loo": true,
+        "scored_review_removed_from_attack_and_clean_worlds": true,
+        "stage4_attack_world_reused_without_modification": true,
+        "stage4_r8_identity_assignment_reused_without_modification": true
+      },
+      "metrics": {
+        "fraction_accounts_loo_score_positive": 0.792,
+        "loo_matched_twin_auc": 0.792,
+        "loo_mean_paired_gap": 0.6724822349219103,
+        "loo_misordering_probability": 0.208,
+        "mean_direct_self_component": -0.02480301533418384,
+        "median_direct_self_component": -0.03165330613878506,
+        "original_matched_twin_auc": 0.756,
+        "original_mean_paired_gap": 0.6476792195877265,
+        "original_misordering_probability": 0.244,
+        "pearson_original_vs_loo_score": 0.990711195709017,
+        "retained_mean_gap_fraction": 1.0382952155697878,
+        "spearman_original_vs_loo_score": 0.9888029202202386
+      },
+      "population": {
+        "exposures_per_account": 8,
+        "n_exposures": 12000,
+        "n_synthetic_accounts": 1500
+      },
+      "seed": 29,
+      "source_stage4": {
+        "attack_world_sha256": "aab38f3aca4c83b12c3f74ea3590a5bae0f4a25d950bd08a5b81f2e475607bff",
+        "modified_ratings_k": 6,
+        "n_items": 2000,
+        "reuse_r": 8,
+        "selected_lambda": 20.0
+      },
+      "stage": "amazon_stage11_leave_one_out_self_influence"
+    }
+  }
+]

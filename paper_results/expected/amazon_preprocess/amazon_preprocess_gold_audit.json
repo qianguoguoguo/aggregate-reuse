@@ -1,0 +1,12 @@
+{
+  "both_experimental_blocks_feasible_k6": 21197,
+  "both_experimental_blocks_feasible_k9": 13268,
+  "category": "home_and_kitchen",
+  "duplicate_user_item_records_removed": 786064,
+  "eligible_items_ge_300_after_dedup": 31247,
+  "item_counts_csv_sha256": "c49cbbd895fc7d0d11a4843e3cd17d9e8f79b7ca29602b58222bc3826183ad9d",
+  "item_counts_csv_size_bytes": 61447683,
+  "raw_total_lines": 67409944,
+  "stage2_items": 31247,
+  "usable_records_after_user_item_dedup": 66623880
+}

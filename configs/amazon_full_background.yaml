@@ -1,0 +1,82 @@
+stage: amazon_stage10_one_world_investigative_ranking_burden_full_background
+category: home_and_kitchen
+
+seed_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+
+# Inherit the frozen primary Amazon experiment, not the k=9-feasible
+# intervention-strength robustness experiment.
+n_attacked_items_per_seed: 2000
+primary_modified_ratings_k: 6
+reuse_r: 8
+
+# Full-universe ranking cutoffs.
+top_fractions:
+  - 0.001
+  - 0.005
+  - 0.01
+  - 0.05
+
+# Minimum inspection burden needed to encounter these fractions of the
+# planted identities, with random ordering within exact score ties.
+inspection_burden_targets:
+  - 0.25
+  - 0.50
+  - 0.75
+
+# "all" is the operational full stream.
+# Exact F=8 directly activity-matches the planted accounts.
+# F=7..9 is a predeclared wider activity-matched diagnostic.
+activity_strata:
+  - all
+  - freq_eq_8
+  - freq_7_9
+
+historical_account_status: >
+  Historical reviewers are an unlabeled background population. They are not
+  treated as verified benign/negative accounts, and Stage 10 must not report
+  precision, false-positive rate, recall, or fraud-detection AUC against them.
+
+stream_scope: >
+  Score both experimental blocks (181--210 and 211--240) for every eligible
+  item. On the 2,000 frozen Stage-4 attacked items, only the selected treatment
+  block is modified and the six historical donor identities are displaced by
+  the frozen r=8 planted identities. All other blocks remain historical.
+
+shared_data:
+  root: ../amazon_preprocess
+  roles_file: stage2/home_and_kitchen_roles.items.jsonl.gz
+  reference_histograms: stage2/home_and_kitchen_reference_histograms.csv
+  reference_freeze: stage3/home_and_kitchen_reference_freeze.json
+  attack_dir: stage4_attack
+  reuse_dir: stage4_reuse
+  output_subdir: stage10_full_background

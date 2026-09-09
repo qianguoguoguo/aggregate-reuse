@@ -1,0 +1,32 @@
+{
+  "3": {
+    "counterfactual_score_auc": 0.18173333333333333,
+    "max_modified_exposures_per_account": 3,
+    "mean_d_cf": -0.062491012629934076,
+    "mean_paired_score_gap": -0.4999281010394726,
+    "min_modified_exposures_per_account": 2,
+    "n_accounts_per_seed": 2250,
+    "paired_misordering_probability": 0.8182666666666666,
+    "positive_block_fraction": 0.3853333333333334
+  },
+  "6": {
+    "counterfactual_score_auc": 0.514,
+    "max_modified_exposures_per_account": 6,
+    "mean_d_cf": 0.0005955420706549051,
+    "mean_paired_score_gap": 0.004764336565239239,
+    "min_modified_exposures_per_account": 5,
+    "n_accounts_per_seed": 2250,
+    "paired_misordering_probability": 0.48599999999999993,
+    "positive_block_fraction": 0.5338999999999999
+  },
+  "9": {
+    "counterfactual_score_auc": 0.8380000000000003,
+    "max_modified_exposures_per_account": 8,
+    "mean_d_cf": 0.16044679871023498,
+    "mean_paired_score_gap": 1.2835743896818799,
+    "min_modified_exposures_per_account": 8,
+    "n_accounts_per_seed": 2250,
+    "paired_misordering_probability": 0.16199999999999998,
+    "positive_block_fraction": 0.6766666666666666
+  }
+}

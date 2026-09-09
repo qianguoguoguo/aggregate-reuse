@@ -1,0 +1,18 @@
+\begin{tabular}{lll}
+\toprule
+Experiment & Canonical config & Canonical output \\
+\midrule
+Amazon preprocessing & configs/electronics/amazon_preprocess.yaml & ../amazon_preprocess/electronics/stage2/ \\
+Reference/calibration & configs/electronics/amazon_reference.yaml & ../amazon_preprocess/electronics/stage3/ \\
+Primary attack & configs/electronics/amazon_primary.yaml & ../amazon_preprocess/electronics/stage4_attack/ \\
+Fixed-attack reuse & configs/electronics/amazon_primary.yaml & ../amazon_preprocess/electronics/stage4_reuse/ \\
+Exact matched twins & configs/electronics/amazon_twins.yaml & ../amazon_preprocess/electronics/stage5_twins/ \\
+Mean-preserving shape & configs/electronics/amazon_shape.yaml & ../amazon_preprocess/electronics/stage6_shape/ \\
+Complementarity & configs/electronics/amazon_complementarity.yaml & ../amazon_preprocess/electronics/stage7_complementarity/ \\
+Reference history & configs/electronics/amazon_reference_history.yaml & ../amazon_preprocess/electronics/stage8_reference_history/ \\
+Fixed-identity strength & configs/electronics/amazon_strength_fixed.yaml & ../amazon_preprocess/electronics/stage9_strength_fixed/ \\
+Same-k=6 population audit & configs/electronics/amazon_k6_population_audit.yaml & ../amazon_preprocess/electronics/stage9_k6_population_audit/ \\
+Full-background ranking & configs/electronics/amazon_full_background.yaml & ../amazon_preprocess/electronics/stage10_full_background/ \\
+LOO self-influence & configs/electronics/amazon_self_influence.yaml & ../amazon_preprocess/electronics/stage11_self_influence/ \\
+\bottomrule
+\end{tabular}

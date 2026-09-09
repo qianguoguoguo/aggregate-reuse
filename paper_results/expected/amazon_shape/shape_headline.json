@@ -1,0 +1,11 @@
+{
+  "frequency_auc": 0.5,
+  "js_counterfactual_score_auc": 0.9665333333333332,
+  "js_paired_misordering_probability": 0.03346666666666667,
+  "max_abs_d_abs_mean": 0.0,
+  "mean_counterfactual_score_auc": 0.5,
+  "mean_d_abs_mean": 0.0,
+  "mean_paired_misordering_probability": 1.0,
+  "w1_counterfactual_score_auc": 0.9090666666666667,
+  "w1_paired_misordering_probability": 0.09093333333333335
+}

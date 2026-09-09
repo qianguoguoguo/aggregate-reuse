@@ -1,0 +1,40 @@
+{
+  "blank_lines": 0,
+  "category": "home_and_kitchen",
+  "duplicate_user_item_records": 786064,
+  "input_path": "external/Home_and_Kitchen.jsonl.gz",
+  "invalid_rating": 0,
+  "malformed_json": 0,
+  "missing_required_fields": {},
+  "threshold_counts_after_dedup": {
+    "100": 99347,
+    "1000": 7340,
+    "200": 48524,
+    "300": 31247,
+    "50": 189932,
+    "500": 17173
+  },
+  "threshold_counts_before_dedup": {
+    "100": 100545,
+    "1000": 7462,
+    "200": 49152,
+    "300": 31714,
+    "50": 192048,
+    "500": 17440
+  },
+  "total_lines": 67409944,
+  "unique_items_after_dedup": 3734414,
+  "unique_items_before_dedup": 3734414,
+  "unique_reviewers_valid_records": 23235852,
+  "usable_records_after_user_item_dedup": 66623880,
+  "usable_reviews_per_item_after_dedup_quantiles": {
+    "max": 83830,
+    "p50": 2,
+    "p75": 7,
+    "p90": 23,
+    "p95": 50,
+    "p99": 254,
+    "p999": 1646
+  },
+  "valid_records_before_user_item_dedup": 67409944
+}

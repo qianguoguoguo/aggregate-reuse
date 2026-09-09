@@ -1,0 +1,23 @@
+{
+  "120": {
+    "counterfactual_score_auc": 0.7436000000000001,
+    "mean_d_cf": 0.07635742143375306,
+    "mean_paired_score_gap": 0.6108593714700244,
+    "paired_misordering_probability": 0.2564,
+    "selected_lambda": 20.0
+  },
+  "60": {
+    "counterfactual_score_auc": 0.6182666666666666,
+    "mean_d_cf": 0.035543321909648894,
+    "mean_paired_score_gap": 0.28434657527719115,
+    "paired_misordering_probability": 0.38173333333333337,
+    "selected_lambda": 20.0
+  },
+  "90": {
+    "counterfactual_score_auc": 0.6878666666666666,
+    "mean_d_cf": 0.057785700640793136,
+    "mean_paired_score_gap": 0.4622856051263451,
+    "paired_misordering_probability": 0.3121333333333333,
+    "selected_lambda": 20.0
+  }
+}

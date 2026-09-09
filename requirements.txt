@@ -1,0 +1,7 @@
+-r requirements-paper.txt
+
+# Figure rendering
+matplotlib
+
+# Verification/test suite
+pytest

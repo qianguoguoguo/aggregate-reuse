@@ -1,0 +1,35 @@
+{
+  "known_feasible_population_sizes": {
+    "k6_feasible_population": 21197,
+    "k9_feasible_population": 13268
+  },
+  "provenance_status": "Legacy supplement-only audit. The trimmed pre-refactor repository retained the reported values but not the original dedicated compact artifact or script. Phase 2P recreates this audit as a named output.",
+  "reported_empirical_rounded": {
+    "k6_feasible_population": {
+      "counterfactual_score_auc": 0.739,
+      "mean_d_cf": 0.0761
+    },
+    "k9_feasible_population": {
+      "counterfactual_score_auc": 0.509,
+      "mean_d_cf": -0.0004
+    }
+  },
+  "reported_exact_expected_mean_d_cf_rounded": {
+    "k6_feasible_population": 0.07637,
+    "k9_feasible_population": 0.00079
+  },
+  "supplement_table_display": {
+    "primary": [
+      "Primary",
+      "21,197",
+      "0.0764",
+      "0.744"
+    ],
+    "strength_sensitivity": [
+      "Strength sensitivity",
+      "13,268",
+      "0.0006",
+      "0.514"
+    ]
+  }
+}

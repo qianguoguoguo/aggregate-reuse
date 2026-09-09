@@ -1,0 +1,14 @@
+\begin{tabular}{ll}
+\toprule
+Experiment & Control/isolation principle \\
+\midrule
+Fixed-attack reuse & Hold item/block set, treated slots, replacement ratings, timestamps, and $d^{\rm cf}$ fixed; vary only identity reuse $r$. \\
+Exact matched twins & Match frequency, item set, block, position, source line, and timestamp; differ only in attacked versus clean aggregate evidence. \\
+Mean-preserving shape & Preserve block mean exactly; compare distribution-sensitive W1/JS evidence with a mean-deviation channel. \\
+Complementarity & Evidence-only branch fixes topology; topology-only branch has zero aggregate treatment effect; mixed score is untrained. \\
+Reference history & Hold attack world and $r=8$ identities fixed; vary only historical prefix length and calibration-selected reference. \\
+Intervention strength & Hold items, blocks, reference, identity population, and account-item incidence fixed; use nested $k=3\subset6\subset9$ donor sets. \\
+Full-background ranking & Historical Amazon reviewers are unlabeled background, not verified negatives; report ranking burden rather than fraud AUC/precision/recall. \\
+LOO self-influence & Remove the scored account's own review from both attacked and clean worlds before recomputing paired evidence. \\
+\bottomrule
+\end{tabular}

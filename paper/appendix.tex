@@ -1,0 +1,3168 @@
+
+
+% ---------------------------------------------------------------------
+% Appendix setup and numbering
+% ---------------------------------------------------------------------
+%\clearpage
+\appendix
+
+\numberwithin{equation}{section}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\makeatletter
+\@addtoreset{algocf}{section}
+\makeatother
+\renewcommand{\thealgocf}{\thesection.\arabic{algocf}}
+\counterwithin{theorem}{section}
+
+% ---------------------------------------------------------------------
+% Notation and helper commands
+% ---------------------------------------------------------------------
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\Prb}{\mathbb{P}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\1}{\mathbf{1}}
+
+\providecommand{\suppnote}[1]{%
+  \textcolor{red!70!black}{\textbf{[TODO: #1]}}}
+
+\providecommand{\placeholderfigure}[2]{%
+  \begin{figure}[t]
+    \centering
+    \fbox{%
+      \parbox[c][1.35in][c]{0.92\columnwidth}{%
+        \centering\textbf{Figure placeholder}\\[4pt]#1}}
+    \caption{#2}
+  \end{figure}}
+
+\providecommand{\placeholderfigurewide}[2]{%
+  \begin{figure*}[t]
+    \centering
+    \fbox{%
+      \parbox[c][1.55in][c]{0.94\textwidth}{%
+        \centering\textbf{Wide figure placeholder}\\[4pt]#1}}
+    \caption{#2}
+  \end{figure*}}
+
+% =====================================================================
+\section{Guide to the Appendices}
+\label{sec:supp-guide}
+% =====================================================================
+
+These appendices provide proofs, experimental protocols,
+counterfactual-construction details, supporting results, and reproducibility
+information supporting the main text. They follow the paper's
+aggregate-to-attribution structure: Appendix~\ref{sec:supp-theory} gives the
+theoretical proofs, Appendices~\ref{sec:supp-rotation}--\ref{sec:supp-evaluation}
+specify the controlled and Amazon experiments and evaluation procedures,
+Appendix~\ref{sec:supp-extra-results} reports supporting experimental results,
+and Appendix~\ref{sec:supp-reproducibility} documents reproducibility checks.
+
+The appendices are organized to support the corresponding claims and
+experiments in the main text.
+Appendix~\ref{sec:supp-theory} gives the theoretical proofs.
+Appendix~\ref{sec:supp-rotation} specifies the controlled rotation protocol.
+Appendix~\ref{sec:supp-amazon-data} documents Amazon preprocessing and
+chronological splits.
+Appendix~\ref{sec:supp-calibration} specifies reference estimation,
+calibration, and reference-history sensitivity.
+Appendix~\ref{sec:supp-counterfactual} gives the counterfactual Amazon
+construction.
+Appendix~\ref{sec:supp-evaluation} defines the reported evidence channels,
+baselines, metrics, and statistical procedures.
+Appendix~\ref{sec:supp-extra-results} reports additional results supporting the
+main-text experiments.
+Appendix~\ref{sec:supp-reproducibility} documents implementation details and
+experimental invariants. Table~\ref{tab:supp-map} maps the main-text claims to
+the corresponding appendices.
+
+\begin{table}[t]
+\caption{Map from main-text claims to appendix support.}
+\label{tab:supp-map}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\columnwidth}{@{}
+  >{\raggedright\arraybackslash}X
+  >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Main-text claim} & \textbf{Appendix support} \\
+\midrule
+
+Matched-exposure score divergence
+&
+Appendix~\ref{sec:supp-score-gap}
+\\
+
+Non-identifiability boundary
+&
+Appendix~\ref{sec:supp-nonidentifiability}
+\\
+Self-influence bound
+&
+Appendix~\ref{sec:supp-influence}
+\\
+
+Finite-horizon separation
+&
+Appendix~\ref{sec:supp-concentration}
+\\
+
+Paired-context reuse law
+&
+Appendix~\ref{sec:supp-paired-theory}
+\\
+
+Controlled null calibration
+&
+Appendix~\ref{sec:supp-rotation-calibration}
+\\
+
+Exposure--intermittency boundary
+&
+Appendices~\ref{sec:supp-rotation-ratio} and
+\ref{sec:supp-extra-controlled}
+\\
+
+Amazon preprocessing and splits
+&
+Appendix~\ref{sec:supp-amazon-data}
+\\
+
+Finite-reference calibration
+&
+Appendix~\ref{sec:supp-calibration}
+\\
+
+Reference-history robustness
+&
+Appendix~\ref{sec:supp-reference-history}
+\\
+
+Fixed-attack identity reassignment
+&
+Appendix~\ref{sec:supp-fixed-attack}
+\\
+
+Exact matched-twin attribution
+&
+Appendix~\ref{sec:supp-twins}
+\\
+
+Mean-preserving shape intervention
+&
+Appendix~\ref{sec:supp-shape}
+\\
+
+Evidence channels and statistical inference
+&
+Appendix~\ref{sec:supp-evaluation}
+\\
+
+Intervention-strength reversal
+&
+Appendix~\ref{sec:supp-intervention-strength}
+\\
+
+One-world investigative ranking burden
+&
+Appendix~\ref{sec:supp-one-world-ranking}
+
+\\
+
+Leave-one-out self-influence ablation
+&
+Appendix~\ref{sec:supp-self-influence-ablation}
+
+\\
+Identity-independent evidence construction and complementarity
+&
+Appendix~\ref{sec:supp-extra-complementarity}
+\\
+
+Cross-category replication on \texttt{Electronics}
+&
+Appendix~\ref{sec:supp-electronics}
+\\
+
+Reproducibility and invariants
+&
+Appendix~\ref{sec:supp-reproducibility}
+\\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+Historical Amazon reviewers provide the ecological background and are never
+labeled fraudulent or treated as verified benign accounts. In the
+fixed-attack reuse sweep, reviewers occupying non-donor positions of the
+selected treated blocks form an unlabeled historical comparison class for
+descriptive ROC--AUC evaluation. The exact matched-twin and mean-preserving
+experiments instead use synthetic attacked and clean identities. Coalition
+membership is known by construction for the planted intervention identities,
+and exact clean counterfactual outcomes are available in the matched
+experiments described in Appendix~\ref{sec:supp-counterfactual}.
+
+
+
+
+% =====================================================================
+\section{Complete Theory}
+\label{sec:supp-theory}
+% =====================================================================
+
+This section gives the complete theoretical support for the identifiability
+analysis in the main text. We first formalize matched-exposure score
+divergence and its non-identifiability boundary, then bound direct
+self-influence and derive finite-horizon separation under predictable positive
+drift. We finally establish the exact paired-context reuse law and related
+extensions. Assumptions specific to individual results are stated locally;
+the exposure-attribution rule itself does not require stationarity, matched
+marginal exposure, or positive drift.
+
+\subsection{Notation}
+\label{sec:supp-notation}
+
+Table~\ref{tab:supp-notation} summarizes the notation used in the main text
+and appendices.
+
+\begin{table*}[t]
+\caption{Core notation used in the main text and appendices.}
+\label{tab:supp-notation}
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}lXlX@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning}
+& \textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+
+$t$
+& Interval index
+&
+$c_t$
+& Context associated with interval $t$
+\\
+
+$H_t$
+& Empirical outcome histogram in interval $t$
+&
+$n_t$
+& Number of actions contributing to $H_t$
+\\
+
+$h_t$
+& Reporting resolution
+&
+$H_c^{\mathrm{ref}}$
+& Declared reference distribution for context $c$
+\\
+
+$b_c(n,h)$
+& Matched finite-sample null expectation
+&
+$d_t$
+& Signed aggregate evidence increment
+\\
+
+$a_{u,t}$
+& Number of actions contributed by account $u$ in interval $t$
+&
+$S_u(T)$
+& Cumulative exposure-attribution score
+\\
+
+$I_t$
+& Indicator that the campaign is active
+&
+$p$
+& Campaign activity probability $\Pr(I_t=1)$
+\\
+
+$A_{g,t}$
+& Binary participation indicator for group $g\in\{\mathrm c,\mathrm n\}$
+&
+$q_{g,i}$
+& $\Pr(A_{g,t}=1\mid I_t=i)$
+\\
+
+$\nu_{g,i}$
+& $\E[d_t\mid A_{g,t}=1,I_t=i]$
+&
+$\mu_i$
+& $\E[d_t\mid I_t=i]$
+\\
+
+$\Delta$
+& Expected per-interval coalition--normal score gap
+&
+$\eta$
+& Bound on participation-conditioned evidence deviation
+\\
+
+$d_i^{\mathrm{cf}}$
+& Paired attack--clean evidence increment for Amazon item $i$
+&
+$\overline d_{\mathrm{cf}}$
+& Mean paired evidence increment
+\\
+
+$R$
+& Balanced synthetic account--item incidence matrix
+&
+$(L,M,m,r)$&
+items, accounts, synthetic exposures per item
+(item-side incidence degree), and items per account
+(account-side incidence degree or reuse)
+\\
+
+$G_j(r)$
+& Attacked--clean score gap for matched account pair $j$
+&
+$R_{\mathrm{exp}}$
+& Coalition-to-normal marginal exposure ratio
+\\
+
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Matched-Exposure Score-Gap Theorem}
+\label{sec:supp-score-gap}
+
+\begin{theorem}[Matched-exposure score gap]
+\label{thm:supp-divergence}
+Assume $p$, $q_{g,i}$, and $\nu_{g,i}$ are stationary in $t$.
+Suppose coalition accounts participate only in active intervals
+($q_{\mathrm c,0}=0$), normal participation is independent of campaign state
+($q_{\mathrm n,0}=q_{\mathrm n,1}=q_{\mathrm n}$), and marginal exposure is
+matched, $p q_{\mathrm c,1}=q_{\mathrm n}$. Then
+\begin{equation}
+\label{eq:supp-expected-gap}
+\Delta
+=
+q_{\mathrm n}
+\left[
+\nu_{\mathrm c,1}
+-
+p\nu_{\mathrm n,1}
+-
+(1-p)\nu_{\mathrm n,0}
+\right],
+\end{equation}
+and hence
+\[
+\E[S_{\mathrm c}(T)-S_{\mathrm n}(T)]
+=
+T\Delta.
+\]
+\end{theorem}
+
+\begin{proof}
+For group $g\in\{\mathrm c,\mathrm n\}$, conditioning on campaign state gives
+\begin{equation}
+\label{eq:supp-group-increment}
+\E[A_{g,t}d_t]
+=
+p q_{g,1}\nu_{g,1}
++
+(1-p)q_{g,0}\nu_{g,0}.
+\end{equation}
+Thus coalition accounts satisfy
+$\E[A_{\mathrm c,t}d_t]=p q_{\mathrm c,1}\nu_{\mathrm c,1}$, while normal
+accounts satisfy
+$\E[A_{\mathrm n,t}d_t]
+=
+q_{\mathrm n}[p\nu_{\mathrm n,1}+(1-p)\nu_{\mathrm n,0}]$.
+Substituting $p q_{\mathrm c,1}=q_{\mathrm n}$ yields
+$\E[A_{\mathrm c,t}d_t-A_{\mathrm n,t}d_t]=\Delta$.
+Linearity of expectation and stationarity then give
+\[
+\E[S_{\mathrm c}(T)-S_{\mathrm n}(T)]
+=
+T\Delta.
+\]
+\end{proof}
+
+Under matched marginal exposure,
+$\Pr(A_{\mathrm c,t}=1)=p q_{\mathrm c,1}
+=q_{\mathrm n}=\Pr(A_{\mathrm n,t}=1)$.
+Participation frequency therefore does not separate the two groups; the score
+gap is determined by the evidence encountered conditional on participation.
+
+\paragraph{Time-varying extension.}
+If $p$, $q_{g,i}$, and $\nu_{g,i}$ vary with $t$, suppose
+$q_{\mathrm c,0,t}=0$,
+$q_{\mathrm n,0,t}=q_{\mathrm n,1,t}=q_{\mathrm n,t}$, and
+$p_tq_{\mathrm c,1,t}=q_{\mathrm n,t}$. Define
+\[
+\Delta_t
+=
+q_{\mathrm n,t}
+\left[
+\nu_{\mathrm c,1,t}
+-
+p_t\nu_{\mathrm n,1,t}
+-
+(1-p_t)\nu_{\mathrm n,0,t}
+\right].
+\]
+Applying the same argument interval by interval gives
+\begin{equation}
+\label{eq:supp-nonstationary-gap}
+\E[S_{\mathrm c}(T)-S_{\mathrm n}(T)]
+=
+\sum_{t=1}^{T}\Delta_t.
+\end{equation}
+No independence across intervals is required for this expectation identity.
+
+\paragraph{Count-valued extension.}
+Theorem~\ref{thm:supp-divergence} also extends to count-valued exposure
+$A_{g,t}\in\{0,1,2,\ldots\}$, provided the required first moments
+exist. Let
+$\rho_{g,i}=\E[A_{g,t}\mid I_t=i]$ and, whenever
+$\rho_{g,i}>0$, define the action-weighted evidence mean
+\[
+\nu^{\mathrm w}_{g,i}
+=
+\frac{\E[A_{g,t}d_t\mid I_t=i]}{\rho_{g,i}}.
+\]
+If $\rho_{\mathrm c,0}=0$,
+$\rho_{\mathrm n,0}=\rho_{\mathrm n,1}=\rho_{\mathrm n}$, and
+$p\rho_{\mathrm c,1}=\rho_{\mathrm n}$, then
+\[
+\E\!\left[
+S_{\mathrm c}(T)-S_{\mathrm n}(T)
+\right]
+=
+T\rho_{\mathrm n}
+\left[
+\nu^{\mathrm w}_{\mathrm c,1}
+-p\nu^{\mathrm w}_{\mathrm n,1}
+-(1-p)\nu^{\mathrm w}_{\mathrm n,0}
+\right].
+\]
+When $\rho_{g,i}=0$, the corresponding contribution is zero and
+$\nu^{\mathrm w}_{g,i}$ need not be defined. Thus the same
+matched-exposure mechanism applies when an account may contribute
+multiple actions within one interval.
+
+\subsection{Non-Identifiability Under Matched Evidence Exposure}
+\label{sec:supp-nonidentifiability}
+
+The matched-exposure theorem identifies differential alignment with fixed
+aggregate evidence as the source of account-level separation. The converse
+boundary is immediate for exposure attribution.
+
+\begin{proposition}[Non-identifiability under matched evidence exposure]
+\label{prop:supp-nonidentifiability}
+Let $u$ and $v$ denote representative accounts from two groups. Suppose their
+exposure-weighted fixed-evidence processes have the same joint
+distribution:
+\[
+\{A_{u,t}d_t\}_{t=1}^T
+\overset{d}{=}
+\{A_{v,t}d_t\}_{t=1}^T.
+\]
+Then
+\[
+S_u(T)
+=
+\sum_{t=1}^T A_{u,t}d_t
+\quad\text{and}\quad
+S_v(T)
+=
+\sum_{t=1}^T A_{v,t}d_t
+\]
+have the same distribution. In particular,
+\[
+\E[S_u(T)]
+=
+\E[S_v(T)],
+\]
+so exposure attribution cannot separate the two groups in expectation.
+\end{proposition}
+
+\begin{proof}
+The cumulative exposure score is a deterministic measurable function of the
+exposure-weighted evidence sequence. Equality in distribution of those
+sequences therefore implies equality in distribution of their sums.
+\end{proof}
+
+This establishes the complementary boundary to
+Theorem~\ref{thm:supp-divergence}: reuse alone is not identifiable evidence.
+Account-level recoverability requires the distribution of participation over
+already-fixed evidence to differ between the groups.
+
+% ---------------------------------------------------------------------
+
+\subsection{Influence-Aware Divergence and Self-Influence}
+\label{sec:supp-influence}
+
+Let $\mu_i=\E[d_t\mid I_t=i]$ and suppose that
+$|\nu_{g,i}-\mu_i|\leq\eta$ for every relevant group--state pair.
+The parameter $\eta$ captures how much the evidence seen conditional on a
+particular account's participation can differ from the corresponding
+state-level evidence mean.
+
+\begin{corollary}[Influence-aware divergence]
+\label{cor:supp-influence}
+Under the conditions of Theorem~\ref{thm:supp-divergence},
+\begin{equation}
+\label{eq:supp-influence-bound}
+\Delta
+\geq
+q_{\mathrm n}
+\left[
+(1-p)(\mu_1-\mu_0)-2\eta
+\right].
+\end{equation}
+Consequently, $(1-p)(\mu_1-\mu_0)>2\eta$ is sufficient for
+$\Delta>0$.
+\end{corollary}
+
+\begin{proof}
+From $|\nu_{g,i}-\mu_i|\leq\eta$,
+$\nu_{\mathrm c,1}\geq\mu_1-\eta$,
+$\nu_{\mathrm n,1}\leq\mu_1+\eta$, and
+$\nu_{\mathrm n,0}\leq\mu_0+\eta$.
+Substituting these inequalities into
+Equation~\eqref{eq:supp-expected-gap} gives
+\begin{align*}
+\Delta
+&\geq
+q_{\mathrm n}
+\left[
+(\mu_1-\eta)
+-p(\mu_1+\eta)
+-(1-p)(\mu_0+\eta)
+\right] \\
+&=
+q_{\mathrm n}
+\left[
+(1-p)(\mu_1-\mu_0)-2\eta
+\right].
+\end{align*}
+\end{proof}
+
+\begin{lemma}[One-action Wasserstein sensitivity]
+\label{lem:supp-w1-sensitivity}
+Let
+$\widehat P=B^{-1}\sum_{j=1}^{B}\delta_{x_j}$
+be an empirical distribution on bounded support $\mathcal X$, and let
+$\widehat P'$ differ from $\widehat P$ by replacing one observation
+$x_k$ with $x_k'$. For any fixed reference $Q$,
+\begin{equation}
+\label{eq:supp-w1-sensitivity}
+\left|
+W_1(\widehat P,Q)-W_1(\widehat P',Q)
+\right|
+\leq
+\frac{\operatorname{diam}(\mathcal X)}{B}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By the reverse triangle inequality,
+\[
+\left|
+W_1(\widehat P,Q)-W_1(\widehat P',Q)
+\right|
+\leq
+W_1(\widehat P,\widehat P').
+\]
+The two empirical distributions share $B-1$ observations. Coupling those
+observations to themselves and transporting only the remaining mass $1/B$
+from $x_k$ to $x_k'$ costs at most
+$\operatorname{diam}(\mathcal X)/B$. Since $W_1$ is the minimum coupling
+cost, the result follows.
+\end{proof}
+
+For fixed reference, block size, and reporting resolution, replacing one
+action leaves the matched finite-sample centering term unchanged. Hence the
+same sensitivity bound applies to the signed evidence increment $d_t$:
+one-action replacement sensitivity is at most
+$\operatorname{diam}(\mathcal X)/B$, equal to $4/B$ for ratings on
+$\{1,\ldots,5\}$. This is a fixed-size replacement bound. The deletion-based
+leave-one-out ablation reported later in
+Appendix~\ref{sec:supp-self-influence-ablation} addresses a related
+but distinct question by removing the scored action from both paired worlds
+and recomputing the resulting 29-review histograms.
+
+The bound isolates only the direct mechanical dependence created by including
+the scored action in its interval histogram. Any additional
+participation-conditioned dependence---for example, selective participation
+in particular campaign states or evidence-bearing contexts---remains part of
+$\eta$ and is not covered by the one-action sensitivity bound.
+
+% ---------------------------------------------------------------------
+\subsection{Finite-Horizon Separation}
+\label{sec:supp-concentration}
+
+Let $X_t=A_{\mathrm c,t}d_t-A_{\mathrm n,t}d_t$, so that
+$S_{\mathrm c}(T)-S_{\mathrm n}(T)=\sum_{t=1}^{T}X_t$.
+Let $\{\mathcal F_t\}_{t\geq0}$ be a filtration such that $X_t$ is
+$\mathcal F_t$-measurable.
+
+\begin{corollary}[Finite-horizon separation]
+\label{cor:supp-finite}
+Suppose there exists a uniform predictable-drift lower bound
+$\underline{\Delta}>0$ such that
+$\E[X_t\mid\mathcal F_{t-1}]\geq\underline{\Delta}$ for every $t$,
+and suppose
+$\left|X_t-\E[X_t\mid\mathcal F_{t-1}]\right|\leq c$
+almost surely. Then
+\begin{equation}
+\label{eq:supp-finite-horizon-bound}
+\Pr\!\left[
+S_{\mathrm c}(T)\leq S_{\mathrm n}(T)
+\right]
+\leq
+\exp\!\left(
+-\frac{T\underline{\Delta}^{\,2}}{2c^2}
+\right).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Define
+$Z_t=X_t-\E[X_t\mid\mathcal F_{t-1}]$.
+Then $\E[Z_t\mid\mathcal F_{t-1}]=0$, so
+$M_T=\sum_{t=1}^{T}Z_t$ is a martingale with $|Z_t|\leq c$
+almost surely. Moreover,
+\[
+S_{\mathrm c}(T)-S_{\mathrm n}(T)
+=
+\sum_{t=1}^{T}\E[X_t\mid\mathcal F_{t-1}]
++
+M_T
+\geq
+T\underline{\Delta}+M_T.
+\]
+Hence $S_{\mathrm c}(T)\leq S_{\mathrm n}(T)$ implies
+$M_T\leq-T\underline{\Delta}$. Applying Azuma--Hoeffding proves
+Equation~\eqref{eq:supp-finite-horizon-bound}.
+\end{proof}
+
+For any target coalition--normal pairwise non-win probability
+$\delta\in(0,1)$, Equation~\eqref{eq:supp-finite-horizon-bound} is at
+most $\delta$ whenever
+\begin{equation}
+\label{eq:supp-monitoring-horizon}
+T
+\geq
+\frac{2c^2}{\underline{\Delta}^{\,2}}
+\log\frac{1}{\delta}.
+\end{equation}
+The uniform conditional-drift assumption is stronger than the
+stationary unconditional expectation identity in
+Theorem~\ref{thm:supp-divergence}. No independence across intervals is
+required; the result uses only predictable positive drift and bounded
+martingale differences.
+
+% ---------------------------------------------------------------------
+
+\subsection{Paired-Context Reuse Law}
+\label{sec:supp-paired-theory}
+
+Let $L$ denote the number of experimental items and let
+$d_i^{\mathrm{cf}}$ be the fixed paired attack--clean evidence increment for
+item $i$. Let $R\in\{0,1\}^{M\times L}$ be a balanced account--item incidence
+matrix in which every synthetic account appears in exactly $r$ items and every
+item receives exactly $m$ synthetic accounts. Hence $Mr=Lm$.
+
+For matched attacked/clean account pair $j$, define
+\[
+G_j(r)
+=
+S_j^{\mathrm{attack}}
+-
+S_j^{\mathrm{clean}}
+=
+\sum_{i=1}^{L}R_{ji}d_i^{\mathrm{cf}}.
+\]
+
+\begin{corollary}[Paired-context reuse law]
+\label{cor:supp-paired-reuse}
+Under the balanced incidence construction,
+\begin{equation}
+\label{eq:supp-paired-reuse}
+\frac{1}{M}\sum_{j=1}^{M}G_j(r)
+=
+r\,\overline d_{\mathrm{cf}},
+\qquad
+\overline d_{\mathrm{cf}}
+=
+\frac{1}{L}\sum_{i=1}^{L}d_i^{\mathrm{cf}}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Summing over accounts and exchanging the order of summation,
+\begin{align*}
+\sum_{j=1}^{M}G_j(r)
+&=
+\sum_{i=1}^{L}
+d_i^{\mathrm{cf}}
+\sum_{j=1}^{M}R_{ji} \\
+&=
+m\sum_{i=1}^{L}d_i^{\mathrm{cf}}
+=
+mL\,\overline d_{\mathrm{cf}},
+\end{align*}
+because every column of $R$ has degree $m$. Since $Mr=Lm$, dividing by $M$
+gives
+\[
+\frac{1}{M}\sum_{j=1}^{M}G_j(r)
+=
+r\,\overline d_{\mathrm{cf}}.
+\]
+\end{proof}
+
+Equation~\eqref{eq:supp-paired-reuse} determines the mean matched-account
+gap exactly. ROC--AUC and matched-pair misordering additionally depend on the
+distribution of the item-level increments and their assignment across
+accounts, and are therefore measured empirically.
+
+
+% =====================================================================
+\section{Controlled Rotation Protocol}
+\label{sec:supp-rotation}
+% =====================================================================
+
+This section specifies the controlled experiments used for the null-centering,
+matched-exposure, and exposure--intermittency results in the main text.
+
+% ---------------------------------------------------------------------
+
+\subsection{Generative Model}
+\label{sec:supp-rotation-model}
+
+Time is divided into $T=4000$ intervals. The population contains
+$N_{\mathrm n}=20{,}000$ normal accounts and
+$N_{\mathrm c}=2{,}000$ coalition accounts.
+
+Actions are continuous scalars on $\mathcal X=[-4,4]$. Values outside this
+range are clipped to the corresponding endpoint before histogram
+construction. Each interval is represented by 40 equal-width bins over
+$\mathcal X$, and Wasserstein--1 is evaluated on the bin centers.
+
+Each normal account participates independently in every interval with
+probability $p_{\mathrm n}=0.04$. Conditional on participation, its
+pre-clipping action is drawn from $X_{\mathrm n}\sim\mathcal N(0,1)$.
+The declared aggregate reference is the exact 40-bin probability
+distribution induced by this clipped normal model.
+
+Campaign activity follows
+$I_t\sim\operatorname{Bernoulli}(p_{\mathrm{on}})$ independently across
+intervals. If $I_t=0$, coalition accounts do not participate. If $I_t=1$,
+exactly $k_{\mathrm{on}}$ coalition accounts are selected using the balanced
+rotation in Section~\ref{sec:supp-rotation-process}; each selected account
+contributes one action drawn from the specified coalition distribution.
+
+Table~\ref{tab:supp-rotation-parameters} summarizes the fixed controlled-model
+parameters and the operating-regime grid used in the experiments.
+\begin{table}[t]
+\caption{Controlled-rotation parameters.}
+\label{tab:supp-rotation-parameters}
+\centering
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value or grid} \\
+\midrule
+Horizon $T$ & $4000$ \\
+Normal accounts $N_{\mathrm n}$ & $20{,}000$ \\
+Coalition accounts $N_{\mathrm c}$ & $2{,}000$ \\
+Normal participation $p_{\mathrm n}$ & $0.04$ \\
+Campaign activity $p_{\mathrm{on}}$
+& $\{0.1,0.2,\ldots,1.0\}$ \\
+Exposure ratio $R_{\mathrm{exp}}$
+& $\{0.25,0.5,0.75,1,1.25,1.5,2\}$ \\
+Principal $(R_{\mathrm{exp}},p_{\mathrm{on}})$
+& $(1,0.2)$ \\
+Action support & $[-4,4]$ \\
+Histogram resolution & $40$ equal-width bins \\
+Normal distribution & $\mathcal N(0,1)$, clipped \\
+Mean-shift distribution & $\mathcal N(0.5,1)$, clipped \\
+Randomized seeds & $30$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+% ---------------------------------------------------------------------
+
+\subsection{Campaign Process and Balanced Rotation}
+\label{sec:supp-rotation-process}
+
+Normal-account participation is independent of campaign state:
+$\Pr(A_{\mathrm n,t}=1\mid I_t=0)
+=
+\Pr(A_{\mathrm n,t}=1\mid I_t=1)
+=
+p_{\mathrm n}=0.04$.
+
+Coalition accounts participate only when $I_t=1$. In each active interval,
+exactly $k_{\mathrm{on}}$ accounts are selected from
+$U=(u_1,\ldots,u_{N_{\mathrm c}})$ by cyclic balanced rotation in Algorithm~\ref{alg:supp-rotation}.
+
+\begin{algorithm}[t]
+\caption{Balanced coalition rotation}
+\label{alg:supp-rotation}
+\KwIn{Coalition accounts $U=(u_1,\ldots,u_{N_{\mathrm c}})$;
+selection size $k_{\mathrm{on}}$; initial pointer $q$.}
+\KwOut{Coalition accounts selected in each active interval.}
+
+\For{$t\gets 1$ \KwTo $T$}{
+    sample $I_t$\;
+    \If{$I_t=1$}{
+        select
+        $u_q,u_{q+1},\ldots,u_{q+k_{\mathrm{on}}-1}$
+        with indices modulo $N_{\mathrm c}$\;
+        $q\gets(q+k_{\mathrm{on}})\bmod N_{\mathrm c}$\;
+    }
+}
+\end{algorithm}
+
+For a representative coalition account,
+\[
+q_{\mathrm c,0}=0,
+\qquad
+q_{\mathrm c,1}
+=
+\frac{k_{\mathrm{on}}}{N_{\mathrm c}},
+\]
+so its expected marginal participation rate is
+$p_{\mathrm{on}}k_{\mathrm{on}}/N_{\mathrm c}$.
+
+If $K_T$ active intervals occur over the horizon, the scheduler assigns
+exactly $K_Tk_{\mathrm{on}}$ coalition participations. Because the pointer
+advances cyclically through the account list, the participation counts of any
+two coalition accounts differ by at most one.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Exposure-Ratio Construction}
+\label{sec:supp-rotation-ratio}
+
+For requested exposure ratio $R_{\mathrm{exp}}^{\mathrm{req}}$, the ideal
+active-interval selection size is
+$k_{\mathrm{on}}^{*}
+=
+R_{\mathrm{exp}}^{\mathrm{req}}p_{\mathrm n}N_{\mathrm c}/p_{\mathrm{on}}$.
+The implementation sets
+$k_{\mathrm{on}}=\operatorname{round}(k_{\mathrm{on}}^{*})$
+using Python's round-to-nearest-even rule, and requires
+$1\leq k_{\mathrm{on}}\leq N_{\mathrm c}$. Configurations outside this range
+are infeasible. All grid points in the reported frozen sweep satisfy this
+condition.
+
+Because campaign activity and normal participation are realized randomly,
+the reported exposure ratio is computed from the realized marginal rates:
+\begin{equation}
+\label{eq:supp-realized-rexp}
+R_{\mathrm{exp}}^{\mathrm{real}}
+=
+\frac{
+\widehat p_{\mathrm{on}}k_{\mathrm{on}}/N_{\mathrm c}
+}{
+\widehat p_{\mathrm n}
+},
+\end{equation}
+where $\widehat p_{\mathrm{on}}$ is the realized fraction of active intervals
+and $\widehat p_{\mathrm n}$ is the realized normal-account participation
+rate.
+
+The principal configuration requests
+$R_{\mathrm{exp}}^{\mathrm{req}}=1$ and $p_{\mathrm{on}}=0.2$.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Exact Finite-Sample Null Calibration}
+\label{sec:supp-rotation-calibration}
+
+Let $Q=(q_1,\ldots,q_h)$ be the fixed binned reference on ordered bin
+centers $x_1<\cdots<x_h$, with cumulative probabilities
+$F_k=\sum_{j=1}^{k}q_j$ for $k=1,\ldots,h-1$.
+For $N\sim\operatorname{Mult}(n,Q)$ and $\widehat P=N/n$, define the
+cumulative count $C_k=\sum_{j=1}^{k}N_j$. Marginally,
+$C_k\sim\operatorname{Bin}(n,F_k)$, and the discrete Wasserstein distance is
+\begin{equation}
+\label{eq:supp-discrete-w1}
+W_1(\widehat P,Q)
+=
+\sum_{k=1}^{h-1}
+(x_{k+1}-x_k)
+\left|
+\frac{C_k}{n}-F_k
+\right|.
+\end{equation}
+
+Taking expectations term by term gives the exact finite-sample null baseline
+\begin{equation}
+\label{eq:supp-exact-null}
+b_Q(n,h)
+=
+\sum_{k=1}^{h-1}
+(x_{k+1}-x_k)
+\sum_{\ell=0}^{n}
+\left|
+\frac{\ell}{n}-F_k
+\right|
+\binom{n}{\ell}
+F_k^\ell(1-F_k)^{n-\ell}.
+\end{equation}
+No independence among the cumulative counts is required; linearity of
+expectation applies directly to the sum in
+Equation~\eqref{eq:supp-discrete-w1}.
+
+In the controlled experiments, $h=40$ with equal-width bins on $[-4,4]$,
+and Wasserstein--1 is evaluated on the bin centers. The signed interval
+evidence is
+\begin{equation}
+\label{eq:supp-centered-evidence}
+d_t
+=
+W_1(H_t,Q)-b_Q(n_t,40).
+\end{equation}
+By construction, under the fixed-reference null,
+$\E_0[d_t\mid n_t,Q]=0$ exactly. Numerically, this identity holds up to
+floating-point precision.
+
+The baseline is evaluated using numerically stable Binomial routines and
+cached for each realized interval size $n_t$. Earlier Monte Carlo
+implementations of the same null expectation are not used for the canonical
+controlled $W_1$ results.
+
+% ---------------------------------------------------------------------
+
+\subsection{Controlled Intervention Distribution}
+\label{sec:supp-rotation-attacks}
+
+The primary mean-shift condition uses pre-clipping coalition actions
+\[
+X_{\mathrm c}^{\mathrm{shift}}
+\sim
+\mathcal N(0.5,1),
+\]
+while the normal reference is induced by
+$X_{\mathrm n}\sim\mathcal N(0,1)$.
+Both are clipped to $[-4,4]$ before histogram construction.
+
+\begin{comment}
+The mean-matched shape condition uses
+\[
+X_{\mathrm c}^{\mathrm{shape}}
+\sim
+\frac12\mathcal N(-1,0.35^2)
++
+\frac12\mathcal N(1,0.35^2),
+\]
+also clipped to $[-4,4]$. Because the shape mixture, clipping interval, and
+40-bin discretization are all symmetric about zero, the resulting binned
+shape distribution has the same mean as the binned normal reference.  
+\end{comment}
+% ---------------------------------------------------------------------
+
+\subsection{Predicted Divergence Estimator}
+\label{sec:supp-rotation-prediction}
+
+For group $g\in\{\mathrm c,\mathrm n\}$, let
+$\overline A_{g,t}=N_g^{-1}\sum_{u\in g}A_{u,t}$ denote the mean
+participation rate in interval $t$, and let
+$\widehat p=T^{-1}\sum_{t=1}^{T}I_t$ be the realized fraction of active
+intervals. Write
+$T_1=\sum_t I_t$ and $T_0=T-T_1$.
+
+The implementation estimates the state-conditional participation rates as
+$\widehat q_{\mathrm c,1}
+=T_1^{-1}\sum_{t:I_t=1}\overline A_{\mathrm c,t}$,
+$\widehat q_{\mathrm n,1}
+=T_1^{-1}\sum_{t:I_t=1}\overline A_{\mathrm n,t}$, and
+$\widehat q_{\mathrm n,0}
+=T_0^{-1}\sum_{t:I_t=0}\overline A_{\mathrm n,t}$.
+For group $g$ and campaign state $i$, the participation-conditioned evidence
+mean is
+\[
+\widehat\nu_{g,i}
+=
+\frac{
+\sum_{t:I_t=i}\overline A_{g,t}d_t
+}{
+\sum_{t:I_t=i}\overline A_{g,t}
+}.
+\]
+
+Let
+$\widehat q_{\mathrm n}
+=(N_{\mathrm n}T)^{-1}
+\sum_{u\in\mathrm n}\sum_{t=1}^{T}A_{u,t}$
+be the realized normal marginal participation rate. The predicted
+per-interval score gap used in the principal matched-exposure experiment is
+\begin{equation}
+\label{eq:supp-delta-est}
+\widehat\Delta
+=
+\widehat q_{\mathrm n}
+\left[
+\widehat\nu_{\mathrm c,1}
+-
+\widehat p\,\widehat\nu_{\mathrm n,1}
+-
+(1-\widehat p)\widehat\nu_{\mathrm n,0}
+\right].
+\end{equation}
+The corresponding predicted cumulative gap at horizon $t$ is
+$t\widehat\Delta$.
+
+All quantities in Equation~\eqref{eq:supp-delta-est} are computed directly
+from campaign states, realized participation, and interval evidence. All terms in $\widehat{\Delta}$ are computed from the realized run.
+It is a same-run plug-in mechanism check, computed separately from
+and without fitting the cumulative account-score trajectory.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Evaluation Grid}
+\label{sec:supp-rotation-evaluation}
+
+Each controlled configuration is evaluated over 30 primary randomized seeds.
+The frozen operating-regime grid is
+\[
+p_{\mathrm{on}}\in\{0.1,0.2,\ldots,1.0\},
+\qquad
+R_{\mathrm{exp}}^{\mathrm{req}}
+\in\{0.25,0.5,0.75,1.0,1.25,1.5,2.0\}.
+\]
+
+Within each seed of the operating-regime sweep, all grid cells share the
+same realized normal background. They also share a common vector of campaign
+uniforms, so the active-interval sets are nested as $p_{\mathrm{on}}$
+increases. Coalition action draws are generated separately for each
+$(R_{\mathrm{exp}}^{\mathrm{req}},p_{\mathrm{on}})$ cell.
+
+The controlled evaluations comprise:
+\begin{itemize}
+    \item a normal-only condition for finite-sample null calibration;
+    \item a principal matched-exposure trajectory at
+          $(R_{\mathrm{exp}}^{\mathrm{req}},p_{\mathrm{on}})=(1,0.2)$;
+          and
+    \item the full
+          $R_{\mathrm{exp}}^{\mathrm{req}}\times p_{\mathrm{on}}$
+          operating-regime sweep.
+\end{itemize}
+
+The principal matched-exposure trajectory and the operating-regime sweep
+are separate Monte Carlo evaluations with experiment-specific random streams.
+Their frequency ROC--AUC estimates at the common requested setting
+$(R_{\mathrm{exp}}^{\mathrm{req}},p_{\mathrm{on}})=(1,0.2)$ therefore
+need not coincide exactly: they are $0.513$ in the trajectory experiment
+and $0.486$ in the sweep, both near chance.
+
+For the controlled index-pair diagnostic, coalition account $j$ is paired
+with normal account $j$ for $j=1,\ldots,N_{\mathrm c}=2000$. The
+index-paired non-win rate is the fraction of these pairs for which the
+coalition score is no larger than the paired normal score.
+
+Metric definitions and confidence-interval procedures are given in
+Section~\ref{sec:supp-metrics}.
+
+% =====================================================================
+% =====================================================================
+\section{Amazon Data Construction}
+\label{sec:supp-amazon-data}
+% =====================================================================
+
+\subsection{Data and Preprocessing}
+\label{sec:supp-amazon-preprocessing}
+
+The primary Amazon experiments use the \texttt{Home\_and\_Kitchen}
+domain from the Amazon Reviews 2023 release~\cite{amazonreviews2023}; the
+cross-category replication in Section~\ref{sec:supp-electronics} applies
+the same preprocessing and experimental protocol to \texttt{Electronics}.
+The experiments use item identifier \texttt{asin}, reviewer identifier
+\texttt{user\_id}, numeric rating, review timestamp, and source line number
+for deterministic ordering. Only exact ratings in $\{1,\ldots,5\}$ are
+retained.
+
+Repeated reviewer--item records are removed before item eligibility is
+determined. For each $(\texttt{user\_id},\texttt{asin})$ pair, we retain the
+earliest usable review by timestamp, breaking exact timestamp ties by source
+line number. Retained reviews for each item are then ordered by
+$(\text{timestamp},\text{source line})$.
+
+For the primary domain, this procedure removes 786,064 repeated
+reviewer--item records. After deduplication, an item is eligible if it
+contains at least 300 usable reviews, yielding 31,247 eligible items. Applying the same eligibility rule to \texttt{Electronics} yields
+21,409 eligible items.
+For each eligible item, only the first 300
+chronologically ordered reviews are retained for the reported Amazon
+experiments; later reviews do not enter reference estimation, calibration,
+intervention construction, temporal diagnostics, or attribution evaluation.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Chronological Split}
+\label{sec:supp-amazon-splits}
+
+The first 300 usable reviews of every eligible item are assigned the fixed
+roles shown in Table~\ref{tab:supp-amazon-splits}.
+
+\begin{table}[t]
+\caption{Chronological roles of the first 300 usable reviews per eligible item.}
+\label{tab:supp-amazon-splits}
+\centering
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Review positions} & \textbf{Role} \\
+\midrule
+1--120 & Historical reference prefix \\
+121--180 & Calibration blocks \\
+181--210 & Experimental block A \\
+211--240 & Experimental block B \\
+241--300 & Untouched temporal diagnostics \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Positions 1--120 are used to estimate the item reference, and positions
+121--180 are used to select the shrinkage strength $\lambda$. Positions
+181--210 and 211--240 form the two candidate experimental blocks. For a given
+intervention, both candidate blocks must satisfy its feasibility rule before
+one is selected uniformly at random for treatment. Positions 241--300 remain
+untouched and are used only for temporal-calibration diagnostics.
+
+Experimental and diagnostic blocks are not used to estimate the historical
+reference or select $\lambda$.
+
+
+% =====================================================================
+% =====================================================================
+\section{Reference Estimation and Calibration}
+\label{sec:supp-calibration}
+% =====================================================================
+
+\subsection{Shrunk Item Reference}
+\label{sec:supp-shrinkage}
+
+Let $c_i\in\mathbb{N}^5$ denote the rating-count vector in item $i$'s
+historical reference prefix, with
+$n_{\mathrm{ref}}=\sum_{x=1}^{5}c_i(x)$.
+Let $C=\sum_j c_j$ be the aggregate reference-prefix count vector over all
+eligible items. The leave-one-item-out domain distribution is
+\begin{equation}
+\label{eq:supp-loo-domain}
+H_{-i}
+=
+\frac{C-c_i}
+{\sum_{x=1}^{5}[C(x)-c_i(x)]}.
+\end{equation}
+
+For shrinkage strength $\lambda\geq0$, the item reference is
+\begin{equation}
+\label{eq:supp-shrunk-reference}
+\widehat H_i^{(\lambda)}
+=
+\frac{c_i+\lambda H_{-i}}
+{n_{\mathrm{ref}}+\lambda}.
+\end{equation}
+Thus $\lambda$ acts as an effective prior sample size for the
+leave-one-item-out domain reference. Zero-mass bins are permitted and no pseudocount is added. We
+interpret the corresponding distribution on its positive-support
+face. For cumulative boundary $k$, degenerate cases are handled
+directly:
+\[
+A_{i,k}=0
+\;\Longrightarrow\;
+C_k=0 \quad\text{almost surely},
+\]
+and
+\[
+\alpha_{i,0}-A_{i,k}=0
+\;\Longrightarrow\;
+C_k=B \quad\text{almost surely}.
+\]
+These cases are evaluated deterministically rather than passed to a
+generic Beta--Binomial routine.
+
+% ---------------------------------------------------------------------
+
+\subsection{Plug-In and Posterior-Predictive Null Expectations}
+\label{sec:supp-null-expectations}
+
+Let
+$\widehat H_i=\widehat H_i^{(\lambda)}
+=(\widehat p_{i,1},\ldots,\widehat p_{i,5})$
+and define cumulative reference probabilities
+$F_{i,k}=\sum_{x=1}^{k}\widehat p_{i,x}$ for $k=1,\ldots,4$.
+
+For a block of size $B$ generated under the plug-in null,
+$N\sim\operatorname{Mult}(B,\widehat H_i)$.
+The cumulative count $C_k=\sum_{x=1}^{k}N_x$ then satisfies
+$C_k\sim\operatorname{Bin}(B,F_{i,k})$. Hence the exact plug-in null
+expectation is
+\begin{equation}
+\label{eq:supp-plugin-expectation}
+b_i^{\mathrm{plug}}(B)
+=
+\sum_{k=1}^{4}
+\sum_{\ell=0}^{B}
+\left|
+\frac{\ell}{B}-F_{i,k}
+\right|
+\binom{B}{\ell}
+F_{i,k}^{\ell}
+(1-F_{i,k})^{B-\ell}.
+\end{equation}
+The corresponding centered evidence is
+\begin{equation}
+\label{eq:supp-plugin-centered}
+d_{it}^{\mathrm{plug}}
+=
+W_1(H_{it},\widehat H_i)
+-
+b_i^{\mathrm{plug}}(B).
+\end{equation}
+
+For posterior-predictive calibration, define
+$\alpha_i=c_i+\lambda H_{-i}$ and
+$\alpha_{i,0}=n_{\mathrm{ref}}+\lambda$.
+We place the posterior
+$P_i\mid c_i\sim\operatorname{Dirichlet}(\alpha_i)$
+and draw
+$N\mid P_i\sim\operatorname{Mult}(B,P_i)$.
+
+For cumulative boundary $k$, let
+$A_{i,k}=\sum_{x=1}^{k}\alpha_i(x)$, so that
+$F_{i,k}=A_{i,k}/\alpha_{i,0}$.
+The corresponding cumulative count has the Beta--Binomial distribution
+\[
+C_k
+\sim
+\operatorname{BetaBinomial}
+\left(
+B,
+A_{i,k},
+\alpha_{i,0}-A_{i,k}
+\right).
+\]
+Therefore,
+\begin{equation}
+\label{eq:supp-predictive-expectation}
+b_i^{\mathrm{pred}}(B)
+=
+\sum_{k=1}^{4}
+\sum_{\ell=0}^{B}
+\left|
+\frac{\ell}{B}-F_{i,k}
+\right|
+\Pr(C_k=\ell),
+\end{equation}
+with
+\begin{equation}
+\label{eq:supp-beta-binomial-pmf}
+\Pr(C_k=\ell)
+=
+\binom{B}{\ell}
+\frac{
+\mathrm{B}
+\left(
+\ell+A_{i,k},
+B-\ell+\alpha_{i,0}-A_{i,k}
+\right)
+}{
+\mathrm{B}
+\left(
+A_{i,k},
+\alpha_{i,0}-A_{i,k}
+\right)
+}.
+\end{equation}
+The predictive-centered evidence is
+\begin{equation}
+\label{eq:supp-predictive-centered}
+d_{it}^{\mathrm{pred}}
+=
+W_1(H_{it},\widehat H_i)
+-
+b_i^{\mathrm{pred}}(B).
+\end{equation}
+
+Both procedures score the observed block against the same point reference
+$\widehat H_i$; they differ only in the null expectation being subtracted.
+All expectations are evaluated exactly using numerically stable Binomial and
+Beta--Binomial probability calculations and are cached by item and block size.
+
+% ---------------------------------------------------------------------
+
+\subsection{Selection of the Shrinkage Strength}
+\label{sec:supp-lambda}
+
+The shrinkage strength is selected using only the two calibration blocks at
+positions 121--150 and 151--180, over the candidate grid
+$\lambda\in\{0,5,10,20,40,80,160\}$.
+For calibration block $b$ of item $i$, define
+\[
+d_{ib}^{\mathrm{pred}}(\lambda)
+=
+W_1\!\left(
+H_{ib},
+\widehat H_i^{(\lambda)}
+\right)
+-
+b_{i,\lambda}^{\mathrm{pred}}(30).
+\]
+Let $\mathcal C$ denote the set of all calibration blocks. We select
+\begin{equation}
+\label{eq:supp-lambda-objective}
+\lambda^\star
+=
+\arg\min_{\lambda\in\{0,5,10,20,40,80,160\}}
+\left|
+\frac{1}{|\mathcal C|}
+\sum_{(i,b)\in\mathcal C}
+d_{ib}^{\mathrm{pred}}(\lambda)
+\right|.
+\end{equation}
+This objective targets global signed-score drift rather than
+per-item predictive loss, because the downstream account statistic
+accumulates signed evidence across contexts. Item-level positive and
+negative calibration errors may therefore offset one another under
+this objective.
+Ties are resolved in favor of the smaller $\lambda$.
+
+For the primary \texttt{Home\_and\_Kitchen} domain, this procedure selects
+$\lambda^\star=20$, which is frozen before evaluating the experimental
+blocks at positions 181--240 and the untouched diagnostic blocks at
+positions 241--300.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Untouched-Holdout Calibration}
+\label{sec:supp-holdout}
+
+For the primary \texttt{Home\_and\_Kitchen} domain, after selecting $\lambda^\star=20$, we evaluate the two untouched 30-review
+blocks at positions 241--270 and 271--300.
+
+Aggregating both blocks, the mean signed increments are
+\[
+\begin{aligned}
+\overline d^{\mathrm{plug}}
+&=
+0.12269
+\quad
+[0.12025,\,0.12511],\\
+\overline d^{\mathrm{pred}}
+&=
+0.10399
+\quad
+[0.10156,\,0.10640].
+\end{aligned}
+\]
+where brackets denote 95\% confidence intervals.
+
+For the two untouched blocks separately, the posterior-predictive mean signed
+increments are $0.09584$ for positions 241--270 and $0.11215$ for positions
+271--300.
+
+Confidence intervals for this diagnostic use an item-cluster percentile
+bootstrap. Each replicate samples the 31,247 eligible items with replacement
+and retains both untouched blocks from every sampled item. We use 10,000
+bootstrap replicates with seed 314159 and report the 2.5th and 97.5th
+percentiles.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Reference-History Sensitivity}
+\label{sec:supp-reference-history}
+
+For the primary \texttt{Home\_and\_Kitchen} domain, we vary the reference-history length over
+$n_{\mathrm{ref}}\in\{60,90,120\}$.
+For each randomized seed, the primary frozen $k=6$ attack world and $r=8$ identity assignment are held fixed. Only the historical prefix used to construct the
+item reference and the calibration-selected shrinkage parameter are
+recomputed.
+
+For each reference length, we use the first $n_{\mathrm{ref}}$ reviews from
+the original positions 1--120 reference block: positions 1--60 for
+$n_{\mathrm{ref}}=60$, positions 1--90 for $n_{\mathrm{ref}}=90$, and
+positions 1--120 for $n_{\mathrm{ref}}=120$.
+
+For each $n_{\mathrm{ref}}$, the leave-one-item-out domain target is recomputed
+using the same reference length for every eligible item, and $\lambda$ is
+reselected from $\{0,5,10,20,40,80,160\}$ using only the two fixed calibration
+blocks at positions 121--180. The selected value is $\lambda^\star=20$ for
+all three reference lengths.
+
+The sampled items, clean and attacked block histograms, manipulated donor
+slots, replacement ratings, and $r=8$ synthetic identity assignments are
+inherited unchanged from the primary $k=6$ experiment. Table~\ref{tab:supp-reference-history} reports the resulting attribution
+performance as the reference-history length varies.
+
+\begin{table}[t]
+\caption{Sensitivity to reference-history length in the primary
+\texttt{Home\_and\_Kitchen} domain under the exact $r=8$
+matched-twin construction.}
+\label{tab:supp-reference-history}
+\centering
+\small
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$n_{\mathrm{ref}}$
+& $\lambda^\star$
+& ROC--AUC
+& Misordering \\
+\midrule
+60  & 20 & 0.618 & 0.382 \\
+90  & 20 & 0.688 & 0.312 \\
+120 & 20 & 0.744 & 0.256 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The $n_{\mathrm{ref}}=120$ condition reproduces the primary item-level $d_i^{\mathrm{cf}}$ values and the exact $r=8$ counterfactual
+matched-twin ROC--AUC.
+
+
+% =====================================================================
+% =====================================================================
+\section{Counterfactual Amazon Experiment Construction}
+\label{sec:supp-counterfactual}
+% =====================================================================
+
+\subsection{Counterfactual Identification Quantity}
+\label{sec:supp-counterfactual-score}
+
+For discrepancy $D$, define the paired attack--clean evidence increment
+\[
+d_{it}^{\mathrm{cf}}
+=
+D(H_{it}^{\mathrm{attack}},\widehat H_i)
+-
+D(H_{it}^{\mathrm{clean}},\widehat H_i).
+\]
+The attacked and clean worlds share the same item, experimental block, review
+positions, source records, timestamps, block size, unmodified reviews, and
+item reference $\widehat H_i$; they differ only through the controlled rating
+replacements.
+
+The quantity $d_{it}^{\mathrm{cf}}$ is used only for offline counterfactual
+evaluation. In deployment, the framework uses the one-world signed increment
+$d_t=W_1(H_t,H_{c_t}^{\mathrm{ref}})-b_{c_t}(n_t,h_t)$.
+
+% ---------------------------------------------------------------------
+
+\subsection{Block and Donor Selection}
+\label{sec:supp-block-selection}
+
+Each eligible item contributes two candidate 30-review blocks: block A at
+positions 181--210 and block B at positions 211--240.
+
+For the primary five-star experiment, a block is feasible if it contains at
+least $k=6$ non-five-star reviews. Both candidate blocks must be feasible.
+For each seed, we first form the feasible item universe, sample 2,000 items
+uniformly without replacement, and then select block A or B independently for
+each sampled item with probability $1/2$.
+
+For a selected block, let
+\[
+\mathcal J_i
+=
+\{j\in\{1,\ldots,30\}:r_{ij}<5\}.
+\]
+Using the same seed-specific random generator, exactly six distinct positions
+are sampled uniformly without replacement from $\mathcal J_i$. The selected
+local indices are sorted before the attack manifest is constructed. Each
+selected rating is replaced by five, and all other ratings remain unchanged.
+Donor selection does not use $W_1$, $d_i^{\mathrm{cf}}$, account scores, or
+downstream evaluation metrics.
+
+The intervention-strength experiment uses $k \in \{3,6,9\}$ under a
+separate common-random-number construction. Both candidate blocks must
+contain at least nine non-five-star reviews. For each sampled item, one
+treatment block and an ordered sample of nine distinct non-five-star donor
+positions are generated once. The $k=3$, $k=6$, and $k=9$ conditions use
+the first 3, 6, and 9 donors from this common ordering, respectively.
+
+All three intervention strengths use the same sampled items, treatment
+blocks, item references, ordered nine donor positions, synthetic-account
+population, and account--item incidence. The identity construction fixes
+item-side degree $m=9$ and account-side degree $r=8$, yielding
+$M=Lm/r=2000\times 9/8=2250$ synthetic identities per seed. Thus changing
+$k$ changes only the nested subset of donor slots that is actually modified,
+not the identity population or account--item exposure structure. The number
+of modified exposures assigned to each identity is balanced to within one:
+2--3 for $k=3$, 5--6 for $k=6$, and exactly 8 for $k=9$.
+
+% ---------------------------------------------------------------------
+
+\subsection{Fixed-Attack Identity Reassignment}
+\label{sec:supp-fixed-attack}
+
+For each randomized seed, the primary $k=6$ five-star attack world is
+generated once before identity reuse is varied over
+$r\in\{1,2,4,8,16\}$. The attack manifest records, for every treated item,
+the selected experimental block, manipulated positions and source lines,
+original and replacement ratings, clean and attacked histograms, and the
+resulting $d_i^{\mathrm{cf}}$.
+
+Across all reuse values, the attack manifest and aggregate evidence remain
+unchanged. Only the assignment of the fixed manipulated slots to synthetic
+identities varies.
+
+In the primary construction, each item has $k=6$ manipulated slots and is
+assigned $m=6$ synthetic identities, one per slot. For $L=2000$ items, the
+$Lm$ synthetic exposures are partitioned among
+\begin{equation}
+\label{eq:supp-fixed-attack-account-count}
+M=\frac{Lm}{r}
+\end{equation}
+synthetic accounts, each appearing on exactly $r$ distinct items.
+
+
+\subsubsection{Balanced regular incidence construction}
+\label{sec:supp-fixed-attack-incidence}
+
+Identity assignment is represented by
+$R\in\{0,1\}^{M\times L}$ and satisfies
+\[
+\sum_{i=1}^{L}R_{ji}=r
+\quad\text{for every account }j,
+\quad
+\sum_{j=1}^{M}R_{ji}=m
+\quad\text{for every item }i.
+\]
+No synthetic account appears more than once on the same item.
+
+The implementation uses an exact circulant construction. For each reuse
+value, the $L$ items are first randomly permuted. Indexing the permuted items
+by $j=0,\ldots,L-1$, item $j$ is assigned numeric account indices
+\[
+(jm+s)\bmod M,
+\qquad
+s=0,\ldots,m-1.
+\]
+The construction is then checked for exact row degree $r$ and column degree
+$m$. A final random permutation of the $M$ account labels changes the visible
+synthetic identifiers without altering the incidence structure.
+
+For seed $s$ and reuse value $r$, the incidence random generator is initialized
+with seed $100003\,s+997\,r+41$. Within each item, the sorted manipulated
+slots are assigned in order to its $m$ incident synthetic accounts.
+
+The implementation verifies $Mr=Lm$, exact account degree $r$, exact item
+degree $m$, and absence of duplicate account--item edges. Any failed invariant
+aborts the run.
+
+
+\subsubsection{Historical comparison accounts for the fixed-attack reuse sweep.}
+
+For each seed and reuse value $r$, the positive class consists of the
+synthetic intervention identities generated by the exact-regular incidence
+construction above. With $L=2000$ treated items and $m=6$ manipulated slots
+per item, the number of positive identities is
+$M=Lm/r=12000/r$, giving $12000$, $6000$, $3000$, $1500$, and $750$
+synthetic identities for $r\in\{1,2,4,8,16\}$, respectively. Every such
+identity appears on exactly $r$ distinct treated items and occupies one
+manipulated slot on each.
+
+The comparison class is constructed from the original historical reviewers
+occupying the 24 non-donor positions of each selected 30-review treated
+block. Because repeated reviewer--item records were removed during
+preprocessing, a historical comparison account appears at most once on a
+given item, although the same reviewer may appear on multiple selected
+items. Each seed therefore contains exactly $24L=48000$ historical
+comparison exposures. After repeated reviewer identities across items are
+merged, the reported seeds contain between 47,805 and 47,861 unique
+historical comparison accounts.
+
+For either class, an exposure on treated item $i$ contributes the same paired
+counterfactual increment $d_i^{\mathrm{cf}}$ to the account score. Thus, for
+the exposure set $E_u$ of account $u$,
+$S_u=\sum_{i\in E_u}d_i^{\mathrm{cf}}$ and
+$F_u=|E_u|$. The historical comparison population, its exposure sets, and
+its scores are identical across reuse values within a seed; only the
+partition of the fixed manipulated slots among synthetic intervention
+identities changes.
+
+The historical comparison accounts are not assumed to be benign and do not
+provide clean-label ground truth. The fixed-attack reuse sweep is therefore
+a descriptive mechanism test. Synthetic intervention frequency is exactly
+$r$, whereas comparison-account frequency reflects naturally occurring
+cross-item reuse; the exact matched-twin construction in
+Appendix~\ref{sec:supp-twins}
+removes this activity difference.
+
+% ---------------------------------------------------------------------
+
+\subsection{Exact Matched-Twin Construction}
+\label{sec:supp-twins}
+
+The matched-twin experiment uses the frozen $r=8$ identity assignment from the primary $k=6$ experiment. For attacked identity $a$, let
+\[
+E_a
+=
+\{(i,t):a\text{ occupies manipulated slot }(i,t)\}
+\]
+denote its exposure set. A synthetic clean twin $a'$ is assigned to the exact
+clean counterparts of the same slots.
+
+For every matched pair, the following are identical:
+\begin{itemize}
+    \item participation count, equal to $r=8$;
+    \item item set and experimental block;
+    \item review position and source line; and
+    \item timestamp, since the attacked and clean worlds use the same
+    source record.
+\end{itemize}
+
+For attacked identity $a$ and exact clean twin $a'$ with shared exposure set
+$E_a$, the raw-world scores are
+\begin{align*}
+S_a^{\mathrm{raw,attack}}
+&=
+\sum_{(i,t)\in E_a}
+W_1\!\left(H_{it}^{\mathrm{attack}},\widehat H_i\right),\\
+S_{a'}^{\mathrm{raw,clean}}
+&=
+\sum_{(i,t)\in E_a}
+W_1\!\left(H_{it}^{\mathrm{clean}},\widehat H_i\right).
+\end{align*}
+The posterior-predictive-centered scores are
+\begin{align*}
+S_a^{\mathrm{pred,attack}}
+&=
+\sum_{(i,t)\in E_a}
+\left[
+W_1\!\left(H_{it}^{\mathrm{attack}},\widehat H_i\right)
+-b_i^{\mathrm{pred}}(30)
+\right],\\
+S_{a'}^{\mathrm{pred,clean}}
+&=
+\sum_{(i,t)\in E_a}
+\left[
+W_1\!\left(H_{it}^{\mathrm{clean}},\widehat H_i\right)
+-b_i^{\mathrm{pred}}(30)
+\right].
+\end{align*}
+Because each pair has the same item set, the predictive baselines cancel
+pairwise, and
+\[
+S_a^{\mathrm{raw,attack}}-S_{a'}^{\mathrm{raw,clean}}
+=
+S_a^{\mathrm{pred,attack}}-S_{a'}^{\mathrm{pred,clean}}
+=
+\sum_{(i,t)\in E_a} d_{it}^{\mathrm{cf}}.
+\]
+
+For counterfactual ROC--AUC, the implemented score assigns
+$S_a^{\mathrm{cf}}=\sum_{(i,t)\in E_a}d_{it}^{\mathrm{cf}}$ to the attacked
+identity and $S_{a'}^{\mathrm{cf}}=0$ to its clean twin. Each reported
+ROC--AUC is then computed between the corresponding attacked- and
+clean-score distributions; pairing is used separately for the misordering
+and paired-gap statistics. Historical Amazon reviewers do not enter either
+labeled class in this experiment.
+
+% ---------------------------------------------------------------------
+
+\subsection{Exact Mean-Preserving Shape Intervention}
+\label{sec:supp-shape}
+
+The shape intervention modifies exactly six ratings in each treated block
+through three disjoint rating pairs. The admissible unordered transformations
+are shown in Table~\ref{tab:supp-shape-transforms}.
+
+\begin{table}[t]
+\caption{Admissible sum-preserving rating-pair transformations.}
+\label{tab:supp-shape-transforms}
+\centering
+\small
+\begin{tabular}{@{}cc@{}}
+\toprule
+\textbf{Original pair} & \textbf{Replacement pair} \\
+\midrule
+$(2,2)$ & $(1,3)$ \\
+$(2,3)$ & $(1,4)$ \\
+$(2,4)$ & $(1,5)$ \\
+$(3,3)$ & $(1,5)$ \\
+$(3,4)$ & $(2,5)$ \\
+$(4,4)$ & $(3,5)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Both candidate experimental blocks must admit three disjoint transformable
+pairs. Feasibility is checked deterministically by enumerating candidate pairs
+in review-position order and using backtracking to determine whether three
+disjoint pairs exist.
+
+For attack construction, the candidate-pair list is randomly permuted and a
+depth-first backtracking search returns the first feasible set of three
+disjoint pairs in that order. For each selected unordered replacement pair,
+its orientation across the two review positions is chosen independently with
+probability $1/2$.
+
+
+
+\begin{table*}[t]
+\caption{Controlled quantities in the Amazon counterfactual experiments.}
+\label{tab:supp-controls}
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}
+\toprule
+\textbf{Quantity}
+&
+\textbf{Fixed-attack reuse}
+&
+\textbf{Exact matched twins}
+&
+\textbf{Mean-preserving shape}
+\\
+\midrule
+
+Item set
+& Fixed across $r$
+& Exactly matched
+& Exactly matched \\
+
+Selected experimental block
+& Fixed across $r$
+& Exactly matched
+& Exactly matched \\
+
+Manipulated position / source record
+& Fixed across $r$
+& Exactly matched
+& Exactly matched \\
+
+Timestamp exposure
+& Fixed across $r$
+& Exactly matched
+& Exactly matched \\
+
+Replacement rating
+& Fixed across $r$
+& Attack--clean contrast
+& Sum-preserving contrast \\
+
+Aggregate attack volume
+& Fixed across $r$
+& Fixed
+& Fixed \\
+
+Block histogram
+& Fixed across $r$
+& Attack--clean contrast
+& Shape contrast \\
+
+Paired evidence $d_i^{\mathrm{cf}}$
+& Fixed across $r$
+& Determined by matched worlds
+& Determined by matched worlds \\
+
+Participation frequency
+& Changes with $r$
+& Exactly matched
+& Exactly matched \\
+
+Item exposure
+& Exact regular incidence
+& Exactly matched
+& Exactly matched \\
+
+Block mean
+& May change
+& May change
+& Exactly preserved \\
+
+Account classes
+& Synthetic / historical comparison
+& Synthetic matched twins
+& Synthetic matched twins \\
+
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+
+
+For seed $s$, the shape-intervention random generator is initialized with seed
+$s+600000$ and is used for feasible-item sampling, A/B treatment-block
+selection, randomized pair ordering, and replacement orientation. Pair
+selection does not use $W_1$, Jensen--Shannon divergence,
+$d_i^{\mathrm{cf}}$, account scores, or downstream evaluation metrics. Table~\ref{tab:supp-controls} summarizes the quantities held fixed or exactly
+matched across the three principal Amazon counterfactual constructions.
+
+Every admissible transformation preserves the corresponding pair sum, and
+the implementation additionally requires all six selected positions to
+change. Hence
+\[
+\sum_{j=1}^{30}r_{ij}^{\mathrm{attack}}
+=
+\sum_{j=1}^{30}r_{ij}^{\mathrm{clean}},
+\]
+so the 30-review block mean is preserved exactly.
+
+The shape experiment uses the same exact-regular incidence construction at
+$r=8$, with incidence seed $100003\,s+6008$.
+
+% ---------------------------------------------------------------------
+
+\subsection{Construction Invariants}
+\label{sec:supp-construction-invariants}
+
+
+Before evaluation, the implementation checks all relevant incidence degrees,
+slot uniqueness, histogram sizes, score-conservation identities,
+matched-twin exposures, and mean-preservation constraints. For the
+fixed-attack reuse sweep, it additionally verifies that each treated block
+contains exactly 24 historical non-donor comparison exposures after the six
+frozen donor source records are removed, and the same reconstructed
+historical comparison population is reused across all $r$ within a seed.
+Any failed invariant raises an exception and aborts the affected run; failed
+constructions are not included in reported metrics.
+% =====================================================================
+% =====================================================================
+\section{Evidence Channels, Baselines, Metrics, and Statistical Inference}
+\label{sec:supp-evaluation}
+% =====================================================================
+
+\subsection{Aggregate Evidence Channels}
+\label{sec:supp-evidence-channels}
+
+For distributions $P,Q$ on ordered support
+$\mathcal X=\{x_1<\cdots<x_h\}$, let
+$F_P(k)=\sum_{j=1}^{k}P(j)$ and
+$F_Q(k)=\sum_{j=1}^{k}Q(j)$. Then
+\[
+W_1(P,Q)
+=
+\sum_{k=1}^{h-1}
+(x_{k+1}-x_k)
+\left|
+F_P(k)-F_Q(k)
+\right|.
+\]
+
+In the controlled model, the centered Wasserstein evidence is
+\begin{equation}
+\label{eq:supp-eval-centered-w1}
+d_t^{W_1}
+=
+W_1(H_t,H_{c_t}^{\mathrm{ref}})
+-
+b_{c_t}^{W_1}(n_t,h_t),
+\end{equation}
+with $b_{c_t}^{W_1}$ defined in
+Section~\ref{sec:supp-rotation-calibration}.
+
+For Amazon, the paired counterfactual Wasserstein increment is
+\begin{equation}
+\label{eq:supp-eval-cf-w1}
+d_{it}^{\mathrm{cf},W_1}
+=
+W_1(H_{it}^{\mathrm{attack}},\widehat H_i)
+-
+W_1(H_{it}^{\mathrm{clean}},\widehat H_i).
+\end{equation}
+
+For the Amazon mean-preserving shape experiment, for probability vectors $P$ and $Q$, let $M=(P+Q)/2$ and define
+\begin{equation}
+\label{eq:supp-js}
+\operatorname{JS}(P,Q)
+=
+\frac{1}{2}\operatorname{KL}(P\|M)
++
+\frac{1}{2}\operatorname{KL}(Q\|M),
+\end{equation}
+where
+$\operatorname{KL}(P\|M)
+=
+\sum_x P(x)\log[P(x)/M(x)]$.
+The implementation uses the natural logarithm, so JS is measured in nats.
+Zero-mass terms contribute zero and no smoothing is added.
+
+The paired JS increment is
+\begin{equation}
+\label{eq:supp-eval-cf-js}
+d_{it}^{\mathrm{cf},\mathrm{JS}}
+=
+\operatorname{JS}(H_{it}^{\mathrm{attack}},\widehat H_i)
+-
+\operatorname{JS}(H_{it}^{\mathrm{clean}},\widehat H_i).
+\end{equation}
+
+For a rating histogram $H$, let
+$\mu(H)=\sum_{x=1}^{5}xH(x)$ and
+$D_{\mathrm{mean}}(H,\widehat H_i)
+=
+|\mu(H)-\mu(\widehat H_i)|$.
+The paired mean increment is
+\begin{equation}
+\label{eq:supp-eval-cf-mean}
+d_{it}^{\mathrm{cf},\mathrm{mean}}
+=
+D_{\mathrm{mean}}(H_{it}^{\mathrm{attack}},\widehat H_i)
+-
+D_{\mathrm{mean}}(H_{it}^{\mathrm{clean}},\widehat H_i).
+\end{equation}
+
+For any evidence channel $\phi$, account scores use the same exposure rule:
+\begin{equation}
+\label{eq:supp-common-account-score}
+S_u^\phi
+=
+\sum_t a_{u,t}d_t^\phi,
+\end{equation}
+or the corresponding sum of paired increments over the Amazon contexts
+assigned to account $u$.
+
+% ---------------------------------------------------------------------
+
+\subsection{Account-Level Mechanism Baselines}
+\label{sec:supp-account-baselines}
+
+Participation frequency is
+\begin{equation}
+\label{eq:supp-frequency-score}
+F_u
+=
+\sum_t a_{u,t}.
+\end{equation}
+For the Amazon shape experiment, mean-based attribution uses
+\begin{equation}
+\label{eq:supp-mean-account-score}
+S_u^{\mathrm{mean}}
+=
+\sum_{(i,t)\in E_u}
+d_{it}^{\mathrm{cf},\mathrm{mean}},
+\end{equation}
+where $E_u$ is the account's assigned exposure set. Under the exact
+mean-preserving shape construction,
+$d_{it}^{\mathrm{cf},\mathrm{mean}}=0$ for every treated block, so
+$S_u^{\mathrm{mean}}=0$ for every synthetic account.
+
+\paragraph{Role of uniform exposure attribution.}
+Uniform exposure attribution is used as a parameter-free
+identifiability instrument rather than an optimal allocation model.
+It uses no per-action features, account relations, training labels,
+or learned weights. Consequently, any account separation in the
+matched experiments must arise from repeated exposure to the
+already-fixed context evidence. A differential second-stage allocator
+could redistribute the same fixed evidence using action-level
+information while preserving the aggregate-first boundary, but
+optimizing such an allocator is a distinct problem.
+
+% ---------------------------------------------------------------------
+
+\subsection{Co-Activity Evidence}
+\label{sec:supp-coactivity}
+
+Let $B\in\{0,1\}^{M\times L}$ be the synthetic account--item incidence
+matrix, with $B_{ui}=1$ when account $u$ participates on item $i$. For
+distinct accounts $u$ and $v$, define their item-level co-occurrence count as
+\begin{equation}
+\label{eq:supp-cooccur}
+N_{uv}
+=
+\sum_{i=1}^{L}B_{ui}B_{vi}.
+\end{equation}
+
+The implemented pairwise co-activity score retains only repeated
+co-occurrence beyond the first shared item:
+\begin{equation}
+\label{eq:supp-pair-coactivity}
+c_{uv}
+=
+\max\{N_{uv}-1,0\}.
+\end{equation}
+The account-level score is
+\begin{equation}
+\label{eq:supp-account-coactivity}
+C_u
+=
+\sum_{v\neq u}c_{uv}
+=
+\sum_{v\neq u}\max\{N_{uv}-1,0\}.
+\end{equation}
+
+No fitted pairwise null expectation or variance normalization is used.
+Instead, the complementarity experiment uses structural controls obtained by
+degree-preserving randomization of the account--item incidence graph.
+
+The structured incidence consists of teams of six accounts, each repeated on
+eight items. Thus every account has degree $r=8$, every item has degree
+$m=6$, and with $L=2000$ items there are $M=1500$ accounts.
+
+A randomized control graph is generated by degree-preserving bipartite edge
+swaps. Each randomization performs exactly
+$20Lm=240{,}000$ successful swaps. A proposed swap exchanges the item
+endpoints of two edges only if the resulting graph remains simple and creates
+no duplicate account--item edge. The implementation allows at most
+12,000,000 swap attempts; failure to complete all 240,000 successful swaps
+raises an exception and aborts the run. Two independently randomized control
+incidences are generated for each seed.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Untrained Combined Score}
+\label{sec:supp-combination}
+
+The complementarity experiment combines the aggregate-evidence and
+co-activity channels using fixed equal weights after unlabeled
+standardization.
+
+For each seed, the primary mixed benchmark concatenates two mechanism
+conditions:
+\begin{itemize}
+    \item an evidence-only condition, in which positive and negative accounts
+          use the same randomized incidence but only the positive world carries
+          the five-star intervention; and
+    \item a topology-only condition, in which both classes carry zero aggregate
+          intervention evidence but positive accounts use the repeated-team
+          incidence and negative accounts use a degree-preserving randomized
+          incidence.
+\end{itemize}
+
+Let $\mathcal U^{\mathrm{mix}}$ denote the pooled, unlabeled account population
+from these two conditions. For channel $X\in\{S,C\}$, define
+\[
+\widehat\mu_X
+=
+\frac{1}{|\mathcal U^{\mathrm{mix}}|}
+\sum_{u\in\mathcal U^{\mathrm{mix}}}X_u,
+\qquad
+\widehat\sigma_X
+=
+\left[
+\frac{1}{|\mathcal U^{\mathrm{mix}}|}
+\sum_{u\in\mathcal U^{\mathrm{mix}}}
+(X_u-\widehat\mu_X)^2
+\right]^{1/2}.
+\]
+Class labels are not used in either quantity. For $\widehat\sigma_X>0$, let
+$Z(X_u)=(X_u-\widehat\mu_X)/\widehat\sigma_X$; if
+$\widehat\sigma_X=0$, the standardized value for that channel is set to zero.
+
+The combined score is
+\begin{equation}
+\label{eq:supp-combined-score}
+S_u^{\mathrm{comb}}
+=
+Z(S_u)+Z(C_u).
+\end{equation}
+Thus the two standardized channels receive equal fixed weight. No classifier,
+combination weight, or label-dependent parameter is fitted.
+
+For the primary \texttt{Home\_and\_Kitchen} experiment, estimating the
+normalization from the other 29 seeds instead of the current seed changes
+mean combined ROC--AUC only from $0.873700$ to $0.873698$.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Metrics and Statistical Inference}
+\label{sec:supp-metrics}
+
+For $L$ treated item contexts, the mean paired evidence and fraction of
+positive increments are
+\begin{equation}
+\label{eq:supp-mean-dcf}
+\overline d_{\mathrm{cf}}
+=
+\frac{1}{L}
+\sum_{i=1}^{L}d_i^{\mathrm{cf}},
+\end{equation}
+and
+\begin{equation}
+\label{eq:supp-positive-dcf}
+\pi_+
+=
+\frac{1}{L}
+\sum_{i=1}^{L}
+\mathbf 1\{d_i^{\mathrm{cf}}>0\}.
+\end{equation}
+
+Account ROC--AUC classes are experiment-specific. In the controlled model,
+the positive and comparison classes are the generated coalition and normal
+accounts. In the fixed-attack Amazon reuse sweep, the positive class consists
+of synthetic intervention identities and the comparison class consists of
+the historical non-donor accounts defined in
+Appendix~\ref{sec:supp-fixed-attack}; these historical
+accounts are used as the negative class for ROC--AUC computation but are not
+assumed to be verified benign. In the exact matched-twin and mean-preserving
+Amazon experiments, the classes are synthetic attacked identities and their
+exact synthetic clean twins. In the complementarity experiment, both classes
+are synthetic by construction. Tied scores receive their usual half-credit
+in ROC--AUC through average ranks.
+
+Historical Amazon reviewers do not enter the labeled classes of the
+matched-twin, mean-preserving, or complementarity experiments. In the
+one-world ranking experiment of
+Appendix~\ref{sec:supp-one-world-ranking}, they remain an unlabeled
+background population rather than a negative class.
+
+For matched attacked--clean pair $j$,
+\begin{equation}
+\label{eq:supp-pair-gap}
+G_j
+=
+S_j^{\mathrm{attack}}
+-
+S_j^{\mathrm{clean}},
+\end{equation}
+with
+\[
+\overline G
+=
+\frac{1}{M}
+\sum_{j=1}^{M}G_j.
+\]
+The matched-pair misordering rate is
+\begin{equation}
+\label{eq:supp-misordering}
+\widehat p_{\mathrm{mis}}
+=
+\frac{1}{M}
+\sum_{j=1}^{M}
+\mathbf 1\{G_j\leq0\}.
+\end{equation}
+We use this conservative convention throughout: exact ties count as
+misorderings (equivalently, non-wins).
+
+For the fixed-attack reuse construction, numerical agreement with the exact
+reuse law is checked using
+\begin{equation}
+\label{eq:supp-reuse-error}
+\epsilon_{\mathrm{reuse}}(r)
+=
+\left|
+\overline G(r)
+-
+r\,\overline d_{\mathrm{cf}}
+\right|.
+\end{equation}
+
+For the principal controlled matched-exposure experiment, the empirical
+coalition--normal mean-score gap is evaluated at every interval. If
+$G_t^{\mathrm{emp}}$ denotes this cumulative gap, its descriptive slope is the
+ordinary least-squares slope from
+\begin{equation}
+\label{eq:supp-controlled-slope}
+G_t^{\mathrm{emp}}
+=
+\alpha+\beta t+\varepsilon_t,
+\qquad
+t=1,\ldots,T.
+\end{equation}
+The fitted $\widehat{\beta}$ is compared with the separately computed
+plug-in estimate $\widehat{\Delta}$  from Section~\ref{sec:supp-rotation-prediction}.
+
+\paragraph{Confidence intervals.}
+For the controlled experiments, each seed is an independent Monte Carlo
+replicate. The frozen inference procedure uses a percentile bootstrap over
+the 30 seed-level estimates. Each bootstrap replicate samples 30 seeds with
+replacement, recomputes their mean, and the 2.5th and 97.5th percentiles form
+the 95\% interval. We use 10,000 bootstrap replicates.
+
+For the Amazon experiments, the independently seeded randomized construction
+is the replication unit. The reported intervals therefore summarize variation
+over item sampling, treatment-block and donor selection, and identity
+assignment conditional on the fixed Amazon corpus. The primary Amazon
+intervention and robustness summaries report 95\% Student-$t$ intervals over
+the 30 seed-level estimates:
+\[
+\widehat{\theta}
+\pm
+t_{0.975,29}\frac{s_\theta}{\sqrt{30}},
+\]
+where $s_\theta$ is the sample standard deviation across seeds.
+
+The untouched calibration diagnostic for the primary
+\texttt{Home\_and\_Kitchen} domain uses the item-cluster percentile
+bootstrap described in Section~\ref{sec:supp-holdout}: 31,247 items are
+sampled with replacement, both untouched blocks from each sampled item are
+retained together, and 10,000 bootstrap replicates are used.
+
+All reported seed-level metrics in the final experiment grid are finite.
+Construction or invariant failures raise an exception rather than producing an
+undefined metric or being silently omitted.
+
+
+
+% =====================================================================
+\section{Additional Experimental Results}
+\label{sec:supp-extra-results}
+% =====================================================================
+
+\subsection{Controlled-Model Results}
+\label{sec:supp-extra-controlled}
+
+\paragraph{Null calibration.}
+Under normal-only traffic, raw Wasserstein--1 has mean discrepancy $0.04531$
+per interval. After matched finite-sample centering,
+\[
+\begin{aligned}
+\overline d_{\mathrm{centered}}
+&=
+-1.35\times10^{-5},\\
+95\%~\mathrm{CI}
+&=
+[-1.01\times10^{-4},\,7.59\times10^{-5}],\\
+\text{raw cumulative slope}
+&=
+0.04529,\\
+\text{centered cumulative slope}
+&=
+-3.37\times10^{-5}.
+\end{aligned}
+\]
+
+\paragraph{Predicted and observed divergence.}
+For the principal matched-exposure condition,
+\[
+\begin{aligned}
+\widehat\Delta &= 0.004180,
+&
+\text{empirical gap slope} &= 0.004190,\\
+T\widehat\Delta &= 16.72,
+&
+\text{observed final gap} &= 16.76.
+\end{aligned}
+\]
+The realized exposure ratio is approximately $R_{\mathrm{exp}}=1.002$.
+
+\paragraph{Exposure--intermittency sweep.}
+The complete operating-regime sweep uses
+\[
+p_{\mathrm{on}}\in\{0.1,0.2,\ldots,1.0\},
+\quad
+R_{\mathrm{exp}}^{\mathrm{req}}
+\in
+\{0.25,0.5,0.75,1.0,1.25,1.5,2.0\}.
+\]
+Table~\ref{tab:supp-controlled-grid} reports the mean account-score ROC--AUC
+over the 30 randomized seeds for every grid point.
+
+\begin{table*}[t]
+\caption{Complete controlled exposure--intermittency sweep. Entries are mean
+account-score ROC--AUC over 30 seeds.}
+\label{tab:supp-controlled-grid}
+\centering
+\small
+\setlength{\tabcolsep}{4.2pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}c*{10}{c}@{}}
+\toprule
+& \multicolumn{10}{c}{$p_{\mathrm{on}}$} \\
+\cmidrule(lr){2-11}
+$R_{\mathrm{exp}}^{\mathrm{req}}$
+& .1 & .2 & .3 & .4 & .5 & .6 & .7 & .8 & .9 & 1.0 \\
+\midrule
+0.25
+& 1.000 & 0.725 & 0.363 & 0.254 & 0.228
+& 0.226 & 0.225 & 0.236 & 0.254 & 0.261 \\
+0.50
+& 1.000 & 1.000 & 0.995 & 0.825 & 0.498
+& 0.295 & 0.188 & 0.137 & 0.118 & 0.103 \\
+0.75
+& 1.000 & 1.000 & 1.000 & 1.000 & 0.994
+& 0.886 & 0.645 & 0.392 & 0.241 & 0.152 \\
+1.00
+& 1.000 & 1.000 & 1.000 & 1.000 & 1.000
+& 1.000 & 0.994 & 0.926 & 0.742 & 0.507 \\
+1.25
+& 1.000 & 1.000 & 1.000 & 1.000 & 1.000
+& 1.000 & 1.000 & 1.000 & 0.994 & 0.951 \\
+1.50
+& 1.000 & 1.000 & 1.000 & 1.000 & 1.000
+& 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+2.00
+& 1.000 & 1.000 & 1.000 & 1.000 & 1.000
+& 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Along the matched-exposure row
+$R_{\mathrm{exp}}^{\mathrm{req}}=1$, frequency remains near chance throughout
+the sweep (ROC--AUC $0.486$--$0.517$), including $0.486$ at the principal
+setting $p_{\mathrm{on}}=0.2$.
+
+The evidence-score ROC--AUC remains essentially perfect through
+$p_{\mathrm{on}}=0.7$ and then decreases to $0.926$, $0.742$, and $0.507$
+at $p_{\mathrm{on}}=0.8,0.9,$ and $1.0$, respectively. At
+$p_{\mathrm{on}}=1$, the mean signed aggregate increment remains positive
+at $0.01583$, even though account-level attribution is at chance.
+% ---------------------------------------------------------------------
+
+\subsection{Amazon Counterfactual Results}
+\label{sec:supp-extra-amazon}
+Unless otherwise stated,
+Appendix~\ref{sec:supp-extra-amazon}--\ref{sec:supp-extra-complementarity}
+reports the primary \texttt{Home\_and\_Kitchen} experiments;
+Appendix~\ref{sec:supp-electronics} repeats the same
+experimental pipeline on \texttt{Electronics}.
+
+\paragraph{Fixed-attack reuse.}
+The primary five-star intervention uses $k=6$ modified ratings per treated
+block. Its mean paired Wasserstein effect is
+\[
+\overline d_{\mathrm{cf}}
+=
+0.0764,
+\qquad
+95\%~\mathrm{CI}
+=
+[0.0737,\,0.0790],
+\]
+with $63.8\%$ of treated blocks having $d_i^{\mathrm{cf}}>0$.
+
+Holding the attack world and historical comparison population fixed,
+Table~\ref{tab:supp-reuse-results} shows how account ROC--AUC changes as the
+same manipulated exposures are concentrated onto increasingly reused
+identities. Every synthetic
+intervention identity has frequency exactly $r$, whereas historical
+comparison frequency is determined by naturally occurring reviewer reuse
+among the 24 non-donor positions of the selected treated blocks. Across the
+30 seeds, the historical comparison accounts have mean frequency 1.0034.
+Consequently, frequency ROC--AUC is 0.498 at $r=1$, 0.998 at $r=2$, and
+essentially 1.000 for $r\geq4$.
+
+\begin{table}[t]
+\caption{Fixed-attack identity reassignment against historical non-donor
+comparison accounts.}
+\label{tab:supp-reuse-results}
+\centering
+\small
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Reuse $r$ & Evidence ROC--AUC & Frequency ROC--AUC \\
+\midrule
+1  & 0.500 & 0.498 \\
+2  & 0.562 & 0.998 \\
+4  & 0.626 & 1.000 \\
+8  & 0.706 & 1.000 \\
+16 & 0.797 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This activity difference is intentional in the fixed-attack sweep: the
+experiment holds the aggregate attack fixed while changing its concentration
+onto reusable identities, but does not identify an activity-controlled
+attribution effect. The exact matched-twin construction below provides that
+control.
+
+For every reuse value, the implementation verifies
+$G(r)=r\overline d_{\mathrm{cf}}$ to numerical precision. Across
+$r\in\{1,2,4,8,16\}$, the mean absolute construction error ranges from
+$5.55\times10^{-18}$ to $1.04\times10^{-16}$.
+
+
+\paragraph{Exact matched twins.}
+Table~\ref{tab:supp-twin-results} reports the account-level results for the
+exact matched-twin construction at $r=8$.
+
+\begin{table}[t]
+\caption{Exact matched-twin attribution at $r=8$.}
+\label{tab:supp-twin-results}
+\centering
+\small
+\begin{tabular}{@{}lc@{}}
+\toprule
+Metric & Value \\
+\midrule
+Frequency ROC--AUC & 0.500 \\
+Counterfactual ROC--AUC & 0.744 \\
+Raw-world ROC--AUC & 0.748 \\
+Posterior-predictive ROC--AUC & 0.755 \\
+Matched-pair misordering & 0.256 \\
+Mean paired score gap & 0.6109 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The counterfactual ROC--AUC is $0.744$ with 95\% CI
+$[0.732,\,0.755]$, and the attacked identity scores above its clean twin in
+$74.4\%$ of matched pairs. Because each pair has identical participation
+count, item set, block, review position, source record, and timestamp exposure,
+frequency is exactly uninformative in this condition.
+
+
+\paragraph{Mean-preserving shape intervention.}
+The exact shape intervention preserves the 30-review block mean while changing
+six ratings through three disjoint sum-preserving pairs. At $r=8$, Table~\ref{tab:supp-shape-results} compares the resulting
+account-level attribution performance across frequency, mean deviation,
+Wasserstein--1, and Jensen--Shannon evidence.
+
+\begin{table}[t]
+\caption{Exact mean-preserving shape intervention at $r=8$.}
+\label{tab:supp-shape-results}
+\centering
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Evidence channel & ROC--AUC & Misordering \\
+\midrule
+Frequency & 0.500 & 1.000 \\
+Mean deviation & 0.500 & 1.000 \\
+Wasserstein--1 & 0.909 & 0.091 \\
+Jensen--Shannon & 0.967 & 0.033 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Frequency is exactly matched across each attacked--clean pair. Mean-based
+paired evidence is also identically zero because the intervention preserves
+the block mean exactly; hence both controls have ROC--AUC $0.500$.
+
+The 95\% confidence intervals are $[0.902,\,0.916]$ for Wasserstein--1 and
+$[0.962,\,0.971]$ for Jensen--Shannon divergence. Their mean paired score
+gaps are $0.2583$ and $0.1393$, respectively.
+
+At the item level, $55.7\%$ of Wasserstein--1 paired increments and $72.4\%$
+of Jensen--Shannon paired increments are positive. After reuse across eight
+exposures, $90.9\%$ and $96.7\%$ of matched account pairs, respectively,
+favor the attacked identity.
+% ---------------------------------------------------------------------
+
+\subsection{Intervention-Strength Sensitivity}
+\label{sec:supp-intervention-strength}
+
+We evaluate the fixed-identity intervention-strength construction of
+Appendix~\ref{sec:supp-block-selection} for $k\in\{3,6,9\}$. Because the
+sampled items, treatment
+blocks, item references, synthetic-account population, and account--item
+incidence are fixed across $k$, the comparison isolates how the induced
+contextual distortion changes as progressively more of the nested donor
+positions are modified. Table~\ref{tab:supp-strength-results} reports the
+resulting aggregate evidence and account-level attribution performance for
+each intervention strength.
+
+\begin{table}[t]
+\caption{Sensitivity to the number $k$ of modified ratings per 30-review
+block under fixed identities and account--item incidence.}
+\label{tab:supp-strength-results}
+\centering
+\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$k$
+& $\overline d_{\mathrm{cf}}$
+& Positive blocks
+& ROC--AUC
+& Misordering \\
+\midrule
+3 & $-0.0625$ & 0.385 & 0.182 & 0.818 \\
+6 & $ 0.0006$ & 0.534 & 0.514 & 0.486 \\
+9 & $ 0.1604$ & 0.677 & 0.838 & 0.162 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The corresponding 95\% ROC--AUC confidence intervals are\\
+$[0.173,0.191]$, $[0.503,0.525]$, and $[0.829,0.847]$ for
+$k=3$, $6$, and $9$, respectively. The mean paired account-score gaps
+are $-0.4999$, $0.0048$, and $1.2836$. In every condition,
+$\overline G(k)=r\,\overline d_{\mathrm{cf}}(k)$ holds to numerical
+precision.
+
+\paragraph{Relation to the primary $k=6$ experiment.}
+The $k=6$ point in this sensitivity experiment is not a replication of the
+primary five-star experiment. The primary experiment samples from the
+21,197 items for which both candidate blocks are feasible for six
+replacements. The strength experiment instead restricts all three values of
+$k$ to the 13,268 items for which both candidate blocks are feasible for
+nine replacements. This stricter eligibility rule selects a proper subset
+with a different distribution of later-block rating compositions. Table~\ref{tab:supp-k6-population} contrasts the observed primary and
+strength-sensitivity $k=6$ conditions.
+
+\begin{table}[t]
+\caption{Observed results for the primary and strength-sensitivity $k=6$
+conditions. The conditions use different feasibility populations and
+identity constructions; the deterministic audit in this section isolates
+the population effect on expected mean paired evidence.}
+\label{tab:supp-k6-population}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Condition}
+& \textbf{Eligibility}
+& \textbf{Eligible}
+& $\overline d_{\mathrm{cf}}$
+& ROC--AUC \\
+\midrule
+Primary
+& feasible for $k=6$
+& 21,197
+& 0.0764
+& 0.744 \\
+Strength sensitivity
+& feasible for $k=9$
+& 13,268
+& 0.0006
+& 0.514 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Deterministic feasibility-population audit.}
+To isolate feasibility-population selection from differences between the
+two identity constructions, we hold $k=6$ and the selected shrinkage value
+$\lambda^\star=20$ fixed and change only the item-eligibility rule. For
+every eligible item, the audit averages exactly over the uniform A/B
+treatment-block choice and all uniform selections of six non-five-star
+donor positions.
+
+Across the full population of 21,197 items feasible at $k=6$, the exact
+expected mean paired evidence is $0.07637$. Across the stricter population
+of 13,268 items feasible at $k=9$, it is $0.00079$. These values closely
+match the observed means $0.0764$ and $0.0006$ in the primary and
+strength-sensitivity conditions, respectively. Thus restricting the
+experiment to the stricter common population nearly eliminates the
+expected $k=6$ aggregate effect before identity assignment.
+
+The two actual experiments also differ in identity construction. The deterministic audit
+isolates the feasibility-population effect on expected mean paired
+evidence; it does not by itself isolate the corresponding change in
+ROC--AUC.
+
+% ---------------------------------------------------------------------
+
+\subsection{One-World Investigative Ranking Burden}
+\label{sec:supp-one-world-ranking}
+
+The matched-twin experiment isolates attribution under exact exposure control.
+We additionally evaluate how the same planted identities rank in a single
+observed attacked world against the heterogeneous historical account
+population.
+
+For each seed, we retain the frozen primary Amazon intervention
+($k=6$, $r=8$) on its 2,000 treated items and score both experimental
+30-review blocks, positions 181--210 and 211--240, for all 31,247 eligible
+items.  On each treated item, the six manipulated historical review positions
+are occupied by their assigned synthetic identities; all other reviews retain
+their historical reviewer identities.  Thus the resulting stream contains the
+same 1,500 planted identities as the primary $r=8$ experiment together with
+approximately $1.68$ million historical background accounts per seed.
+Historical reviewers are not assumed to be benign and are not used as labeled
+negative examples.
+
+For every account $u$, we compute participation frequency $F_u$, raw one-world
+Wasserstein score
+\[
+S_u^{\mathrm{raw}}
+=
+\sum_{(i,b)\in E_u}
+W_1(H_{ib}^{\mathrm{obs}},\widehat H_i),
+\]
+and posterior-predictive-centered score
+\[
+S_u^{\mathrm{pred}}
+=
+\sum_{(i,b)\in E_u}
+\left[
+W_1(H_{ib}^{\mathrm{obs}},\widehat H_i)
+-
+b_i^{\mathrm{pred}}(30)
+\right].
+\]
+Here $H_{ib}^{\mathrm{obs}}$ is the histogram actually observed in the
+one-world stream: attacked for the selected treatment block of a planted item
+and otherwise historical.
+
+For a planted account, its background percentile is its midrank percentile
+relative to historical-background scores.  We also measure the fraction of
+planted identities appearing in the top $\alpha$ fraction of the complete
+ranking and the number of accounts that must be inspected to encounter a
+specified fraction of the planted population.  Exact score ties are handled by
+uniform expected ordering within the tied group. Table~\ref{tab:supp-one-world-ranking} summarizes the investigative ranking
+burden both in the full one-world population and after exact activity matching
+at $F_u=8$.
+
+\begin{table}[t]
+\caption{One-world investigative ranking burden. Historical reviewers form an
+unlabeled background population rather than a negative class. Values are
+means over 30 seeds.}
+\label{tab:supp-one-world-ranking}
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}Xccc@{}}
+\toprule
+& Frequency & Raw $W_1$ & Predictive $W_1$ \\
+\midrule
+\multicolumn{4}{l}{\emph{Full one-world population}} \\
+Median background percentile
+& 0.99991 & 0.99996 & 0.99735 \\
+Planted in top 1\%
+& 1.000 & 1.000 & 0.728 \\
+Planted in top 5\%
+& 1.000 & 1.000 & 0.922 \\
+Accounts inspected for 50\%
+& 907 & 808 & 5,144 \\
+Inspection fraction for 50\%
+& 0.00054 & 0.00048 & 0.00307 \\
+\midrule
+\multicolumn{4}{l}{\emph{Exact activity match: $F_u=8$}} \\
+Median background percentile
+& 0.500 & 0.946 & 0.926 \\
+25th--75th percentile
+& 0.500--0.500
+& 0.805--0.979
+& 0.754--0.977 \\
+Above background 95th percentile
+& 0.000 & 0.456 & 0.426 \\
+Above background 99th percentile
+& 0.000 & 0.183 & 0.163 \\
+Background accounts above planted median
+& 0 & 5.1 & 7.0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+As shown in Table~\ref{tab:supp-one-world-ranking}, in the full population, planted identities are highly ranked by frequency
+because each synthetic identity appears on exactly eight treated items, while
+such activity is rare among historical accounts.  Predictive-centered evidence
+still places the median planted identity at the $99.74$th background
+percentile; $72.8\%$ of planted identities appear in the top $1\%$ of the
+complete ranking, and inspecting approximately 5,144 accounts, or $0.31\%$ of
+the account population, encounters half of the planted identities.
+
+To remove this activity advantage, we separately restrict the background to
+historical accounts with exactly $F_u=8$.  This produces on average 94.5
+activity-matched historical accounts per seed; a wider $F_u\in\{7,8,9\}$ stratum
+contains 362.3. 
+Within the exact $F_u=8$ comparison, frequency is tied by construction, whereas
+predictive-centered $W_1$ places the median planted identity at the $92.6$th
+background percentile.  Across planted identities, $42.6\%$ exceed the
+activity-matched historical 95th percentile and $16.3\%$ exceed the 99th
+percentile. 
+The wider $F_u\in\{7,8,9\}$ analysis gives a similar median background percentile
+of $94.4\%$.
+
+Raw $W_1$ ranks planted accounts somewhat more strongly than predictive
+centering in this one-world analysis. This does not alter the calibration role
+of predictive centering: raw discrepancy reflects both intervention-induced
+distortion and any persistent reference or temporal mismatch, whereas
+predictive centering subtracts the finite-reference null expectation. We
+therefore report both channels without treating the historical background as a
+labeled negative class.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Leave-One-Out Self-Influence Ablation}
+\label{sec:supp-self-influence-ablation}
+
+To measure direct self-influence empirically, we repeat the primary
+$k=6$, $r=8$ matched-twin experiment after removing each scored synthetic
+account's own review from both the attacked and clean versions of its paired
+context. For exposure $(i,j)$, let
+\[
+H_{ij,-}^{\mathrm{attack}}
+\qquad\text{and}\qquad
+H_{ij,-}^{\mathrm{clean}}
+\]
+denote the corresponding 29-review histograms after deleting the exact review
+position assigned to that synthetic identity. We compute
+\[
+d_{ij}^{\mathrm{cf,LOO}}
+=
+W_1(H_{ij,-}^{\mathrm{attack}},\widehat H_i)
+-
+W_1(H_{ij,-}^{\mathrm{clean}},\widehat H_i),
+\]
+using the same frozen item reference $\widehat H_i$, and accumulate these
+increments over each account's eight exposures. Table~\ref{tab:supp-self-influence} compares the original matched-twin results
+with the corresponding leave-one-out scores.
+
+\begin{table}[t]
+\caption{Leave-one-out self-influence ablation under the primary
+$r=8$ matched-twin construction. Values are means over 30 seeds.}
+\label{tab:supp-self-influence}
+\centering
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} & \textbf{Original} & \textbf{Leave-one-out} \\
+\midrule
+ROC--AUC & 0.744 & 0.779 \\
+Mean paired gap & 0.611 & 0.639 \\
+Misordering probability & 0.256 & 0.221 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The leave-one-out mean paired gap retains $104.7\%$ of the original gap.
+Original and leave-one-out account scores remain highly aligned
+(Pearson $0.991$, Spearman $0.990$). Thus removing the scored account's direct
+contribution does not weaken separation; in this experiment it slightly
+increases it. The remaining paired attribution signal is therefore carried by
+the surrounding manipulated context rather than by the scored rating alone.
+
+
+% ---------------------------------------------------------------------
+
+\subsection{Complementarity Construction and Results}
+\label{sec:supp-extra-complementarity}
+
+All complementarity conditions use $L=2000$ items, item-side degree $m=6$,
+account-side degree $r=8$, and therefore $M=Lm/r=1500$ synthetic accounts per
+branch. Participation frequency is consequently identical across labels.
+
+\paragraph{Evidence-only condition.}
+The evidence-only condition uses one degree-preserving randomized incidence
+with 1500 accounts, 2000 items, account degree $r=8$, and item degree $m=6$.
+Positive and negative accounts use the identical incidence graph. The positive
+world receives the frozen five-star intervention inherited from the primary
+Amazon experiment, whereas the negative world carries no intervention
+evidence. Thus the two classes have identical account--item topology and
+co-activity scores, while only the aggregate-evidence channel differs.
+
+\paragraph{Topology-only condition.}
+The topology-only condition removes rating manipulation and varies only
+repeated co-activity. The 1500 positive accounts are partitioned into 250 fixed
+teams of six accounts. Each team is assigned together to eight distinct items,
+so every account has degree $8$, all 2000 items are covered, and every pair of
+accounts within a team co-occurs on eight items.
+
+The negative incidence is obtained by degree-preserving bipartite edge swaps
+on the same degree sequence. Each graph contains $Lm=12{,}000$ edges and is
+randomized using exactly $20Lm=240{,}000$ successful swaps. A proposed swap is
+accepted only if the resulting graph remains simple and creates no duplicate
+account--item edge. The implementation permits at most 12,000,000 attempts;
+failure to complete all requested swaps aborts the run. Two independently
+randomized incidences are generated per seed, one used by the evidence-only
+construction and one as the topology-only control.
+
+\paragraph{Mixed population.}
+The primary mixed benchmark concatenates the evidence-only and topology-only
+conditions with equal weight. The positive population therefore contains 1500
+evidence-only identities and 1500 topology-only identities, while the negative
+population contains their corresponding 1500 evidence-only and 1500
+topology-only controls. Equivalently, half of the positive mechanisms carry
+aggregate intervention evidence without repeated-team structure, and half
+carry repeated-team structure without a rating intervention. No fitted mixture
+proportion is used. Table~\ref{tab:supp-complementarity} compares the aggregate-evidence,
+co-activity, and untrained combined scores across the evidence-only,
+topology-only, and mixed conditions.
+
+\begin{table}[t]
+\caption{Aggregate evidence, repeated co-activity, and their untrained
+combination.}
+\label{tab:supp-complementarity}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Condition & Aggregate & Co-activity & Combined \\
+\midrule
+Evidence only & 0.748 & 0.500 & -- \\
+Topology only & 0.500 & 1.000 & -- \\
+Mixed & 0.624 & 0.750 & 0.874 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As shown in Table~\ref{tab:supp-complementarity}, across 30 seeds the mixed-population ROC--AUC is $0.624$ ($95\%$ CI $[0.620,0.628]$) for aggregate evidence, $0.750$ ($[0.749,0.751]$) for repeated co-activity, and $0.874$ ($[0.870,0.877]$) for their untrained combination. The combined score improves by $0.123$ over the stronger individual channel.
+
+
+The combined score is the unit-weight standardized sum defined in
+Section~\ref{sec:supp-combination}. Standardization is computed over the
+pooled, unlabeled account population of the primary mixed benchmark; class
+labels are not used, and no classifier or combination weight is fitted.
+
+
+% ------------------------------------------------------------
+\subsection{Cross-Category Replication on Electronics}
+\label{sec:supp-electronics}
+% ------------------------------------------------------------
+
+To test category dependence of the real-background results, we repeat the
+same preprocessing, chronological split, calibration rule, counterfactual
+interventions, identity constructions, and evaluation metrics on the
+\texttt{Electronics} domain of Amazon Reviews 2023. After reviewer--item
+deduplication, 21,409 items contain at least 300 usable reviews. The primary
+$k=6$ intervention is feasible on 15,968 items, while the common $k=9$
+strength-sensitivity population contains 10,771 items. Applying the same
+calibration rule independently to \texttt{Electronics} again selects
+$\lambda^\star=20$.
+
+Table~\ref{tab:supp-electronics} compares the principal results.
+The second category reproduces the same qualitative conclusions despite
+different item and rating distributions. Exact matched twins retain
+substantial evidence-based separation with frequency fixed at chance;
+distribution-sensitive evidence remains informative under exact mean
+preservation; combining aggregate evidence with repeated co-activity again
+improves over either source alone; shorter reference histories degrade
+attribution gradually; and intervention strength again changes the sign and
+magnitude of contextual paired evidence.
+
+Figure~\ref{fig:supp-electronics} shows that the qualitative structure of
+the primary results persists in \texttt{Electronics}. The reuse trend, exact-matching
+result, distribution-sensitive shape separation, complementarity gain,
+reference-history degradation, and intervention-strength transition all
+persist in \texttt{Electronics}. Absolute values differ across categories, as expected because account
+recoverability follows the contextual evidence induced relative to each
+category's empirical item references rather than the nominal intervention
+alone. The replication
+therefore reduces dependence on the particular composition of the primary
+domain, while not constituting cross-platform validation because both
+categories share the same Amazon review interface.
+
+
+\begin{figure*}[t]
+    \centering
+
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/fig2a_electronics_reuse.pdf}
+        \caption{Fixed-attack reuse.}
+        \label{fig:supp-electronics-reuse}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/fig2b_electronics_matched.pdf}
+        \caption{Exact matched twins.}
+        \label{fig:supp-electronics-matched}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/fig2c_electronics_shape.pdf}
+        \caption{Mean-preserving shape.}
+        \label{fig:supp-electronics-shape}
+    \end{subfigure}
+
+    \medskip
+
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/fig3a_electronics_complementarity.pdf}
+        \caption{Complementarity.}
+        \label{fig:supp-electronics-complementarity}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/fig3b_electronics_reference_history.pdf}
+        \caption{Reference-history sensitivity.}
+        \label{fig:supp-electronics-reference}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]
+        {figures/fig3c_electronics_intervention_strength.pdf}
+        \caption{Intervention-strength sensitivity.}
+        \label{fig:supp-electronics-strength}
+    \end{subfigure}
+
+    \caption{
+    Cross-category replication on the \texttt{Electronics} domain of
+    Amazon Reviews 2023. The experimental protocol is unchanged from the
+    primary \texttt{Home\_and\_Kitchen} evaluation.
+    (a) Evidence-score separation increases as a fixed intervention is
+    concentrated through greater identity reuse.
+    (b) Under exact activity and exposure matching, frequency is at chance
+    while evidence-based attribution remains informative.
+    (c) Under exact mean preservation, frequency and mean-based attribution
+    are at chance whereas distribution-sensitive evidence retains strong
+    separation.
+    (d) Aggregate evidence and repeated co-activity remain complementary.
+    (e) Attribution degrades gradually with shorter item-reference histories.
+    (f) The sign and recoverability of a nominal five-star intervention depend
+    on its contextual distortion strength.
+    Error bars show 95\% confidence intervals across 30 randomized seeds.
+    }
+    \label{fig:supp-electronics}
+\end{figure*}
+
+\begin{table}[t]
+\centering
+\caption{Cross-category replication on Amazon Reviews.
+The \texttt{Home\_and\_Kitchen} domain is primary; \texttt{Electronics}
+is a second-category robustness check using the same experimental protocol.
+Performance quantities are means over 30 randomized seeds; dataset counts
+and selected $\lambda$ are determined by preprocessing and calibration,
+respectively.}
+\label{tab:supp-electronics}
+\small
+\begin{tabular}{lcc}
+\toprule
+Quantity & Home \& Kitchen & Electronics \\
+\midrule
+Eligible items ($\ge 300$ reviews)
+    & 31,247 & 21,409 \\
+Primary $k=6$-feasible items
+    & 21,197 & 15,968 \\
+Common $k=9$-feasible items
+    & 13,268 & 10,771 \\
+Selected $\lambda$
+    & 20 & 20 \\
+Matched-twin ROC--AUC
+    & 0.744 & 0.794 \\
+Shape $W_1$ ROC--AUC
+    & 0.909 & 0.891 \\
+Shape JS ROC--AUC
+    & 0.967 & 0.960 \\
+Combined complementarity ROC--AUC
+    & 0.874 & 0.895 \\
+Reference ROC--AUC ($60/90/120$)
+    & .618/.688/.744 & .681/.751/.794 \\
+Strength $\bar d_{\mathrm{cf}}$ ($k=3/6/9$)
+    & -.062/.001/.160 & -.046/.033/.202 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+% =====================================================================
+\section{Reproducibility and Experimental Invariants}
+\label{sec:supp-reproducibility}
+% =====================================================================
+
+\subsection{Implementation Environment}
+\label{sec:supp-environment}
+
+Experiments are implemented in Python~3.12.10. The frozen scientific
+environment uses NumPy~2.5.1, SciPy~1.18.0, scikit-learn~1.9.0, and
+PyYAML~6.0.3. The artifact includes an environment checker and pinned
+scientific requirements to enforce this software environment.
+
+The original controlled runs were executed on Windows~11, and the
+reproduction pipeline has been tested on both Windows~11 and
+Ubuntu~24.04.4~LTS under the same pinned scientific environment. The reported experiments are CPU-based
+and do not require a GPU. We do not report hardware-specific runtime or
+peak-memory values because these quantities are not part of the experimental
+claims and are not required for numerical reproduction.
+
+% ---------------------------------------------------------------------
+
+\subsection{Random-Seed Policy}
+\label{sec:supp-seeds}
+
+Within each Amazon category, all randomized experiments use the same
+30 primary seed indices $\{0,1,\ldots,29\}$.
+The controlled experiments use 30 primary seeds $\{27001,27002,\ldots,27030\}$,
+with experiment-specific random streams derived deterministically from the primary
+seed and the experiment name.
+
+Randomness enters only through operations that define the experimental world:
+sampling eligible items, random assignment of treatment to experimental block
+A or B, randomized donor ordering or donor selection, construction of regular
+account--item incidence, and degree-preserving swaps in the complementarity
+experiment. Deterministic scoring and attribution computations introduce no
+additional randomness.
+
+For paired comparisons, the random draws defining the common experimental world
+are generated once and then reused across the conditions being compared. In
+particular:
+\begin{itemize}
+    \item the fixed-attack reuse sweep shares the sampled items, treatment
+          blocks, donor positions, original and replacement ratings, timestamps,
+          and resulting attack-world evidence across all $r$;
+    \item the reference-history experiment shares the frozen attack world and
+          the same $r=8$ identity assignment across all
+          $n_{\mathrm{ref}}\in\{60,90,120\}$;
+    \item the intervention-strength experiment first selects nine non-five-star
+          donor positions per item in a single randomized order and uses the
+          nested prefixes
+          $J_3\subset J_6\subset J_9$. It also shares the sampled items,
+          treatment blocks, reference model, synthetic-account population, and
+          exact account--item incidence across $k\in\{3,6,9\}$; and
+    \item exact matched twins share the same item, treatment block, review
+          position, source record, timestamp exposure, and participation
+          frequency, differing only in whether the common exposure receives
+          attacked or clean aggregate evidence.
+\end{itemize}
+
+Across all 30 Amazon seeds, attack-world hashes are distinct across seeds.
+Within a seed, the fixed-attack reuse sweep uses an identical attack manifest
+for every reuse value; the matched-twin and reference-history experiments
+inherit the same frozen $r=8$ construction; and the intervention-strength
+experiment uses identical sampled items and treatment blocks with exactly
+nested donor sets $J_3\subset J_6\subset J_9$. These invariants are checked automatically by the reproduction artifact
+and passed for all 30 randomized seeds in both Amazon categories.
+
+% ---------------------------------------------------------------------
+
+\subsection{Manifest Schema}
+\label{sec:supp-manifest}
+
+The artifact uses experiment-specific manifests rather than a single combined
+assignment file. This separation preserves the distinction between aggregate
+attack construction and subsequent identity attribution.
+
+For each attacked item, the frozen attack-world record contains the fields
+needed to reconstruct the aggregate counterfactual:
+\begin{verbatim}
+asin
+treatment_block
+treated_positions
+treated_source_lines
+original_ratings
+replacement_ratings
+clean_counts
+attack_counts
+clean_w1
+attack_w1
+d_cf
+\end{verbatim}
+Here, \texttt{treated\_positions} and \texttt{treated\_source\_lines} identify
+the modified source records unambiguously, while \texttt{clean\_counts} and
+\texttt{attack\_counts} record the corresponding aggregate rating histograms.
+The paired increment \texttt{d\_cf} is the resulting counterfactual evidence
+difference.
+
+Identity assignment is stored separately for each reuse condition. Each
+assignment row contains
+\begin{verbatim}
+asin
+treatment_block
+treated_position
+treated_source_line
+synthetic_account_id
+d_cf
+\end{verbatim}
+so that every manipulated exposure can be linked back to the exact frozen
+attack slot without reconstructing the attack. The reuse value $r$ is encoded
+by the corresponding assignment artifact and experiment configuration rather
+than repeated in every row.
+
+The historical comparison identities used in the fixed-attack reuse sweep
+are reconstructed deterministically rather than stored in this synthetic
+assignment file. For each selected treated block, the six source records
+listed in
+\texttt{treated\_source\_lines}
+are removed, and the reviewer identifiers of the remaining 24 records are
+retained. Because the frozen attack world is shared across all reuse values,
+this historical comparison population is identical across $r$ within a seed.
+
+Reference estimation is likewise stored separately: the frozen reference
+artifact records the selected shrinkage parameter and reference configuration.
+Exact matched twins are constructed from the same frozen exposure records, so a
+separate synthetic clean-twin identifier is not required in the attack
+manifest.  Hashes of the attack world and identity assignments are recorded and
+verified at downstream stage boundaries to ensure that later experiments use
+the intended frozen construction unchanged.
+
+% ---------------------------------------------------------------------
+
+\subsection{Automated Experimental Invariants}
+\label{sec:supp-invariants}
+
+Before evaluation, the implementation checks the structural invariants required
+by each experiment. These checks include:
+\begin{itemize}
+    \item reference, calibration, experimental, and holdout ranges follow their
+          predeclared chronological roles, with calibration data used for
+          selecting $\lambda$ and holdout data reserved for temporal-drift
+          evaluation;
+    \item no synthetic identity is assigned more than once to the same item,
+          and every exact-regular incidence construction satisfies its requested
+          item degree and account degree;
+    \item the fixed-attack reuse sweep reuses the identical frozen attack world
+          across all $r$, including the sampled items, treatment blocks, donor
+          source records, original and replacement ratings, attacked
+          histograms, and $d_{it}^{\mathrm{cf}}$;
+    \item every synthetic identity in a reuse-$r$ condition has exactly the
+prescribed number of exposures, every treated block contributes exactly
+24 historical non-donor comparison exposures, and the same historical
+comparison population is used for every $r$ within a seed; the total
+synthetic attributed score obeys the corresponding reuse-law conservation
+identity to numerical precision;
+    \item every exact matched twin has identical participation count, item set,
+          treatment block, review position, source record, and timestamp
+          exposure, so that the pair differs only in attacked versus clean
+          aggregate evidence;
+    \item every mean-preserving shape intervention modifies exactly the
+          prescribed number of ratings while preserving the 30-review block
+          rating sum, and therefore its mean, exactly;
+    \item reference-history experiments inherit the same frozen attack world
+          and $r=8$ identity assignment for all
+          $n_{\mathrm{ref}}\in\{60,90,120\}$;
+    \item intervention-strength experiments use the same sampled items,
+          treatment blocks, synthetic-account population, and account--item
+          incidence across $k\in\{3,6,9\}$, with nested donor sets
+          $J_3\subset J_6\subset J_9$;
+    \item the complementarity construction preserves the prescribed account and
+          item degrees under degree-preserving randomization, while the
+          evidence-only and topology-only controls isolate the intended
+          information channels;
+    \item historical accounts used as the comparison class in the fixed-attack
+reuse sweep are never interpreted as verified benign accounts; in the
+full-background ranking experiment, historical Amazon reviewers remain an
+unlabeled background population and are not used as a negative class; and
+    \item hashes of frozen attack worlds and identity assignments match at
+          downstream stage boundaries whenever an experiment inherits those
+          objects from an earlier stage.
+\end{itemize}
+
+These conditions are implemented as executable assertions and verifier checks,
+rather than post hoc diagnostics. A violated invariant raises an error or causes
+the corresponding verifier to return a nonzero exit status; the experiment is
+therefore not accepted as successfully reproduced unless all required checks
+pass.
+
+% ---------------------------------------------------------------------
+
+\subsection{Artifact Availability}
+\label{sec:supp-artifact}
+
+The compiled appendices, code, frozen experiment configurations,
+verification scripts, figure renderers, and table generators are available in
+the public reproducibility artifact at
+\url{}.
+The artifact supports reproduction and verification of the controlled
+experiments, the primary \texttt{Home\_and\_Kitchen} evaluation, the
+\texttt{Electronics} replication, Figures~1--3, and all appendix
+figures and tables. The README provides the complete
+experiment-by-experiment reproduction commands, required software
+environment, data-download and preprocessing instructions, and
+expected verification outputs.
+
+The Amazon experiments use the public Amazon Reviews 2023
+\texttt{Home\_and\_Kitchen} and \texttt{Electronics} review data released
+by the McAuley Lab, with \texttt{Home\_and\_Kitchen} designated as the
+primary domain.
+The raw dataset is not redistributed with the artifact; the README provides
+the official download location and required file layout. The preprocessing
+pipeline deterministically performs rating filtering, earliest-review
+user--item deduplication, chronological ordering, first-300 selection, fixed
+role assignment, and construction of the shared inputs used by all downstream
+Amazon experiments.
+
+The artifact does not include the raw Amazon data or the large
+generated Amazon intermediate files. Historical reviewer identifiers are required
+internally to reconstruct participation and account reuse from the public
+dataset, but no such identifiers are reported in the paper's figures or
+aggregate result tables.

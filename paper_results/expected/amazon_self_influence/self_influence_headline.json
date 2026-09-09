@@ -1,0 +1,11 @@
+{
+  "loo_auc": 0.7794222222222221,
+  "loo_mean_gap": 0.6390165593266437,
+  "loo_misordering": 0.22057777777777776,
+  "original_auc": 0.7436000000000001,
+  "original_mean_gap": 0.6108593714700244,
+  "original_misordering": 0.2564,
+  "pearson": 0.9913080926009614,
+  "retained_mean_gap_fraction": 1.0474933643657467,
+  "spearman": 0.9897203679152667
+}

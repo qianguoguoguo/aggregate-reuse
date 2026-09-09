@@ -1,0 +1,2972 @@
+[
+  {
+    "seed": 0,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.236,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.05044248159002446,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.4035398527201957,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.764,
+          "positive_block_fraction": 0.4145,
+          "positive_pair_fraction": 0.236,
+          "predicted_mean_gap_r_times_mean_dcf": -0.40353985272019566,
+          "reuse_law_abs_error": 5.551115123125783e-17,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.572,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.02435362293992681,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.19482898351941444,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.428,
+          "positive_block_fraction": 0.5635,
+          "positive_pair_fraction": 0.572,
+          "predicted_mean_gap_r_times_mean_dcf": 0.19482898351941447,
+          "reuse_law_abs_error": 2.7755575615628914e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.84,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1855709330413341,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.4845674643306725,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.16,
+          "positive_block_fraction": 0.7015,
+          "positive_pair_fraction": 0.84,
+          "predicted_mean_gap_r_times_mean_dcf": 1.4845674643306728,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 0,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 1,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.212,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.0625234333232749,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5001874665861991,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.788,
+          "positive_block_fraction": 0.392,
+          "positive_pair_fraction": 0.212,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5001874665861992,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.496,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.0030028309147380155,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.024022647317904128,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.504,
+          "positive_block_fraction": 0.534,
+          "positive_pair_fraction": 0.496,
+          "predicted_mean_gap_r_times_mean_dcf": -0.024022647317904124,
+          "reuse_law_abs_error": 3.469446951953614e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.804,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.15249412016166644,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2199529612933313,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.196,
+          "positive_block_fraction": 0.6645,
+          "positive_pair_fraction": 0.804,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2199529612933315,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 1,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 2,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.16,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06052286254545343,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.4841829003636275,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.84,
+          "positive_block_fraction": 0.384,
+          "positive_pair_fraction": 0.16,
+          "predicted_mean_gap_r_times_mean_dcf": -0.48418290036362743,
+          "reuse_law_abs_error": 5.551115123125783e-17,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.564,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.0029565724603225563,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.023652579682580464,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.436,
+          "positive_block_fraction": 0.531,
+          "positive_pair_fraction": 0.564,
+          "predicted_mean_gap_r_times_mean_dcf": 0.02365257968258045,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.856,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.16339792255313443,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3071833804250756,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.144,
+          "positive_block_fraction": 0.6715,
+          "positive_pair_fraction": 0.856,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3071833804250754,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 2,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 3,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.176,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.0657471610080376,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5259772880643007,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.824,
+          "positive_block_fraction": 0.371,
+          "positive_pair_fraction": 0.176,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5259772880643008,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.52,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.006338412573952305,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.05070730059161844,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.48,
+          "positive_block_fraction": 0.5335,
+          "positive_pair_fraction": 0.52,
+          "predicted_mean_gap_r_times_mean_dcf": -0.05070730059161844,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.82,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1512732618727578,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2101860949820626,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.18,
+          "positive_block_fraction": 0.664,
+          "positive_pair_fraction": 0.82,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2101860949820624,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 3,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 4,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.204,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.05779424867335399,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.4623539893868319,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.796,
+          "positive_block_fraction": 0.3955,
+          "positive_pair_fraction": 0.204,
+          "predicted_mean_gap_r_times_mean_dcf": -0.4623539893868319,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.516,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.0049604423270940765,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.0396835386167526,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.484,
+          "positive_block_fraction": 0.5395,
+          "positive_pair_fraction": 0.516,
+          "predicted_mean_gap_r_times_mean_dcf": 0.03968353861675261,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.848,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1609770758847609,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.287816607078087,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.152,
+          "positive_block_fraction": 0.679,
+          "positive_pair_fraction": 0.848,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2878166070780872,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 4,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 5,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.172,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06165363433186114,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.4932290746548891,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.828,
+          "positive_block_fraction": 0.3905,
+          "positive_pair_fraction": 0.172,
+          "predicted_mean_gap_r_times_mean_dcf": -0.49322907465488913,
+          "reuse_law_abs_error": 5.551115123125783e-17,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.5,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.004830221925549345,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.03864177540439474,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.5,
+          "positive_block_fraction": 0.5415,
+          "positive_pair_fraction": 0.5,
+          "predicted_mean_gap_r_times_mean_dcf": 0.03864177540439476,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.872,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.16673118985896862,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.333849518871749,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.128,
+          "positive_block_fraction": 0.6795,
+          "positive_pair_fraction": 0.872,
+          "predicted_mean_gap_r_times_mean_dcf": 1.333849518871749,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 5,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 6,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.18,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06390019507258833,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5112015605807066,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.82,
+          "positive_block_fraction": 0.378,
+          "positive_pair_fraction": 0.18,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5112015605807066,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.528,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.0012591037176568358,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.010072829741254665,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.472,
+          "positive_block_fraction": 0.533,
+          "positive_pair_fraction": 0.528,
+          "predicted_mean_gap_r_times_mean_dcf": 0.010072829741254686,
+          "reuse_law_abs_error": 2.0816681711721685e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.84,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.16504868535553505,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3203894828442806,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.16,
+          "positive_block_fraction": 0.682,
+          "positive_pair_fraction": 0.84,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3203894828442804,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 6,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 7,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.22,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.05548163555411281,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.44385308443290256,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.78,
+          "positive_block_fraction": 0.391,
+          "positive_pair_fraction": 0.22,
+          "predicted_mean_gap_r_times_mean_dcf": -0.4438530844329025,
+          "reuse_law_abs_error": 5.551115123125783e-17,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.536,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.012596879029087165,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.10077503223269735,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.464,
+          "positive_block_fraction": 0.5365,
+          "positive_pair_fraction": 0.536,
+          "predicted_mean_gap_r_times_mean_dcf": 0.10077503223269732,
+          "reuse_law_abs_error": 2.7755575615628914e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.86,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.17326973673582602,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3861578938866082,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.14,
+          "positive_block_fraction": 0.6905,
+          "positive_pair_fraction": 0.86,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3861578938866082,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 7,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 8,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.172,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06392921452041099,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5114337161632879,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.828,
+          "positive_block_fraction": 0.381,
+          "positive_pair_fraction": 0.172,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5114337161632879,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.512,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.00034601667108630175,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.002768133368690406,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.488,
+          "positive_block_fraction": 0.5325,
+          "positive_pair_fraction": 0.512,
+          "predicted_mean_gap_r_times_mean_dcf": 0.002768133368690414,
+          "reuse_law_abs_error": 7.806255641895632e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.836,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.16304974621513463,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3043979697210768,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.164,
+          "positive_block_fraction": 0.674,
+          "positive_pair_fraction": 0.836,
+          "predicted_mean_gap_r_times_mean_dcf": 1.304397969721077,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 8,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 9,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.176,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.058806900464211796,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.47045520371369437,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.824,
+          "positive_block_fraction": 0.3965,
+          "positive_pair_fraction": 0.176,
+          "predicted_mean_gap_r_times_mean_dcf": -0.47045520371369437,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.52,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.0033674648640740477,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.026939718912592378,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.48,
+          "positive_block_fraction": 0.5355,
+          "positive_pair_fraction": 0.52,
+          "predicted_mean_gap_r_times_mean_dcf": 0.02693971891259238,
+          "reuse_law_abs_error": 3.469446951953614e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.82,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.16272586971132308,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3018069576905844,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.18,
+          "positive_block_fraction": 0.673,
+          "positive_pair_fraction": 0.82,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3018069576905846,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 9,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 10,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.192,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06190416700956768,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.49523333607654146,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.808,
+          "positive_block_fraction": 0.3865,
+          "positive_pair_fraction": 0.192,
+          "predicted_mean_gap_r_times_mean_dcf": -0.49523333607654146,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.528,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.002458005177043592,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.019664041416348716,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.472,
+          "positive_block_fraction": 0.524,
+          "positive_pair_fraction": 0.528,
+          "predicted_mean_gap_r_times_mean_dcf": -0.019664041416348737,
+          "reuse_law_abs_error": 2.0816681711721685e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.844,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1562572928953954,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.250058343163163,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.156,
+          "positive_block_fraction": 0.6655,
+          "positive_pair_fraction": 0.844,
+          "predicted_mean_gap_r_times_mean_dcf": 1.250058343163163,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 10,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 11,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.152,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06499062634302905,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5199250107442324,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.848,
+          "positive_block_fraction": 0.3825,
+          "positive_pair_fraction": 0.152,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5199250107442324,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.496,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.003838790412791868,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.03071032330233493,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.504,
+          "positive_block_fraction": 0.533,
+          "positive_pair_fraction": 0.496,
+          "predicted_mean_gap_r_times_mean_dcf": -0.030710323302334943,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.852,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.15615207020784377,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2492165616627502,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.148,
+          "positive_block_fraction": 0.683,
+          "positive_pair_fraction": 0.852,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2492165616627502,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 11,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 12,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.172,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06733504338079083,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5386803470463266,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.828,
+          "positive_block_fraction": 0.378,
+          "positive_pair_fraction": 0.172,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5386803470463266,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.468,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.009212585039456458,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.07370068031565168,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.532,
+          "positive_block_fraction": 0.521,
+          "positive_pair_fraction": 0.468,
+          "predicted_mean_gap_r_times_mean_dcf": -0.07370068031565166,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.8,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.14487692424630355,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.1590153939704284,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.2,
+          "positive_block_fraction": 0.6635,
+          "positive_pair_fraction": 0.8,
+          "predicted_mean_gap_r_times_mean_dcf": 1.1590153939704284,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 12,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 13,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.196,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.05887883790077511,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.4710307032062008,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.804,
+          "positive_block_fraction": 0.4005,
+          "positive_pair_fraction": 0.196,
+          "predicted_mean_gap_r_times_mean_dcf": -0.4710307032062009,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.556,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.008904922534846382,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.07123938027877105,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.444,
+          "positive_block_fraction": 0.5435,
+          "positive_pair_fraction": 0.556,
+          "predicted_mean_gap_r_times_mean_dcf": 0.07123938027877105,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.868,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.17245297207566382,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3796237766053105,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.132,
+          "positive_block_fraction": 0.6945,
+          "positive_pair_fraction": 0.868,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3796237766053105,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 13,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 14,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.18,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.058390557038920016,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.46712445631136024,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.82,
+          "positive_block_fraction": 0.3885,
+          "positive_pair_fraction": 0.18,
+          "predicted_mean_gap_r_times_mean_dcf": -0.4671244563113601,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.544,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.008382472956538458,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.06705978365230766,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.456,
+          "positive_block_fraction": 0.538,
+          "positive_pair_fraction": 0.544,
+          "predicted_mean_gap_r_times_mean_dcf": 0.06705978365230766,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.88,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1736809806512377,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3894478452099013,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.12,
+          "positive_block_fraction": 0.6925,
+          "positive_pair_fraction": 0.88,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3894478452099015,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 14,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 15,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.148,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06475818005657104,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5180654404525683,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.852,
+          "positive_block_fraction": 0.3815,
+          "positive_pair_fraction": 0.148,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5180654404525683,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.512,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.002843795548687355,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.022750364389498838,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.488,
+          "positive_block_fraction": 0.5275,
+          "positive_pair_fraction": 0.512,
+          "predicted_mean_gap_r_times_mean_dcf": -0.02275036438949884,
+          "reuse_law_abs_error": 3.469446951953614e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.86,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1532495247010665,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2259961976085323,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.14,
+          "positive_block_fraction": 0.6635,
+          "positive_pair_fraction": 0.86,
+          "predicted_mean_gap_r_times_mean_dcf": 1.225996197608532,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 15,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 16,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.16,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06582887123837565,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5266309699070051,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.84,
+          "positive_block_fraction": 0.3645,
+          "positive_pair_fraction": 0.16,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5266309699070052,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.484,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.004464112511163311,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.035712900089306505,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.516,
+          "positive_block_fraction": 0.524,
+          "positive_pair_fraction": 0.484,
+          "predicted_mean_gap_r_times_mean_dcf": -0.035712900089306485,
+          "reuse_law_abs_error": 2.0816681711721685e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.828,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.156632786787185,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2530622942974798,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.172,
+          "positive_block_fraction": 0.6745,
+          "positive_pair_fraction": 0.828,
+          "predicted_mean_gap_r_times_mean_dcf": 1.25306229429748,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 16,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 17,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.184,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.05909459405089565,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.47275675240716514,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.816,
+          "positive_block_fraction": 0.3995,
+          "positive_pair_fraction": 0.184,
+          "predicted_mean_gap_r_times_mean_dcf": -0.4727567524071652,
+          "reuse_law_abs_error": 5.551115123125783e-17,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.536,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.0056368666236897595,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.045094932989518055,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.464,
+          "positive_block_fraction": 0.536,
+          "positive_pair_fraction": 0.536,
+          "predicted_mean_gap_r_times_mean_dcf": 0.045094932989518076,
+          "reuse_law_abs_error": 2.0816681711721685e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.852,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.16600288897931317,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3280231118345054,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.148,
+          "positive_block_fraction": 0.678,
+          "positive_pair_fraction": 0.852,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3280231118345054,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 17,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 18,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.184,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06710423337996786,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5368338670397429,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.816,
+          "positive_block_fraction": 0.38,
+          "positive_pair_fraction": 0.184,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5368338670397429,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.464,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.008161084504530843,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.06528867603624677,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.536,
+          "positive_block_fraction": 0.5235,
+          "positive_pair_fraction": 0.464,
+          "predicted_mean_gap_r_times_mean_dcf": -0.06528867603624675,
+          "reuse_law_abs_error": 2.7755575615628914e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.8,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.14666845638146447,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.1733476510517158,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.2,
+          "positive_block_fraction": 0.6635,
+          "positive_pair_fraction": 0.8,
+          "predicted_mean_gap_r_times_mean_dcf": 1.1733476510517158,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 18,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 19,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.212,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06464331628734192,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5171465302987353,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.788,
+          "positive_block_fraction": 0.3825,
+          "positive_pair_fraction": 0.212,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5171465302987354,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.508,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.005350209245831067,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.04280167396664852,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.492,
+          "positive_block_fraction": 0.5305,
+          "positive_pair_fraction": 0.508,
+          "predicted_mean_gap_r_times_mean_dcf": -0.04280167396664854,
+          "reuse_law_abs_error": 2.0816681711721685e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.792,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.15215671918386509,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2172537534709207,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.208,
+          "positive_block_fraction": 0.6675,
+          "positive_pair_fraction": 0.792,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2172537534709207,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 19,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 20,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.18,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06653837908395131,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5323070326716104,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.82,
+          "positive_block_fraction": 0.377,
+          "positive_pair_fraction": 0.18,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5323070326716105,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.48,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.005412449250646916,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.04329959400517534,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.52,
+          "positive_block_fraction": 0.534,
+          "positive_pair_fraction": 0.48,
+          "predicted_mean_gap_r_times_mean_dcf": -0.04329959400517533,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.832,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.15422561337375,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2338049069899995,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.168,
+          "positive_block_fraction": 0.6675,
+          "positive_pair_fraction": 0.832,
+          "predicted_mean_gap_r_times_mean_dcf": 1.23380490699,
+          "reuse_law_abs_error": 4.440892098500626e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 20,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 21,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.124,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06692698535888783,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5354158828711026,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.876,
+          "positive_block_fraction": 0.378,
+          "positive_pair_fraction": 0.124,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5354158828711026,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.48,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.0014032785910882116,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.011226228728705689,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.52,
+          "positive_block_fraction": 0.5335,
+          "positive_pair_fraction": 0.48,
+          "predicted_mean_gap_r_times_mean_dcf": -0.011226228728705693,
+          "reuse_law_abs_error": 3.469446951953614e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.844,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1598004471429486,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2784035771435887,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.156,
+          "positive_block_fraction": 0.6865,
+          "positive_pair_fraction": 0.844,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2784035771435889,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 21,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 22,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.156,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06529954740873498,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5223963792698798,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.844,
+          "positive_block_fraction": 0.3795,
+          "positive_pair_fraction": 0.156,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5223963792698798,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.5,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.0015794579801452482,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.012635663841161968,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.5,
+          "positive_block_fraction": 0.526,
+          "positive_pair_fraction": 0.5,
+          "predicted_mean_gap_r_times_mean_dcf": -0.012635663841161986,
+          "reuse_law_abs_error": 1.734723475976807e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.848,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1607189705806153,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2857517646449224,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.152,
+          "positive_block_fraction": 0.666,
+          "positive_pair_fraction": 0.848,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2857517646449224,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 22,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 23,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.204,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06328671125142113,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5062936900113689,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.796,
+          "positive_block_fraction": 0.397,
+          "positive_pair_fraction": 0.204,
+          "predicted_mean_gap_r_times_mean_dcf": -0.506293690011369,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.524,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.0022322927429948916,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.017858341943959147,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.476,
+          "positive_block_fraction": 0.541,
+          "positive_pair_fraction": 0.524,
+          "predicted_mean_gap_r_times_mean_dcf": -0.017858341943959133,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.8,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.15339311873824613,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.227144949905969,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.2,
+          "positive_block_fraction": 0.674,
+          "positive_pair_fraction": 0.8,
+          "predicted_mean_gap_r_times_mean_dcf": 1.227144949905969,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 23,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 24,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.188,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06578516221504924,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5262812977203938,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.812,
+          "positive_block_fraction": 0.376,
+          "positive_pair_fraction": 0.188,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5262812977203939,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.496,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.00715175923470583,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.05721407387764666,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.504,
+          "positive_block_fraction": 0.525,
+          "positive_pair_fraction": 0.496,
+          "predicted_mean_gap_r_times_mean_dcf": -0.05721407387764664,
+          "reuse_law_abs_error": 2.0816681711721685e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.824,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.15220319698064214,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.217625575845137,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.176,
+          "positive_block_fraction": 0.6665,
+          "positive_pair_fraction": 0.824,
+          "predicted_mean_gap_r_times_mean_dcf": 1.217625575845137,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 24,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 25,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.164,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.061229420527732295,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.48983536422185836,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.836,
+          "positive_block_fraction": 0.3915,
+          "positive_pair_fraction": 0.164,
+          "predicted_mean_gap_r_times_mean_dcf": -0.48983536422185836,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.556,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.00204899937668214,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.016391995013457117,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.444,
+          "positive_block_fraction": 0.537,
+          "positive_pair_fraction": 0.556,
+          "predicted_mean_gap_r_times_mean_dcf": 0.01639199501345712,
+          "reuse_law_abs_error": 3.469446951953614e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.824,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1618545606980551,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2948364855844408,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.176,
+          "positive_block_fraction": 0.678,
+          "positive_pair_fraction": 0.824,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2948364855844408,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 25,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 26,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.184,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.05962700379934345,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.47701603039474766,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.816,
+          "positive_block_fraction": 0.384,
+          "positive_pair_fraction": 0.184,
+          "predicted_mean_gap_r_times_mean_dcf": -0.4770160303947476,
+          "reuse_law_abs_error": 5.551115123125783e-17,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.544,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.010145632621928002,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.08116506097542406,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.456,
+          "positive_block_fraction": 0.538,
+          "positive_pair_fraction": 0.544,
+          "predicted_mean_gap_r_times_mean_dcf": 0.08116506097542402,
+          "reuse_law_abs_error": 4.163336342344337e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.852,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.17494567609415912,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.399565408753273,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.148,
+          "positive_block_fraction": 0.6945,
+          "positive_pair_fraction": 0.852,
+          "predicted_mean_gap_r_times_mean_dcf": 1.399565408753273,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 26,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 27,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.216,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06298398484529828,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5038718787623861,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.784,
+          "positive_block_fraction": 0.3785,
+          "positive_pair_fraction": 0.216,
+          "predicted_mean_gap_r_times_mean_dcf": -0.5038718787623863,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.48,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.004369469577820223,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.0349557566225618,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.52,
+          "positive_block_fraction": 0.5335,
+          "positive_pair_fraction": 0.48,
+          "predicted_mean_gap_r_times_mean_dcf": -0.034955756622561784,
+          "reuse_law_abs_error": 1.3877787807814457e-17,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.828,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1547289272836447,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.2378314182691577,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.172,
+          "positive_block_fraction": 0.668,
+          "positive_pair_fraction": 0.828,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2378314182691577,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 27,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 28,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.172,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.06648295930450525,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.5318636744360421,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.828,
+          "positive_block_fraction": 0.377,
+          "positive_pair_fraction": 0.172,
+          "predicted_mean_gap_r_times_mean_dcf": -0.531863674436042,
+          "reuse_law_abs_error": 1.1102230246251565e-16,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.496,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": -0.006801325731598386,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": -0.054410605852787085,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.504,
+          "positive_block_fraction": 0.525,
+          "positive_pair_fraction": 0.496,
+          "predicted_mean_gap_r_times_mean_dcf": -0.054410605852787085,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.864,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1527593716376649,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.222074973101319,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.136,
+          "positive_block_fraction": 0.681,
+          "positive_pair_fraction": 0.864,
+          "predicted_mean_gap_r_times_mean_dcf": 1.2220749731013192,
+          "reuse_law_abs_error": 2.220446049250313e-16,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 28,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  },
+  {
+    "seed": 29,
+    "summary": {
+      "feasible_item_universe": 13268,
+      "fixed_item_degree": 9,
+      "interpretation_guard": "Only intervention strength k changes in the scored worlds. Items, treatment blocks, reference model, nine donor positions, synthetic identity population, account-item incidence, and per-account exposure (r=8) are fixed across k. The k=3 and k=6 manipulated positions are nested subsets of k=9. Modified exposures are balanced across identities: counts differ by at most one for each k.",
+      "invariants": {
+        "account_degree_exactly_r_across_strengths": true,
+        "all_replacements_are_five": true,
+        "item_degree_fixed_at_9_across_strengths": true,
+        "modified_edges_nested_across_strengths": true,
+        "modified_exposure_count_balanced_within_one_across_accounts": true,
+        "nested_donor_slots_3_in_6_in_9": true,
+        "same_account_item_incidence_across_strengths": true,
+        "same_identity_population_across_strengths": true,
+        "same_items_across_strengths": true,
+        "same_reference_across_strengths": true,
+        "same_treatment_block_across_strengths": true
+      },
+      "metrics_by_k": {
+        "3": {
+          "counterfactual_score_auc": 0.176,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 3,
+          "mean_d_cf": -0.0628400313335345,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "mean_paired_score_gap": -0.502720250668276,
+          "min_modified_exposures_per_account": 2,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.824,
+          "positive_block_fraction": 0.3835,
+          "positive_pair_fraction": 0.176,
+          "predicted_mean_gap_r_times_mean_dcf": -0.502720250668276,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        },
+        "6": {
+          "counterfactual_score_auc": 0.504,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 6,
+          "mean_d_cf": 0.0026969031083597956,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "mean_paired_score_gap": 0.021575224866878368,
+          "min_modified_exposures_per_account": 5,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.496,
+          "positive_block_fraction": 0.5425,
+          "positive_pair_fraction": 0.504,
+          "predicted_mean_gap_r_times_mean_dcf": 0.021575224866878365,
+          "reuse_law_abs_error": 3.469446951953614e-18,
+          "reuse_r": 8
+        },
+        "9": {
+          "counterfactual_score_auc": 0.852,
+          "fixed_item_degree": 9,
+          "max_modified_exposures_per_account": 8,
+          "mean_d_cf": 0.1661049212775426,
+          "mean_modified_exposures_per_account": 8.0,
+          "mean_paired_score_gap": 1.3288393702203407,
+          "min_modified_exposures_per_account": 8,
+          "n_accounts": 2250,
+          "paired_misordering_probability": 0.148,
+          "positive_block_fraction": 0.6925,
+          "positive_pair_fraction": 0.852,
+          "predicted_mean_gap_r_times_mean_dcf": 1.3288393702203407,
+          "reuse_law_abs_error": 0.0,
+          "reuse_r": 8
+        }
+      },
+      "modified_exposure_balance": {
+        "3": {
+          "max_modified_exposures_per_account": 3,
+          "mean_modified_exposures_per_account": 2.6666666666666665,
+          "min_modified_exposures_per_account": 2
+        },
+        "6": {
+          "max_modified_exposures_per_account": 6,
+          "mean_modified_exposures_per_account": 5.333333333333333,
+          "min_modified_exposures_per_account": 5
+        },
+        "9": {
+          "max_modified_exposures_per_account": 8,
+          "mean_modified_exposures_per_account": 8.0,
+          "min_modified_exposures_per_account": 8
+        }
+      },
+      "n_accounts": 2250,
+      "n_items": 2000,
+      "reuse_r": 8,
+      "seed": 29,
+      "selected_lambda": 20.0,
+      "stage": "amazon_stage9_intervention_strength_fixed_identity",
+      "strength_grid_k": [
+        3,
+        6,
+        9
+      ]
+    }
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "baseline_cancellation_identity": "[(W1_attack - b_i) - (W1_clean - b_i)] = W1_attack - W1_clean",
+  "category": "home_and_kitchen",
+  "experimental_A_B_used_for_selection": false,
+  "holdout_role": "diagnostic only; never used to retune lambda or construct attacks",
+  "holdout_used_for_selection": false,
+  "lambda_grid": [
+    0.0,
+    5.0,
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    160.0
+  ],
+  "reference_formula": "(c_i + lambda * H_-i) / (120 + lambda)",
+  "reference_source_positions": [
+    1,
+    120
+  ],
+  "schema_version": 1,
+  "selected_lambda": 20.0,
+  "selection_source_roles": [
+    "calibration_1",
+    "calibration_2"
+  ],
+  "stage4_evidence_definition": "d_cf(i,t) = W1(H_attack(i,t), Hhat_i) - W1(H_clean(i,t), Hhat_i)",
+  "stage4_evidence_mode": "paired_counterfactual",
+  "stage4_invariant_requirement": "Across identity-reuse conditions, item/block set, treated slots, timestamps, replacement ratings, clean histograms, attacked histograms, d_cf, and total manipulated volume must remain fixed."
+}
