@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "aggregate_provenance": true,
+    "all_invariants": true,
+    "csv_has_exact_two_population_rows": true,
+    "exact_expected_mean_d_cf_matches_reported_rounding": true,
+    "legacy_empirical_not_used_as_target": true,
+    "named_artifacts_exist": true,
+    "population_shift_direction": true,
+    "population_sizes_exact": true,
+    "same_k6_design": true
+  },
+  "headline": {
+    "k6_feasible_population": {
+      "exact_expected_mean_d_cf": 0.0763667559800359,
+      "population_size": 21197
+    },
+    "k9_feasible_population": {
+      "exact_expected_mean_d_cf": 0.0007939635329163373,
+      "population_size": 13268
+    }
+  },
+  "phase": "2P",
+  "provenance_resolution": "Phase 2P is now deterministic. The legacy exploratory empirical values are documented but are not reproduction targets because their exact finite-sample protocol was not retained.",
+  "status": "PASS"
+}

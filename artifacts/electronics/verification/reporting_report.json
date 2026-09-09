@@ -1,0 +1,92 @@
+{
+  "category": "electronics",
+  "checks": {
+    "figure_data_matches_source_summaries": true,
+    "figure_files_and_canvases": true,
+    "latex_fragments_match_table_data": true,
+    "manifests_are_category_scoped": true,
+    "numerical_tables_match_source_summaries": true,
+    "static_tables_match_electronics_configs": true
+  },
+  "details": {
+    "figure_data_matches_source_summaries": {
+      "all_values_match_source_summaries": true,
+      "csv_files_checked": 2,
+      "data_cells_checked": 210,
+      "data_rows_checked": 32,
+      "header_fields_checked": 14
+    },
+    "figure_files_and_canvases": {
+      "files": {
+        "fig2a_electronics_reuse.pdf": {
+          "bytes": 25707,
+          "sha256": "5ec6821fd4fa34d9c42e0c31b0b3bd8770fd3840d5ee3bc6089c7e79f0242702"
+        },
+        "fig2a_electronics_reuse.png": {
+          "bytes": 182018,
+          "sha256": "2fa8ad1a7b4be25ac63d2f15a7e1b4ded33fc8c12fe4de50ca01fd9b4b1fa9aa"
+        },
+        "fig2b_electronics_matched.pdf": {
+          "bytes": 24184,
+          "sha256": "9acb503b24d20c4aea83e9f4a074ca8d1d83256acca260f35ec5abd3d7c96dea"
+        },
+        "fig2b_electronics_matched.png": {
+          "bytes": 128853,
+          "sha256": "bc1b7d5cc9327f6914210e7521cc9acabcad59ac0d7a611ce8537f2c5f80fed4"
+        },
+        "fig2c_electronics_shape.pdf": {
+          "bytes": 31879,
+          "sha256": "b06da2d95a636e23cadfa59bd00cf8fe1245ad7b1bb3b2845b288ba25f1e6d73"
+        },
+        "fig2c_electronics_shape.png": {
+          "bytes": 95509,
+          "sha256": "4c2093ef64a81daf10e8eca5b18a3b591fa00f660ccca53ffb59e491809a93cc"
+        },
+        "fig3a_electronics_complementarity.pdf": {
+          "bytes": 33012,
+          "sha256": "7dc72f27c1cc22693e9d4db4810d66770e8eb79ec5ee3086a7bc443a8a62210a"
+        },
+        "fig3a_electronics_complementarity.png": {
+          "bytes": 123604,
+          "sha256": "7db7b48338207013a1a290b77703785327b5c0a8d8d7783b6c3d6934b8684950"
+        },
+        "fig3b_electronics_reference_history.pdf": {
+          "bytes": 35340,
+          "sha256": "491a8446505e5f9f61d16b62b34717d524091ac12307a9867bacb013ffb90b16"
+        },
+        "fig3b_electronics_reference_history.png": {
+          "bytes": 180135,
+          "sha256": "7a749b856f16d9976e2a18ca67d1baf26b8392573b7cdfe0d52b3a753328c91a"
+        },
+        "fig3c_electronics_intervention_strength.pdf": {
+          "bytes": 53066,
+          "sha256": "c75bc6dd7644f85ae48aa7dff0530cf9045ca7db46267a0f8109ff54e59821a0"
+        },
+        "fig3c_electronics_intervention_strength.png": {
+          "bytes": 190211,
+          "sha256": "27e7159a3e637e4281af1bae37609c8952c59748e5e036bc99d6e43a91598b11"
+        }
+      },
+      "pdf_files": 6,
+      "png_files": 6
+    },
+    "latex_fragments_match_table_data": {
+      "tex_fragments": 15
+    },
+    "manifests_are_category_scoped": {
+      "applicable_table_groups": 14,
+      "numerical_sources": 9
+    },
+    "numerical_tables_match_source_summaries": {
+      "table_groups": 9
+    },
+    "static_tables_match_electronics_configs": {
+      "table_groups": 5
+    }
+  },
+  "failures": [],
+  "gold_comparison_performed": false,
+  "phase": 14,
+  "schema_version": 1,
+  "status": "PASS"
+}

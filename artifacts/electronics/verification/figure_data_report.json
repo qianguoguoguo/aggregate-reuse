@@ -1,0 +1,79 @@
+{
+  "category": "electronics",
+  "generated_csvs": {
+    "amazon_main_figure_data.csv": {
+      "data_cells_checked": 138,
+      "exact_cells_checked": 69,
+      "header_fields_checked": 6,
+      "numeric_cells_checked": 69,
+      "path": "artifacts/electronics/figure_data/amazon_main_figure_data.csv",
+      "rows_checked": 23,
+      "sha256": "e7dd3ddca54b63e3346d236bbe3ce4db41697708c99a5050fe4fe72dd74f8964",
+      "source_stages": [
+        "stage4_reuse",
+        "stage5_twins",
+        "stage6_shape"
+      ]
+    },
+    "amazon_robustness_figure_data.csv": {
+      "data_cells_checked": 72,
+      "exact_cells_checked": 39,
+      "header_fields_checked": 8,
+      "numeric_cells_checked": 33,
+      "path": "artifacts/electronics/figure_data/amazon_robustness_figure_data.csv",
+      "rows_checked": 9,
+      "sha256": "89d4ace3bf70f3046a54b62af080d2c82443ea7592f9e807d108631991c62db7",
+      "source_stages": [
+        "stage7_complementarity",
+        "stage8_reference_history",
+        "stage9_strength_fixed"
+      ]
+    }
+  },
+  "gold_comparison_performed": false,
+  "raw_dataset_sha256": "17b2c5f3736d4c0cb874859076436ebd4513f4c2396c528440a63204084e6a28",
+  "schema_version": 1,
+  "selected_lambda": 20.0,
+  "source_summaries": {
+    "stage4_reuse": {
+      "path": "../amazon_preprocess/electronics/stage4_reuse/electronics_stage4_summary.json",
+      "sha256": "97dbca65f41a1b48b565b4bd68c134b23745c539fc7e80cce0d3f4da13578404",
+      "stage": "amazon_stage4_fixed_five_star_reuse"
+    },
+    "stage5_twins": {
+      "path": "../amazon_preprocess/electronics/stage5_twins/electronics_stage5_summary.json",
+      "sha256": "356dcb8f35bb0f1d51eed4602ae85d90a2578b22bca47719ad99d6b2e1ccf713",
+      "stage": "amazon_stage5_exact_matched_twins_r8"
+    },
+    "stage6_shape": {
+      "path": "../amazon_preprocess/electronics/stage6_shape/electronics_stage6_summary.json",
+      "sha256": "bf5f106d0849c6e3b8bcc82041db2e3d63dad53e4dc9a502855956c6d7de3a7b",
+      "stage": "amazon_stage6_mean_preserving_shape_r8"
+    },
+    "stage7_complementarity": {
+      "path": "../amazon_preprocess/electronics/stage7_complementarity/electronics_stage7_summary.json",
+      "sha256": "0137ec382a7b5d19613d81e6ccba44c2e43e7b5a2be4e2585ece780e9fb142db",
+      "stage": "amazon_stage7_complementarity"
+    },
+    "stage8_reference_history": {
+      "path": "../amazon_preprocess/electronics/stage8_reference_history/electronics_stage8_refhistory_summary.json",
+      "sha256": "513f603f78ff3e136ad261ddcf3e895ca35c074448707428b686390f2a9e72ab",
+      "stage": "amazon_stage8_reference_history_robustness"
+    },
+    "stage9_strength_fixed": {
+      "path": "../amazon_preprocess/electronics/stage9_strength_fixed/electronics_stage9_strength_fixed_identity_summary.json",
+      "sha256": "17064f8850833635bf8bc1e814b49e7b1859eadd6039f1cae45b717435e22929",
+      "stage": "amazon_stage9_intervention_strength_fixed_identity"
+    }
+  },
+  "source_summary_count": 6,
+  "status": "PASS",
+  "totals": {
+    "all_values_match_source_summaries": true,
+    "csv_files_checked": 2,
+    "data_cells_checked": 210,
+    "data_rows_checked": 32,
+    "header_fields_checked": 14
+  },
+  "verification_mode": "source_summary_cell_match"
+}

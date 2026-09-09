@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "all_17_tables_registered": true,
+    "all_6_static_tex_fragments_exist": true,
+    "amazon_splits_derived_from_config": true,
+    "cross_category_table_registered_as_separate_group": true,
+    "exact_static_table_set": true,
+    "legacy_numerical_table_set_still_10": true,
+    "manifest_reports_17_tables": true,
+    "no_scientific_result_literals_in_static_generator": true,
+    "phase2S_numerical_tables_retained": true,
+    "reporting_manifest_exists": true,
+    "reporting_registry_exists": true,
+    "rotation_parameters_derived_from_config": true,
+    "shape_transforms_derived_from_config": true,
+    "static_generator_does_not_read_gold": true,
+    "static_table_data_exists": true
+  },
+  "first_differences": [],
+  "n_registered_tables": 17,
+  "n_static_tables": 6,
+  "phase": "4",
+  "status": "PASS",
+  "verification_note": "The original 10 numerical groups remain frozen-gold verified; the new cross-category table is source-summary verified by tools/verify_cross_category_table.py."
+}

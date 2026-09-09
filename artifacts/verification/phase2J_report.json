@@ -1,0 +1,105 @@
+{
+  "checks": {
+    "aggregate_provenance": true,
+    "aggregate_summary": true,
+    "all_150_seed_reuse_rows_present": true,
+    "all_incidence_invariants": true,
+    "all_reuse_metrics": true,
+    "attack_and_identity_hashes": true,
+    "fixed_attack_across_reuse": true,
+    "integer_counts": true,
+    "row_schema": true
+  },
+  "comparison_details": {
+    "aggregate_summary": {
+      "differences": [],
+      "numeric_envelope": {
+        "float_values_checked": 108,
+        "max_abs_actual": 0.4358937538098243,
+        "max_abs_diff": 5.551115123125783e-17,
+        "max_abs_expected": 0.43589375380982426,
+        "max_abs_path": "$.aggregate_summary.reuse_summary.2.score_no_larger_probability.ci_lower",
+        "max_rel_actual": 1.3984206723809916e-17,
+        "max_rel_diff": 6.610645791812306e-16,
+        "max_rel_expected": 1.3984206723809907e-17,
+        "max_rel_path": "$.aggregate_summary.reuse_summary.8.mean_reuse_law_abs_error.ci_lower",
+        "nonzero_float_differences": 11
+      },
+      "status": "PASS",
+      "tolerances": {
+        "atol": 1e-12,
+        "equal_nan": false,
+        "rtol": 1e-10
+      }
+    },
+    "seed_reuse_metrics": {
+      "differences": [],
+      "numeric_envelope": {
+        "float_values_checked": 2550,
+        "max_abs_actual": null,
+        "max_abs_diff": 0.0,
+        "max_abs_expected": null,
+        "max_abs_path": null,
+        "max_rel_actual": null,
+        "max_rel_diff": 0.0,
+        "max_rel_expected": null,
+        "max_rel_path": null,
+        "nonzero_float_differences": 0
+      },
+      "status": "PASS",
+      "tolerances": {
+        "atol": 1e-12,
+        "equal_nan": false,
+        "rtol": 1e-10
+      }
+    }
+  },
+  "exact_structural_checks": {
+    "aggregate_structure": true,
+    "attack_and_identity_hashes": true,
+    "fixed_attack_across_reuse": true,
+    "incidence_invariants": true,
+    "integer_counts": true,
+    "row_schema": true,
+    "seed_reuse_keys": true
+  },
+  "headline": {
+    "frequency_auc": {
+      "1": 0.498294460959986,
+      "16": 1.0,
+      "2": 0.9982805231498607,
+      "4": 0.9999996516747477,
+      "8": 1.0
+    },
+    "mean_d_cf": 0.07635742143375306,
+    "reuse_auc": {
+      "1": 0.4997748883437735,
+      "16": 0.7967051272867719,
+      "2": 0.5618403029634398,
+      "4": 0.6263578185872887,
+      "8": 0.7055070825608974
+    }
+  },
+  "max_absolute_numeric_difference": 5.551115123125783e-17,
+  "max_relative_numeric_difference": 6.610645791812306e-16,
+  "numeric_envelope": {
+    "float_values_checked": 2658,
+    "max_abs_actual": 0.4358937538098243,
+    "max_abs_diff": 5.551115123125783e-17,
+    "max_abs_expected": 0.43589375380982426,
+    "max_abs_path": "$.aggregate_summary.reuse_summary.2.score_no_larger_probability.ci_lower",
+    "max_abs_source": "aggregate_summary",
+    "max_rel_actual": 1.3984206723809916e-17,
+    "max_rel_diff": 6.610645791812306e-16,
+    "max_rel_expected": 1.3984206723809907e-17,
+    "max_rel_path": "$.aggregate_summary.reuse_summary.8.mean_reuse_law_abs_error.ci_lower",
+    "max_rel_source": "aggregate_summary",
+    "nonzero_float_differences": 11
+  },
+  "phase": "2J",
+  "status": "PASS",
+  "tolerances": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  }
+}

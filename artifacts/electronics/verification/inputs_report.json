@@ -1,0 +1,66 @@
+{
+  "category": "electronics",
+  "checks": {
+    "configuration_category_isolation": true,
+    "preprocessing_rows_and_conservation": true,
+    "preprocessing_schemas_and_provenance": true,
+    "raw_dataset_sha256": true
+  },
+  "details": {
+    "configuration_category_isolation": {
+      "config_count": 11,
+      "config_sha256": {
+        "amazon_complementarity.yaml": "d26c4da55a7a802c00577d9428fff373593d3780d51d742b6f815e8a6e5e30c6",
+        "amazon_full_background.yaml": "b01551818c2469eb19211a4d05f50367723e3a2002083bfb0021d4ce5a6f5269",
+        "amazon_k6_population_audit.yaml": "354be5a0cedf5ac3852cf0b4e564b855b2b87f21d3ee73183ac5f410609e621f",
+        "amazon_preprocess.yaml": "5f5afaf1258925f1634919e660a34ed900fe573c4aabdd20953ad0ded524c62f",
+        "amazon_primary.yaml": "dc5e22534ccf3e503c547ca5667e2a295014c5c8ef7db9fd62f7ff8838f2164a",
+        "amazon_reference.yaml": "5ea0aec7c9a3b6188d76d78b101c15063e6b17e557da242049f2431767fc4d6c",
+        "amazon_reference_history.yaml": "72d50eabac11c074b0dfe66cdafd8a81dfa659a989b7cfdfd4efcfd2f689f70d",
+        "amazon_self_influence.yaml": "a823119dbeff4ee5d53c325c6311c2efd751ce547cf5edf6474c2d7a89bc2d35",
+        "amazon_shape.yaml": "e18ce280c25a2f9e9a7a2b3903e4b72098b90fd0c4dc14dafdbb026a8e076c44",
+        "amazon_strength_fixed.yaml": "85293c979540c14d7baeff1bd9cbb62c2dc16d5443b036a43439c4d1f09c2252",
+        "amazon_twins.yaml": "08b3846d9d01e76b91b6cf1404ad66b900a2331375ab8983c3060208f90249ab"
+      }
+    },
+    "preprocessing_rows_and_conservation": {
+      "reference_rows": 21409,
+      "stage1_exported_reviews": 6422700,
+      "stage1_rows": 21409,
+      "stage2_rows": 21409
+    },
+    "preprocessing_schemas_and_provenance": {
+      "k6_feasible_items": 15968,
+      "k9_feasible_items": 10771,
+      "n_items": 21409,
+      "summary_count": 4
+    },
+    "raw_dataset_sha256": {
+      "path": "external/Electronics.jsonl.gz",
+      "sha256": "17b2c5f3736d4c0cb874859076436ebd4513f4c2396c528440a63204084e6a28",
+      "size_bytes": 6474438619
+    }
+  },
+  "failures": [],
+  "gold_comparison_performed": false,
+  "independent_gold_reproduction_claimed": false,
+  "schema_version": 1,
+  "stage": "inputs",
+  "status": "PASS",
+  "tolerances": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "verification_mode": "invariant_only",
+  "verification_scope": [
+    "input_provenance",
+    "schemas",
+    "row_counts",
+    "seed_sets",
+    "exact_discrete_fields",
+    "hashes",
+    "conservation_laws",
+    "category_consistency",
+    "declared_floating_point_tolerances"
+  ]
+}

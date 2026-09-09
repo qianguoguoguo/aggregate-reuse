@@ -1,0 +1,149 @@
+{
+  "algorithm": "sha256-canonical-json-lines-v1",
+  "comparison_note": "Frozen gold does not contain the Windows row-level Stage-6 attack CSVs or float-free fingerprints.",
+  "cross_platform_comparison": "PENDING_WINDOWS_CONFIRMATION",
+  "excluded_fields": [
+    "clean_mean",
+    "attack_mean",
+    "clean_w1",
+    "attack_w1",
+    "d_w1",
+    "clean_js",
+    "attack_js",
+    "d_js",
+    "clean_abs_mean",
+    "attack_abs_mean",
+    "d_abs_mean"
+  ],
+  "fingerprints": [
+    {
+      "seed": 0,
+      "sha256": "1d425166240ae349318191a9c74e606be5b89134bb58af604ea319a64275f816"
+    },
+    {
+      "seed": 1,
+      "sha256": "9e0abca8e83286fb795711e76649fa673fb012a3765cacb1513f39ff4e96e09e"
+    },
+    {
+      "seed": 2,
+      "sha256": "c9beb34bab3107cdbb31f44993944a6658db0b82957f41f7bb0f567256a2226b"
+    },
+    {
+      "seed": 3,
+      "sha256": "46b2075e8d29e4bb23fb5e2de43817c2b670d59527c225e6068e1a2543af54d6"
+    },
+    {
+      "seed": 4,
+      "sha256": "c77b879e1b36a741bb86d38c683a97b836f0b0e0a2090dfd9efe1143c665244c"
+    },
+    {
+      "seed": 5,
+      "sha256": "8f459872162a37be9a2f61c9e1bb0843b92507197500fc74eb293620c374858c"
+    },
+    {
+      "seed": 6,
+      "sha256": "46042fbbe4e51e69b7a30f21a51ba86bdd58f70968c36759dd66a9355f4f6a1d"
+    },
+    {
+      "seed": 7,
+      "sha256": "f3d5b0e76cc459279652ccbb95510a9e15c33872440e2d07b5019ef5f1a8aad0"
+    },
+    {
+      "seed": 8,
+      "sha256": "f8a5c238507011e40a9b9fd4896c97f16020a1702b4c6617cf3427e707ace09f"
+    },
+    {
+      "seed": 9,
+      "sha256": "4789ffe3235628711cc0d0822e3d887c800c96c44b384df23f30cca8de9c5d3b"
+    },
+    {
+      "seed": 10,
+      "sha256": "5e711e506d871d66f7acde8aae5f7af975d78042dc0c24fb5e905741b2617753"
+    },
+    {
+      "seed": 11,
+      "sha256": "d54640cc2a8918a843f583d1237cf44adba4f0200cc87f4ab2950f6609ae1531"
+    },
+    {
+      "seed": 12,
+      "sha256": "0a25c58f36dede5ec0f3398a547b2252f0b221d54287a3bb027698dda827235d"
+    },
+    {
+      "seed": 13,
+      "sha256": "d96aa8595293efbcc39da9c784ce7da294651145c8ae48523fc8239991221dfa"
+    },
+    {
+      "seed": 14,
+      "sha256": "ee9ef8cab98b708fb82370e3ca1754c9b9788bcd3a0852bc02baeb84eb2a9923"
+    },
+    {
+      "seed": 15,
+      "sha256": "eb1d460c1423d7e38e3afa7f2da2b203f7e245fd93f1d053fb98a16d9e7d4a33"
+    },
+    {
+      "seed": 16,
+      "sha256": "1d801b4975d6be46cfc4c07505bf2fbcc1d4db265affedfe83b8d7dc132cdb17"
+    },
+    {
+      "seed": 17,
+      "sha256": "ca170d44c7d94b441335562519441ee116b2fbf48861fb5eb8f9d62168e3bffa"
+    },
+    {
+      "seed": 18,
+      "sha256": "d8b11805281f8a354b6fff560ab42d17bf82d2a4f67979bb4f35affa7a3d726d"
+    },
+    {
+      "seed": 19,
+      "sha256": "a13cd26c12f0352bd1343a23a6d65a8606075290bacfb66fa0f57852aea9eed9"
+    },
+    {
+      "seed": 20,
+      "sha256": "30bc5e57487df09d9cc1bacfa6a5b1a7e6d1b9e9cb05c18297de1ce2b3a78acf"
+    },
+    {
+      "seed": 21,
+      "sha256": "6e2a7ed81aa3850899b2655b34191930d0b704ac54eb0cbee2dba76bff8cc67c"
+    },
+    {
+      "seed": 22,
+      "sha256": "44248015282c93ee2b642c0907d67dd9506eb4d37a148186c7d9ff361949c983"
+    },
+    {
+      "seed": 23,
+      "sha256": "09b80388ad8f0193c50fc270f36fa131d6cb3b18a3f848fc4a46cbfcb236a687"
+    },
+    {
+      "seed": 24,
+      "sha256": "dc7890d28a047783b99c5664d11bdf6d1e5dc68a46a125c898569a485c14da5c"
+    },
+    {
+      "seed": 25,
+      "sha256": "65c5813dfea5b17a6a3b9c16ec5b93b283411f0660c35f972c8952923264eca0"
+    },
+    {
+      "seed": 26,
+      "sha256": "fdf3d0964cbe8d2d466d24f5ba423fb6b0150a52269d01259e1ae61122e1d113"
+    },
+    {
+      "seed": 27,
+      "sha256": "04ce69b429f0ed36ea44992d2aa77d5e62ef8373dde4fd878a8caaf965f544c4"
+    },
+    {
+      "seed": 28,
+      "sha256": "29a4b168fb774db75038b5e3b5c6c6d0c1d6962dcaa98977f933a360d2f2741d"
+    },
+    {
+      "seed": 29,
+      "sha256": "05ce63ca638662c149a746117f83e5af9b9edd543c8187544ef9020420af748f"
+    }
+  ],
+  "included_fields": [
+    "asin",
+    "treatment_block",
+    "slots",
+    "clean_counts",
+    "attack_counts"
+  ],
+  "phase": "2L",
+  "status": "PASS"
+}

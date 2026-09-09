@@ -1,0 +1,78 @@
+{
+  "category": "electronics",
+  "checks": {
+    "aggregate_schema_category_provenance_and_metric_guard": true,
+    "rows_handoffs_population_and_unlabeled_background": true,
+    "seed_sets_and_expected_files": true
+  },
+  "details": {
+    "aggregate_schema_category_provenance_and_metric_guard": {
+      "activity_strata": [
+        "all",
+        "freq_eq_8",
+        "freq_7_9"
+      ]
+    },
+    "rows_handoffs_population_and_unlabeled_background": {
+      "seed_files_streamed": 30,
+      "unique_account_rows": 35010263
+    },
+    "seed_sets_and_expected_files": {
+      "files_per_seed": 2,
+      "seed_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    }
+  },
+  "failures": [],
+  "gold_comparison_performed": false,
+  "independent_gold_reproduction_claimed": false,
+  "schema_version": 1,
+  "stage": "full_background",
+  "status": "PASS",
+  "tolerances": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "verification_mode": "invariant_only",
+  "verification_scope": [
+    "input_provenance",
+    "schemas",
+    "row_counts",
+    "seed_sets",
+    "exact_discrete_fields",
+    "hashes",
+    "conservation_laws",
+    "category_consistency",
+    "declared_floating_point_tolerances"
+  ]
+}

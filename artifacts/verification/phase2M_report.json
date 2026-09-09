@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "aggregate_provenance": true,
+    "aggregate_summary": true,
+    "all_30_per_seed_summaries": true,
+    "all_complementarity_invariants": true,
+    "combined_improves_over_best_single": true,
+    "evidence_only_isolates_aggregate": true,
+    "frequency_exactly_matched": true,
+    "headline": true,
+    "phase2I_attack_hash_handoff": true,
+    "topology_only_isolates_coactivity": true
+  },
+  "first_differences": [],
+  "headline": {
+    "aggregate_auc": 0.6238666666666666,
+    "coactivity_auc": 0.7502276851851852,
+    "combined_auc": 0.8737004111111111,
+    "combined_minus_best_single": 0.1234727259259259,
+    "evidence_only_aggregate_auc": 0.7477333333333332,
+    "evidence_only_coactivity_auc": 0.5,
+    "frequency_auc": 0.5,
+    "topology_only_aggregate_auc": 0.5,
+    "topology_only_coactivity_auc": 1.0
+  },
+  "phase": "2M",
+  "status": "PASS",
+  "tolerance": {
+    "absolute": 1e-12
+  }
+}

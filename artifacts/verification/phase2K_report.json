@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "aggregate_provenance": true,
+    "aggregate_summary": true,
+    "all_30_per_seed_summaries": true,
+    "exact_matching_guards": true,
+    "headline": true,
+    "phase2I_phase2J_handoff": true
+  },
+  "first_differences": [],
+  "headline": {
+    "counterfactual_score_auc": 0.7436000000000001,
+    "frequency_auc": 0.5,
+    "mean_d_cf": 0.07635742143375306,
+    "mean_paired_score_gap": 0.6108593714700244,
+    "paired_gap_nonpositive_fraction": 0.2564,
+    "predictive_centered_world_score_auc": 0.7550266666666666,
+    "raw_world_score_auc": 0.7476922666666667
+  },
+  "phase": "2K",
+  "status": "PASS",
+  "tolerance": {
+    "absolute": 1e-12
+  }
+}

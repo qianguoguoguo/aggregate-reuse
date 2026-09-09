@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "aggregate_provenance": true,
+    "aggregate_visibility": true,
+    "all_30_seeds_present": true,
+    "all_attack_invariants": true,
+    "attack_world_hashes": true,
+    "feasible_item_universe": true,
+    "identity_assignment_absent": true,
+    "per_seed_attack_metrics": true
+  },
+  "headline": {
+    "feasible_item_universe": 21197,
+    "identity_assignment_performed": false,
+    "m": 6,
+    "mean_d_cf": 0.07635742143375306,
+    "mean_d_cf_ci": [
+      0.07367436801569235,
+      0.07904047485181376
+    ],
+    "n_items_per_seed": 2000
+  },
+  "phase": "2I",
+  "status": "PASS"
+}

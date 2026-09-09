@@ -1,0 +1,42 @@
+{
+  "category": "electronics",
+  "checks": {
+    "files_schema_category_and_provenance": true,
+    "rows_selection_hash_handoffs_and_tolerances": true
+  },
+  "details": {
+    "files_schema_category_and_provenance": {
+      "reference_lengths": [
+        60,
+        90,
+        120
+      ]
+    },
+    "rows_selection_hash_handoffs_and_tolerances": {
+      "calibration_rows": 21,
+      "seed_reference_rows": 90
+    }
+  },
+  "failures": [],
+  "gold_comparison_performed": false,
+  "independent_gold_reproduction_claimed": false,
+  "schema_version": 1,
+  "stage": "reference_history",
+  "status": "PASS",
+  "tolerances": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "verification_mode": "invariant_only",
+  "verification_scope": [
+    "input_provenance",
+    "schemas",
+    "row_counts",
+    "seed_sets",
+    "exact_discrete_fields",
+    "hashes",
+    "conservation_laws",
+    "category_consistency",
+    "declared_floating_point_tolerances"
+  ]
+}

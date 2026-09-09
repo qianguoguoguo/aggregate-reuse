@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "all_display_strings_exact": true,
+    "all_tex_fragments_exist": true,
+    "exact_table_set": true,
+    "generator_does_not_read_gold": true,
+    "numerical_tables_only": true,
+    "source_manifest_complete": true,
+    "table_data_exists": true
+  },
+  "first_differences": [],
+  "n_numerical_tables": 10,
+  "phase": "2S",
+  "status": "PASS"
+}

@@ -1,0 +1,106 @@
+{
+  "amazon_preprocess": {
+    "stderr": "",
+    "stdout": "======================================================================\nPHASE 2G AMAZON PREPROCESSING VERIFICATION\n======================================================================\nactual_root                 : <LOCAL_HOME>/code/aggregate-reuse-migration/amazon_preprocess\nscan_summary                : PASS\nstage1_summary              : PASS\nstage2_summary              : PASS\nstage1_manifest             : PASS\nstage1_excluded             : PASS\nstage2_manifest             : PASS\nreference_histograms        : PASS\nheadline_audit              : PASS\nitem_counts_sha256          : PASS\nportable_provenance         : PASS\naudit_raw_sha256            : PASS\nOVERALL                      : PASS\n======================================================================\n"
+  },
+  "amazon_reference": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2H AMAZON REFERENCE-CALIBRATION VERIFICATION\n========================================================================\nhome_and_kitchen_lambda_calibration.csv   : PASS\nhome_and_kitchen_holdout_validation.csv   : PASS\nhome_and_kitchen_holdout_item_metrics.csv : PASS\nhome_and_kitchen_selected_lambda_chronology.csv: PASS\nreference_freeze                          : PASS\nsummary                                   : PASS\nreference_freeze_provenance               : PASS\nsummary_provenance                        : PASS\nheadline                                  : PASS\nmax numeric abs diff                       : 4.441e-16\nmax numeric rel diff                       : 7.334e-12\nOVERALL                                    : PASS\n========================================================================\n"
+  },
+  "anonymity": {
+    "stderr": "",
+    "stdout": "{\n  \"effective_scope\": \"git_tracked\",\n  \"finding_count\": 0,\n  \"findings\": [],\n  \"git_history_checked\": false,\n  \"requested_scope\": \"release\",\n  \"scanned_files\": 386,\n  \"schema_version\": 1,\n  \"status\": \"PASS\"\n}\n"
+  },
+  "complementarity": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2M AMAZON COMPLEMENTARITY VERIFICATION\n========================================================================\nall_30_per_seed_summaries             : PASS\nphase2I_attack_hash_handoff           : PASS\nall_complementarity_invariants        : PASS\naggregate_summary                     : PASS\naggregate_provenance                  : PASS\nheadline                              : PASS\nfrequency_exactly_matched             : PASS\nevidence_only_isolates_aggregate      : PASS\ntopology_only_isolates_coactivity     : PASS\ncombined_improves_over_best_single    : PASS\nOVERALL                                : PASS\n========================================================================\n"
+  },
+  "controlled_matched": {
+    "stderr": "",
+    "stdout": "========================================================================\nSTATUS:   PASS\nCHECKS:   721\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   54\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   40002\nFAILURES: 0\n========================================================================\n====================================================================\nPHASE 2E MATCHED-EXPOSURE VERIFICATION\n====================================================================\nper_seed_json               : PASS\naggregate_summary           : PASS\nfigure_trajectory           : PASS\nper_seed_trajectories       : PASS\nall_invariants              : PASS\nmax trajectory abs diff      : 7.496e-13\nOVERALL                      : PASS\n====================================================================\n"
+  },
+  "controlled_null": {
+    "stderr": "",
+    "stdout": "========================================================================\nSTATUS:   PASS\nCHECKS:   541\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   39\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   28002\nFAILURES: 0\n========================================================================\n====================================================================\nPHASE 2D CONTROLLED NULL VERIFICATION\n====================================================================\nper_seed_json               : PASS\naggregate_summary           : PASS\nfigure_trajectory           : PASS\nper_seed_trajectories       : PASS\nall_invariants              : PASS\nmax trajectory abs diff      : 1.154e-13\nOVERALL                      : PASS\n====================================================================\n"
+  },
+  "controlled_sweep": {
+    "stderr": "",
+    "stdout": "========================================================================\nSTATUS:   PASS\nCHECKS:   33601\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   4016\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   3362\nFAILURES: 0\n========================================================================\n====================================================================\nPHASE 2F CONTROLLED REGIME-SWEEP VERIFICATION\n====================================================================\nper_seed_cell_rows          : PASS\naggregate_summary           : PASS\nfigure_grid                 : PASS\nper_seed_core_arrays        : PASS\nall_invariants              : PASS\nmax core-array abs diff      : 1.443e-15\nOVERALL                      : PASS\n====================================================================\n"
+  },
+  "cross_category_table": {
+    "stderr": "",
+    "stdout": "table_data_matches_canonical_sources         : PASS\nlatex_fragment_matches_table_data            : PASS\nmanifest_has_both_categories                 : PASS\ngenerator_does_not_read_gold                 : PASS\nCROSS-CATEGORY TABLE STATUS: PASS\n"
+  },
+  "electronics": {
+    "stderr": "",
+    "stdout": "============================================================================\nELECTRONICS INVARIANT-ONLY VERIFICATION\n============================================================================\ninputs                      : PASS\nreference                   : PASS\nprimary_attack              : PASS\nprimary_reuse               : PASS\nmatched_twins               : PASS\nshape                       : PASS\ncomplementarity             : PASS\nreference_history           : PASS\nstrength_fixed              : PASS\nk6_population_audit         : PASS\nfull_background             : PASS\nself_influence              : PASS\n============================================================================\nELECTRONICS FINAL STATUS: PASS\n"
+  },
+  "electronics_figure_data": {
+    "stderr": "",
+    "stdout": "Verified 210 data cells and 14 header fields against 6 source summaries.\nVerification report: <LOCAL_HOME>/code/aggregate-reuse-migration/aggregate-reuse-public-final/artifacts/electronics/verification/figure_data_report.json\nELECTRONICS FIGURE DATA STATUS: PASS\n"
+  },
+  "electronics_reporting": {
+    "stderr": "",
+    "stdout": "============================================================================\nELECTRONICS PHASE 14 REPORTING VERIFICATION\n============================================================================\nnumerical_tables_match_source_summaries      : PASS\nstatic_tables_match_electronics_configs      : PASS\nmanifests_are_category_scoped                : PASS\nlatex_fragments_match_table_data             : PASS\nfigure_data_matches_source_summaries         : PASS\nfigure_files_and_canvases                    : PASS\n============================================================================\nELECTRONICS REPORTING STATUS: PASS\n"
+  },
+  "environment": {
+    "stderr": "",
+    "stdout": "Exact paper-reproduction environment check\n========================================================\npython     expected=3.12.10    actual=3.12.10    PASS\nnumpy      expected=2.5.1      actual=2.5.1      PASS\nscipy      expected=1.18.0     actual=1.18.0     PASS\nsklearn    expected=1.9.0      actual=1.9.0      PASS\npyyaml     expected=6.0.3      actual=6.0.3      PASS\n========================================================\nSTATUS: PASS\n"
+  },
+  "figure_data": {
+    "stderr": "",
+    "stdout": "========================================================================\nSTATUS:   PASS\nCHECKS:   28002\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   40002\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   3362\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   140\nFAILURES: 0\n========================================================================\n========================================================================\nSTATUS:   PASS\nCHECKS:   74\nFAILURES: 0\n========================================================================\n[verify] controlled_null_trajectory.csv\n[verify] controlled_theory_trajectory.csv\n[verify] controlled_regime_auc.csv\n[verify] amazon_main_figure_data.csv\n[verify] fig3_amazon_robustness_figure_data.csv\nFIGURE-DATA VERIFICATION: PASS\n"
+  },
+  "full_background": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2Q AMAZON FULL-BACKGROUND RANKING VERIFICATION\n========================================================================\naggregate_summary                         : PASS\naggregate_provenance                      : PASS\nall_30_per_seed_compact_metrics           : PASS\nphase2I_attack_hash_handoff               : PASS\nall_ranking_invariants                    : PASS\nheadline                                  : PASS\nhistorical_background_remains_unlabeled   : PASS\nmax per-seed numeric abs diff             : 0.000e+00\nOVERALL                                   : PASS\n========================================================================\n"
+  },
+  "gold_integrity": {
+    "stderr": "",
+    "stdout": "========================================================================\nSTATUS:   PASS\nCHECKS:   91\nFAILURES: 0\n========================================================================\n"
+  },
+  "k6_population_audit": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2P DETERMINISTIC SAME-k=6 POPULATION AUDIT VERIFICATION\n========================================================================\nnamed_artifacts_exist                               : PASS\npopulation_sizes_exact                              : PASS\nexact_expected_mean_d_cf_matches_reported_rounding  : PASS\ncsv_has_exact_two_population_rows                   : PASS\nall_invariants                                      : PASS\nsame_k6_design                                      : PASS\npopulation_shift_direction                          : PASS\nlegacy_empirical_not_used_as_target                 : PASS\naggregate_provenance                                : PASS\nOVERALL                                              : PASS\n========================================================================\n"
+  },
+  "matched_twins": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2K EXACT MATCHED-TWIN VERIFICATION\n========================================================================\nall_30_per_seed_summaries         : PASS\naggregate_summary                 : PASS\naggregate_provenance              : PASS\nphase2I_phase2J_handoff           : PASS\nexact_matching_guards             : PASS\nheadline                          : PASS\nOVERALL                            : PASS\n========================================================================\n"
+  },
+  "numerical_tables": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2S AUTOMATIC SUPPLEMENT-TABLE VERIFICATION\n========================================================================\ntable_data_exists                     : PASS\nexact_table_set                       : PASS\nall_display_strings_exact             : PASS\nall_tex_fragments_exist               : PASS\ngenerator_does_not_read_gold          : PASS\nsource_manifest_complete              : PASS\nnumerical_tables_only                 : PASS\nOVERALL                                : PASS\n========================================================================\n"
+  },
+  "primary_attack": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2I PRIMARY AMAZON ATTACK-WORLD VERIFICATION\n========================================================================\nall_30_seeds_present            : PASS\nattack_world_hashes             : PASS\nper_seed_attack_metrics         : PASS\nall_attack_invariants           : PASS\nfeasible_item_universe          : PASS\naggregate_visibility            : PASS\naggregate_provenance            : PASS\nidentity_assignment_absent      : PASS\nOVERALL                          : PASS\n========================================================================\n"
+  },
+  "primary_reuse": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2J FIXED-ATTACK REUSE VERIFICATION\n========================================================================\nall_150_seed_reuse_rows_present   : PASS\nrow_schema                        : PASS\nattack_and_identity_hashes        : PASS\ninteger_counts                    : PASS\nall_reuse_metrics                 : PASS\nall_incidence_invariants          : PASS\nfixed_attack_across_reuse         : PASS\naggregate_summary                 : PASS\naggregate_provenance              : PASS\nmax numeric abs diff               : 5.551e-17\nmax numeric rel diff               : 6.611e-16\nOVERALL                            : PASS\n========================================================================\n"
+  },
+  "pytest": {
+    "stderr": "",
+    "stdout": "........................................................................ [ 32%]\n........................................................................ [ 65%]\n........................................................................ [ 98%]\n...                                                                      [100%]\n219 passed in 0.84s\n"
+  },
+  "reference_history": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2N AMAZON REFERENCE-HISTORY VERIFICATION\n========================================================================\ncalibration_grid                      : PASS\nall_90_seed_length_rows               : PASS\naggregate_summary                     : PASS\naggregate_provenance                  : PASS\nheadline                              : PASS\nlambda_20_all_lengths                 : PASS\nreference_lengths_exact               : PASS\nseed_ids_exact                        : PASS\nreuse_r8_fixed                        : PASS\nall_summary_invariants                : PASS\nnref120_matches_phase2K_auc           : PASS\nnref120_matches_phase2K_gap           : PASS\nmax numeric abs diff                   : 2.776e-16\nOVERALL                                : PASS\n========================================================================\n"
+  },
+  "reporting_spec": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 4 REPORTING SPEC / STATIC-TABLE VERIFICATION\n========================================================================\nstatic_table_data_exists                            : PASS\nreporting_registry_exists                           : PASS\nreporting_manifest_exists                           : PASS\nexact_static_table_set                              : PASS\nall_17_tables_registered                            : PASS\namazon_splits_derived_from_config                   : PASS\nshape_transforms_derived_from_config                : PASS\nrotation_parameters_derived_from_config             : PASS\nall_6_static_tex_fragments_exist                    : PASS\nphase2S_numerical_tables_retained                   : PASS\nlegacy_numerical_table_set_still_10                 : PASS\ncross_category_table_registered_as_separate_group   : PASS\nstatic_generator_does_not_read_gold                 : PASS\nmanifest_reports_17_tables                          : PASS\nno_scientific_result_literals_in_static_generator   : PASS\nOVERALL                                              : PASS\n========================================================================\n"
+  },
+  "self_influence": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2R AMAZON LOO SELF-INFLUENCE VERIFICATION\n========================================================================\naggregate_summary                       : PASS\naggregate_provenance                    : PASS\nall_30_per_seed_summaries               : PASS\nphase2I_attack_hash_handoff             : PASS\nall_self_influence_invariants           : PASS\nheadline                                : PASS\nloo_improves_auc                        : PASS\nloo_reduces_misordering                 : PASS\noffline_diagnostic_guard                : PASS\nOVERALL                                 : PASS\n========================================================================\n"
+  },
+  "shape": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2L AMAZON MEAN-PRESERVING SHAPE VERIFICATION\n========================================================================\nall_30_per_seed_summaries           : PASS\nall_30_shape_attack_hashes          : PASS\nall_30_attack_world_structures      : PASS\nexact_seed_structure                : PASS\nall_shape_invariants                : PASS\naggregate_summary                   : PASS\naggregate_provenance                : PASS\nheadline                            : PASS\nexact_mean_preservation             : PASS\nfrequency_exactly_matched           : PASS\nmax numeric abs diff                 : 2.776e-17\nmax numeric rel diff                 : 2.019e-16\nOVERALL                              : PASS\n========================================================================\n"
+  },
+  "strength_fixed": {
+    "stderr": "",
+    "stdout": "========================================================================\nPHASE 2O AMAZON FIXED-IDENTITY STRENGTH VERIFICATION\n========================================================================\nall_30_per_seed_summaries             : PASS\nall_strength_invariants               : PASS\nnested_strength_slots                 : PASS\nfixed_identity_and_incidence          : PASS\nbalanced_modified_exposures           : PASS\naggregate_summary                     : PASS\naggregate_provenance                  : PASS\nheadline                              : PASS\nstrength_grid_exact                   : PASS\nreuse_r8_fixed                        : PASS\nitem_degree9_fixed                    : PASS\nreported_strength_response            : PASS\nOVERALL                                : PASS\n========================================================================\n"
+  }
+}

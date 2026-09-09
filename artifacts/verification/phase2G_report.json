@@ -1,0 +1,24 @@
+{
+  "actual_root": "amazon_preprocess",
+  "checks": {
+    "audit_raw_sha256": true,
+    "headline_audit": true,
+    "item_counts_sha256": true,
+    "portable_provenance": true,
+    "reference_histograms": true,
+    "scan_summary": true,
+    "stage1_excluded": true,
+    "stage1_manifest": true,
+    "stage1_summary": true,
+    "stage2_manifest": true,
+    "stage2_summary": true
+  },
+  "headline": {
+    "both_experimental_blocks_feasible_k6": 21197,
+    "both_experimental_blocks_feasible_k9": 13268,
+    "duplicate_user_item_records_removed": 786064,
+    "eligible_items_ge_300_after_dedup": 31247
+  },
+  "phase": "2G",
+  "status": "PASS"
+}
