@@ -48,7 +48,7 @@
   "public_packaging_changes": [
     "Added public authorship and citation metadata.",
     "Removed the standalone conference-submission supplement.",
-    "Added the appendix source used by the arXiv manuscript.",
+    "Kept manuscript and appendix source files outside the software repository.",
     "Updated reader-facing documentation and repository links.",
     "Added an approved software license.",
     "Regenerated the package-wide SHA-256 manifest."

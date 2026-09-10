@@ -15,10 +15,10 @@ tables.
 
 The standalone supplement prepared for conference review is not distributed
 in this public repository. Its content is incorporated as Appendices A–I of
-the arXiv paper. The scientific code, frozen configurations, expected
-numerical results, and verification logic are unchanged from the frozen
-conference-review artifact.
-
+the arXiv paper. The manuscript source is distributed through arXiv rather
+than through this software repository. The scientific code, frozen
+configurations, expected numerical results, and verification logic are
+unchanged from the frozen conference-review artifact.
 
 ## 1. Full clean-room reproduction
 
@@ -346,13 +346,10 @@ status      = PASS
 
 ## 9. Relationship to the arXiv paper
 
-The standalone supplement used for conference review has been incorporated
-into Appendices A–I of the arXiv paper and is therefore not distributed in
-this public repository.
-
-The corresponding appendix source is available at:
-
-[`paper/appendix.tex`](paper/appendix.tex)
+The standalone supplement prepared for conference review has been incorporated
+into Appendices A–I of the arXiv paper. Neither the former standalone
+supplement nor the manuscript source is distributed through this software
+repository.
 
 Historical internal filenames containing `supplement` or `supp_` are retained
 to preserve the validated computational pipeline. They generate the tables and
@@ -372,9 +369,8 @@ Included:
 - canonical figure data;
 - rendered main-paper and Electronics appendix figures;
 - generated appendix-table fragments and their compact data;
-- documentation;
-- compact final verification reports; and
-- paper/appendix.tex.
+- documentation; and
+- compact final verification reports.
 
 Not included:
 
@@ -385,7 +381,8 @@ Not included:
 - development Git history;
 - virtual environments and caches;
 - bytecode;
-- patch/rollback directories; or
+- patch/rollback directories;
+- manuscript and appendix source files; or
 - large experiment intermediates.
 
 ## 11. Final package integrity
