@@ -13,7 +13,7 @@ authors:
     given-names: "Rui"
     affiliation: "University of Delaware"
 repository-code: "https://github.com/qianguoguoguo/aggregate-reuse"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-09-09"
 license: MIT
 preferred-citation:

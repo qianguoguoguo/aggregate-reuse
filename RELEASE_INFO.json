@@ -1,7 +1,7 @@
 {
   "artifact": "aggregate-reuse",
 
-  "artifact_version": "1.0.0",
+  "artifact_version": "1.0.1",
 
   "authors": [
     "Qian Guo",
@@ -39,8 +39,7 @@
   },
 
   "source_snapshot": {
-    "tag": "artifact-v1.0",
-    "commit": "4913a950859d38fe647a744e8dfe272eb34434f0"
+    "tag": "artifact-v1.0.1"
   },
 
   "scientific_content_changed": false,
