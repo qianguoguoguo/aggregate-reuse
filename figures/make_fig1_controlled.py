@@ -123,35 +123,62 @@ def make_fig1b():
 
 def make_fig1c():
     rows = read_csv("controlled_regime_auc.csv")
-    rs = sorted({float(r["requested_R_exp"]) for r in rows})
-    ps = sorted({float(r["requested_p_on"]) for r in rows})
-    R = {v:i for i,v in enumerate(rs)}
-    P = {v:j for j,v in enumerate(ps)}
+    rs = sorted({float(row["requested_R_exp"]) for row in rows})
+    ps = sorted({float(row["requested_p_on"]) for row in rows})
+    R = {value: i for i, value in enumerate(rs)}
+    P = {value: j for j, value in enumerate(ps)}
+
     auc = np.full((len(rs), len(ps)), np.nan)
     for row in rows:
-        auc[R[float(row["requested_R_exp"])], P[float(row["requested_p_on"])]] = float(row["score_auc_mean"])
+        i = R[float(row["requested_R_exp"])]
+        j = P[float(row["requested_p_on"])]
+        auc[i, j] = float(row["score_auc_mean"])
 
     fig, ax = plt.subplots(figsize=FIG_SIZE)
-    im = ax.imshow(auc, aspect="auto", origin="lower", vmin=0.5, vmax=1.0)
+    im = ax.imshow(
+        auc,
+        aspect="auto",
+        origin="lower",
+        cmap="RdBu",
+        vmin=0.0,
+        vmax=1.0,
+        interpolation="nearest",
+    )
+
     ax.set_xticks(range(len(ps)))
     ax.set_xticklabels([f"{p:g}" for p in ps])
     ax.set_yticks(range(len(rs)))
     ax.set_yticklabels([f"{r:g}" for r in rs])
     ax.set_xlabel(r"$p_{\mathrm{on}}$")
-    ax.set_ylabel(r"$R_{\mathrm{exp}}$")
+    ax.set_ylabel(r"$R_{\mathrm{exp}}^{\mathrm{req}}$")
+
     if 1.0 in R:
-        ax.axhline(R[1.0], linewidth=1.0, linestyle="--")
-    if 1.0 in R and 0.2 in P:
-        ax.plot(P[0.2], R[1.0], marker="o", markersize=3.8,
-                markerfacecolor="none", markeredgewidth=1.0)
+        ax.axhline(R[1.0], color="0.45", linewidth=1.0, linestyle="--")
+        if 0.2 in P:
+            ax.plot(
+                P[0.2],
+                R[1.0],
+                marker="o",
+                linestyle="none",
+                markersize=3.8,
+                markerfacecolor="none",
+                markeredgecolor="white",
+                markeredgewidth=1.0,
+            )
+
     for idx, label in enumerate(ax.get_xticklabels()):
-        label.set_visible(idx % 2 == 1 or idx == len(ps)-1)
-    cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.02)
-    cbar.set_label(r"Score ROC--AUC", labelpad=6, fontsize=18)
+        label.set_visible(idx % 2 == 1 or idx == len(ps) - 1)
+
+    cbar = fig.colorbar(
+        im, ax=ax, fraction=0.046, pad=0.02,
+        ticks=[0.0, 0.25, 0.5, 0.75, 1.0],
+    )
+    cbar.set_label("Score ROC–AUC", labelpad=6, fontsize=18)
     cbar.ax.tick_params(labelsize=16)
+
     fig.tight_layout()
     save_figure(fig, "fig1c_controlled_regime")
-
+    
 def main():
     configure_plot_style()
     make_fig1a()
